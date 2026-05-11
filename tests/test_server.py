@@ -75,7 +75,9 @@ class ServerTests(unittest.TestCase):
     def test_static_index_is_served(self) -> None:
         with urllib.request.urlopen(self.base_url, timeout=3) as response:
             body = response.read().decode("utf-8")
-        self.assertIn("DE-ENG Vocabulary Trainer", body)
+        self.assertIn("Vocabulary arena", body)
+        self.assertIn("English mode", body)
+        self.assertIn("Article mode", body)
 
     def test_custom_word_can_be_added(self) -> None:
         status, payload = self.post_json(

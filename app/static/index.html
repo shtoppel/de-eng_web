@@ -7,39 +7,70 @@
   <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>DE-ENG Vocabulary Trainer</h1>
-    <p>Practice German-English vocabulary by part of speech, use random mode, and train German noun articles.</p>
-  </header>
-  <main>
-    <section class="panel">
-      <h2>Practice modes</h2>
-      <div class="menu" id="menu">
-        <button data-mode="noun">Nouns</button>
-        <button data-mode="verb">Verbs</button>
-        <button data-mode="adjective">Adjectives</button>
-        <button data-mode="adverb">Adverbs</button>
-        <button data-mode="random">🎲 Random</button>
-        <button class="article-button" data-mode="articles">der / die / das</button>
+  <div class="appShell">
+    <header class="topBar">
+      <div>
+        <p class="eyebrow">DE-ENG neural trainer</p>
+        <h1>Vocabulary arena</h1>
       </div>
-    </section>
-
-    <section class="panel word-card" id="trainer">
-      <p id="modeLabel">Choose a mode</p>
-      <h2 class="word" id="word">Willkommen!</h2>
-      <p class="translation" id="translation">Select a category to start practicing.</p>
-      <p class="example" id="example">Words are loaded into the SQLite database when the app starts.</p>
-      <div class="article-options" id="articleOptions" hidden></div>
-      <p class="result" id="result" aria-live="polite"></p>
-      <div class="actions">
-        <button class="primary" id="nextButton">Next word</button>
-        <button class="secondary" id="showButton">Show translation</button>
+      <div class="scoreBoard" aria-live="polite">
+        <span>Score <strong id="score">0</strong></span>
+        <span>Round <strong id="round">1</strong></span>
       </div>
-    </section>
+    </header>
 
-    <section class="panel">
-      <h2>Add a custom word</h2>
-      <form id="wordForm" class="word-form">
+    <nav class="modeMenu" aria-label="Practice mode">
+      <button class="modeButton active" data-mode="english">English mode</button>
+      <button class="modeButton" data-mode="german">German mode</button>
+      <button class="modeButton articleButton" data-mode="articles">Article mode</button>
+      <select id="categoryFilter" aria-label="Category filter">
+        <option value="">All categories</option>
+        <option value="noun">Nouns</option>
+        <option value="verb">Verbs</option>
+        <option value="adjective">Adjectives</option>
+        <option value="adverb">Adverbs</option>
+      </select>
+    </nav>
+
+    <main class="heroStage british" id="stage">
+      <div class="flagLayer britishFlag" aria-hidden="true">
+        <span class="diagonalWhite diagonalOne"></span>
+        <span class="diagonalWhite diagonalTwo"></span>
+        <span class="diagonalRed diagonalOne"></span>
+        <span class="diagonalRed diagonalTwo"></span>
+        <span class="horizontalWhite"></span>
+        <span class="verticalWhite"></span>
+        <span class="horizontalRed"></span>
+        <span class="verticalRed"></span>
+      </div>
+      <div class="flagLayer germanFlag" aria-hidden="true">
+        <span class="germanBlack"></span>
+        <span class="germanRed"></span>
+        <span class="germanGold"></span>
+      </div>
+      <div class="stageOverlay" aria-hidden="true"></div>
+      <div class="neuronLayer" id="neuronLayer" aria-hidden="true"></div>
+
+      <section class="promptCard" aria-live="polite">
+        <p class="promptLabel" id="promptLabel">German word</p>
+        <h2 class="promptWord" id="promptWord">Loading...</h2>
+        <p class="promptHint" id="promptHint">Choose the correct English translation.</p>
+      </section>
+
+      <section class="answers" id="answers" aria-label="Answer options"></section>
+    </main>
+
+    <footer class="controlPanel">
+      <p class="feedback" id="feedback" aria-live="polite">Pick the answer that matches the center card.</p>
+      <div class="controls">
+        <button class="controlButton" id="nextButton" disabled>Next word</button>
+        <button class="controlButton secondary" id="resetButton">Reset score</button>
+      </div>
+    </footer>
+
+    <details class="addWordPanel">
+      <summary>Add a custom word</summary>
+      <form id="wordForm" class="wordForm">
         <label>
           Category
           <select id="categoryInput" name="category" required>
@@ -65,15 +96,15 @@
           English
           <input name="english" autocomplete="off" required />
         </label>
-        <label class="full-width">
+        <label class="fullWidth">
           Example sentence
           <input name="example" autocomplete="off" required />
         </label>
-        <button class="primary" type="submit">Add word</button>
+        <button class="controlButton" type="submit">Add word</button>
       </form>
-      <p class="result" id="formResult" aria-live="polite"></p>
-    </section>
-  </main>
+      <p class="formResult" id="formResult" aria-live="polite"></p>
+    </details>
+  </div>
   <script src="/static/app.js"></script>
 </body>
 </html>

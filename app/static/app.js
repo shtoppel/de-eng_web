@@ -1,117 +1,191 @@
-const modeLabel = document.querySelector('#modeLabel');
-const word = document.querySelector('#word');
-const translation = document.querySelector('#translation');
-const example = document.querySelector('#example');
-const result = document.querySelector('#result');
+const stage = document.querySelector('#stage');
+const modeButtons = [...document.querySelectorAll('.modeButton')];
+const categoryFilter = document.querySelector('#categoryFilter');
+const scoreElement = document.querySelector('#score');
+const roundElement = document.querySelector('#round');
+const promptLabel = document.querySelector('#promptLabel');
+const promptWord = document.querySelector('#promptWord');
+const promptHint = document.querySelector('#promptHint');
+const answers = document.querySelector('#answers');
+const feedback = document.querySelector('#feedback');
 const nextButton = document.querySelector('#nextButton');
-const showButton = document.querySelector('#showButton');
-const articleOptions = document.querySelector('#articleOptions');
-const menuButtons = [...document.querySelectorAll('#menu button')];
+const resetButton = document.querySelector('#resetButton');
+const neuronLayer = document.querySelector('#neuronLayer');
 const wordForm = document.querySelector('#wordForm');
 const categoryInput = document.querySelector('#categoryInput');
 const articleInput = document.querySelector('#articleInput');
 const formResult = document.querySelector('#formResult');
-const labels = {
-  noun: 'Nouns',
-  verb: 'Verbs',
-  adjective: 'Adjectives',
-  adverb: 'Adverbs',
-  random: 'Random mode',
-  articles: 'Article training',
+
+const answerPositions = ['top', 'right', 'bottom', 'left'];
+const neuronStarts = [
+  ['-42vw', '-32vh'], ['42vw', '-32vh'], ['-42vw', '32vh'], ['42vw', '32vh'],
+  ['-48vw', '0vh'], ['48vw', '0vh'], ['0vw', '-38vh'], ['0vw', '38vh'],
+];
+
+const state = {
+  words: [],
+  mode: 'english',
+  current: null,
+  options: [],
+  selected: null,
+  score: 0,
+  round: 1,
 };
-let mode = 'random';
-let current = null;
 
-function setLoading(isLoading) {
-  nextButton.disabled = isLoading;
-  showButton.disabled = isLoading;
-  menuButtons.forEach((button) => { button.disabled = isLoading; });
+function wordGerman(word) {
+  return word.article ? `${word.article} ${word.german}` : word.german;
 }
 
-function showError(message) {
-  result.className = 'result bad';
-  result.textContent = message;
+function shuffle(items) {
+  return [...items].sort(() => Math.random() - 0.5);
 }
 
-function showFormStatus(message, isSuccess) {
-  formResult.className = `result ${isSuccess ? 'ok' : 'bad'}`;
-  formResult.textContent = message;
+function sampleOptions(correct, candidates, limit) {
+  const uniqueCandidates = [...new Set(candidates.filter((candidate) => candidate && candidate !== correct))];
+  return shuffle([correct, ...shuffle(uniqueCandidates).slice(0, limit - 1)]);
 }
 
 async function fetchJson(url, options) {
   const response = await fetch(url, options);
   const payload = await response.json();
-  if (!response.ok) {
-    throw new Error(payload.error || 'Request failed');
-  }
+  if (!response.ok) throw new Error(payload.error || 'Request failed');
   return payload;
 }
 
-function setMode(nextMode) {
-  mode = nextMode;
-  menuButtons.forEach((button) => button.classList.toggle('active', button.dataset.mode === mode));
-  loadNext();
+function currentPool() {
+  const selectedCategory = categoryFilter.value;
+  const filtered = selectedCategory
+    ? state.words.filter((word) => word.category === selectedCategory)
+    : state.words;
+  return filtered.length ? filtered : state.words;
 }
 
-function renderArticleOptions(options) {
-  const buttons = options.map((article) => {
+function chooseWord() {
+  const pool = currentPool();
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function buildRound() {
+  if (!state.words.length) return;
+  state.selected = null;
+  nextButton.disabled = true;
+  answers.replaceChildren();
+  feedback.className = 'feedback';
+
+  if (state.mode === 'articles') {
+    const nouns = state.words.filter((word) => word.category === 'noun' && word.article);
+    state.current = nouns[Math.floor(Math.random() * nouns.length)];
+    state.options = ['der', 'die', 'das'];
+    promptLabel.textContent = 'German noun';
+    promptWord.textContent = state.current.german;
+    promptHint.textContent = `Choose the correct article for “${state.current.english}”.`;
+    feedback.textContent = 'The German flag marks article training.';
+  } else if (state.mode === 'english') {
+    state.current = chooseWord();
+    state.options = sampleOptions(state.current.english, state.words.map((word) => word.english), 4);
+    promptLabel.textContent = 'German word';
+    promptWord.textContent = wordGerman(state.current);
+    promptHint.textContent = 'Choose the matching English word.';
+    feedback.textContent = 'English mode: German prompt in the center, English answers around it.';
+  } else {
+    state.current = chooseWord();
+    state.options = sampleOptions(wordGerman(state.current), state.words.map(wordGerman), 4);
+    promptLabel.textContent = 'English word';
+    promptWord.textContent = state.current.english;
+    promptHint.textContent = 'Choose the matching German word.';
+    feedback.textContent = 'German mode: English prompt in the center, German answers around it.';
+  }
+
+  updateChrome();
+  renderAnswers();
+  renderNeurons();
+}
+
+function correctAnswer() {
+  if (state.mode === 'articles') return state.current.article;
+  if (state.mode === 'english') return state.current.english;
+  return wordGerman(state.current);
+}
+
+function updateChrome() {
+  stage.className = `heroStage ${state.mode === 'english' ? 'british' : state.mode}`;
+  modeButtons.forEach((button) => button.classList.toggle('active', button.dataset.mode === state.mode));
+  scoreElement.textContent = state.score;
+  roundElement.textContent = state.round;
+}
+
+function renderAnswers() {
+  const options = state.mode === 'articles' ? state.options : shuffle(state.options);
+  const fragment = document.createDocumentFragment();
+  options.forEach((option, index) => {
     const button = document.createElement('button');
-    button.dataset.article = article;
-    button.textContent = article;
-    return button;
+    button.className = `answerButton ${answerPositions[index]}`;
+    button.style.animationDelay = `${index * 90}ms`;
+    button.textContent = option;
+    button.addEventListener('click', () => chooseAnswer(option));
+    fragment.append(button);
   });
-  articleOptions.replaceChildren(...buttons);
+  answers.replaceChildren(fragment);
 }
 
-function renderWordCard(nextWord, label = null) {
-  current = nextWord;
-  modeLabel.textContent = label || current.category_label;
-  word.textContent = current.article ? `${current.article} ${current.german}` : current.german;
-  translation.textContent = 'Translation hidden';
-  example.textContent = current.example;
+function chooseAnswer(answer) {
+  if (state.selected) return;
+  state.selected = answer;
+  const expected = correctAnswer();
+  const isCorrect = answer === expected;
+  if (isCorrect) state.score += 1;
+  feedback.className = `feedback ${isCorrect ? 'ok' : 'bad'}`;
+  feedback.textContent = isCorrect ? `Correct: ${expected}` : `Expected: ${expected}`;
+  [...answers.children].forEach((button) => {
+    button.disabled = true;
+    if (button.textContent === expected) button.classList.add('correct');
+    if (button.textContent === answer && !isCorrect) button.classList.add('wrong');
+  });
+  nextButton.disabled = false;
+  updateChrome();
 }
 
-async function loadNext() {
-  setLoading(true);
-  result.textContent = '';
-  articleOptions.hidden = mode !== 'articles';
-  showButton.hidden = mode === 'articles';
+function renderNeurons() {
+  const fragment = document.createDocumentFragment();
+  neuronStarts.forEach(([x, y], index) => {
+    const dot = document.createElement('span');
+    dot.className = 'neuronDot';
+    dot.style.setProperty('--from-x', x);
+    dot.style.setProperty('--from-y', y);
+    dot.style.animationDelay = `${index * 70}ms`;
+    fragment.append(dot);
+  });
+  const pulse = document.createElement('span');
+  pulse.className = 'centerPulse';
+  fragment.append(pulse);
+  neuronLayer.replaceChildren(fragment);
+}
+
+async function loadWords() {
   try {
-    if (mode === 'articles') {
-      current = await fetchJson('/api/articles/random');
-      modeLabel.textContent = labels[mode];
-      word.textContent = current.noun;
-      translation.textContent = current.english;
-      example.textContent = 'Choose the correct German article.';
-      renderArticleOptions(current.options);
-      return;
-    }
-    const query = mode === 'random' ? '' : `?category=${mode}`;
-    const nextWord = await fetchJson(`/api/words/random${query}`);
-    renderWordCard(nextWord, mode === 'random' ? `${labels[mode]} · ${nextWord.category_label}` : labels[mode]);
+    state.words = await fetchJson('/api/words');
+    buildRound();
   } catch (error) {
-    showError(error.message);
-  } finally {
-    setLoading(false);
+    feedback.className = 'feedback bad';
+    feedback.textContent = error.message;
   }
 }
 
-async function checkArticle(article) {
-  if (!current) return;
-  setLoading(true);
-  try {
-    const answer = await fetchJson('/api/articles/check', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ word_id: current.id, article }),
-    });
-    result.className = `result ${answer.correct ? 'ok' : 'bad'}`;
-    result.textContent = answer.correct ? `Correct: ${answer.full_word}` : `Expected: ${answer.full_word}`;
-  } catch (error) {
-    showError(error.message);
-  } finally {
-    setLoading(false);
-  }
+function setMode(mode) {
+  state.mode = mode;
+  state.round += 1;
+  buildRound();
+}
+
+function nextRound() {
+  state.round += 1;
+  buildRound();
+}
+
+function resetGame() {
+  state.score = 0;
+  state.round = 1;
+  buildRound();
 }
 
 function updateArticleInputState() {
@@ -135,34 +209,35 @@ async function addCustomWord(event) {
   event.preventDefault();
   const submitButton = wordForm.querySelector('button[type="submit"]');
   submitButton.disabled = true;
+  formResult.className = 'formResult';
+  formResult.textContent = '';
   try {
     const createdWord = await fetchJson('/api/words', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formPayload()),
     });
-    showFormStatus(`Added: ${createdWord.german}`, true);
+    state.words.push(createdWord);
+    formResult.className = 'formResult ok';
+    formResult.textContent = `Added: ${wordGerman(createdWord)} — ${createdWord.english}`;
     wordForm.reset();
     updateArticleInputState();
-    articleOptions.hidden = true;
-    showButton.hidden = false;
-    renderWordCard(createdWord, `Added word · ${createdWord.category_label}`);
+    state.current = createdWord;
+    state.round += 1;
+    buildRound();
   } catch (error) {
-    showFormStatus(error.message, false);
+    formResult.className = 'formResult bad';
+    formResult.textContent = error.message;
   } finally {
     submitButton.disabled = false;
   }
 }
 
-menuButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
-nextButton.addEventListener('click', loadNext);
-showButton.addEventListener('click', () => {
-  if (current && mode !== 'articles') translation.textContent = current.english;
-});
-articleOptions.addEventListener('click', (event) => {
-  if (event.target.dataset.article) checkArticle(event.target.dataset.article);
-});
+modeButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
+categoryFilter.addEventListener('change', nextRound);
+nextButton.addEventListener('click', nextRound);
+resetButton.addEventListener('click', resetGame);
 categoryInput.addEventListener('change', updateArticleInputState);
 wordForm.addEventListener('submit', addCustomWord);
 updateArticleInputState();
-setMode('random');
+loadWords();

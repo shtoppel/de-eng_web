@@ -4,12 +4,16 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 
 ## Features
 
+- Flag-backed practice arena with separate English, German, and article modes.
+- English mode shows a German prompt in the center and English answer choices around it.
+- German mode shows an English prompt in the center and German answer choices around it.
+- Article mode uses a German flag background and `der`, `die`, `das` answer choices.
 - Word categories for nouns, verbs, adjectives, and adverbs.
 - Random mode across the full vocabulary database.
 - Automatic SQLite database creation and seed data loading on application startup.
 - Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code.
 - German article practice for noun genders: `der`, `die`, and `das`.
-- Static frontend files separated from backend code.
+- Fully redesigned static frontend with flag backgrounds, animated answer arena, scoring, and round controls.
 - Custom word form and `POST /api/words` endpoint for extending the local vocabulary.
 - Health endpoint for container and deployment checks.
 - GitHub Actions CI for compile checks, tests, and Docker image builds.
