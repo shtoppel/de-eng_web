@@ -23,9 +23,12 @@ class DatabaseTests(unittest.TestCase):
 
     def test_category_filtering(self) -> None:
         nouns = fetch_words("noun", self.db_path)
-        self.assertEqual(12, len(nouns))
+        self.assertGreaterEqual(len(nouns), 40)
         self.assertTrue(all(word["category"] == "noun" for word in nouns))
         self.assertEqual(CATEGORIES["noun"], nouns[0]["category_label"])
+
+    def test_seed_database_is_large_enough_for_hundred_word_deck(self) -> None:
+        self.assertGreaterEqual(len(fetch_words(db_path=self.db_path)), 100)
 
     def test_unknown_category_is_rejected(self) -> None:
         with self.assertRaises(ValueError):
@@ -50,23 +53,23 @@ class DatabaseTests(unittest.TestCase):
         created = add_word(
             {
                 "category": "noun",
-                "german": "Tisch",
-                "english": "table",
-                "article": "der",
-                "example": "Der Tisch ist rund.",
+                "german": "Flugzeug",
+                "english": "airplane",
+                "article": "das",
+                "example": "Das Flugzeug ist schnell.",
             },
             self.db_path,
         )
-        self.assertEqual("Tisch", created["german"])
-        self.assertEqual("der", created["article"])
+        self.assertEqual("Flugzeug", created["german"])
+        self.assertEqual("das", created["article"])
 
     def test_duplicate_custom_word_is_rejected(self) -> None:
         payload = {
             "category": "verb",
-            "german": "arbeiten",
-            "english": "to work",
+            "german": "programmieren",
+            "english": "to program",
             "article": None,
-            "example": "Wir arbeiten heute.",
+            "example": "Wir programmieren heute.",
         }
         add_word(payload, self.db_path)
         with self.assertRaises(ValueError):

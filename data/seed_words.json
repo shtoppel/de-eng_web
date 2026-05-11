@@ -1,40 +1,1157 @@
 [
-  {"category": "noun", "german": "Haus", "english": "house", "article": "das", "example": "Ich wohne in einem großen Haus."},
-  {"category": "noun", "german": "Zeit", "english": "time", "article": "die", "example": "Wir haben heute wenig Zeit."},
-  {"category": "noun", "german": "Mensch", "english": "person", "article": "der", "example": "Jeder Mensch lernt anders."},
-  {"category": "noun", "german": "Stadt", "english": "city", "article": "die", "example": "Berlin ist eine große Stadt."},
-  {"category": "noun", "german": "Kind", "english": "child", "article": "das", "example": "Das Kind spielt im Garten."},
-  {"category": "noun", "german": "Tag", "english": "day", "article": "der", "example": "Heute ist ein schöner Tag."},
-  {"category": "noun", "german": "Arbeit", "english": "work", "article": "die", "example": "Die Arbeit beginnt um neun Uhr."},
-  {"category": "noun", "german": "Buch", "english": "book", "article": "das", "example": "Das Buch liegt auf dem Tisch."},
-  {"category": "noun", "german": "Freund", "english": "friend", "article": "der", "example": "Mein Freund kommt aus Hamburg."},
-  {"category": "noun", "german": "Sprache", "english": "language", "article": "die", "example": "Deutsch ist eine schöne Sprache."},
-  {"category": "noun", "german": "Wasser", "english": "water", "article": "das", "example": "Das Wasser ist kalt."},
-  {"category": "noun", "german": "Weg", "english": "way", "article": "der", "example": "Der Weg zum Bahnhof ist kurz."},
-  {"category": "verb", "german": "sein", "english": "to be", "article": null, "example": "Ich bin heute zu Hause."},
-  {"category": "verb", "german": "haben", "english": "to have", "article": null, "example": "Wir haben eine Frage."},
-  {"category": "verb", "german": "machen", "english": "to do / make", "article": null, "example": "Sie macht ihre Hausaufgaben."},
-  {"category": "verb", "german": "gehen", "english": "to go", "article": null, "example": "Er geht jeden Morgen zur Schule."},
-  {"category": "verb", "german": "kommen", "english": "to come", "article": null, "example": "Kommst du heute Abend?"},
-  {"category": "verb", "german": "sehen", "english": "to see", "article": null, "example": "Ich sehe den Hund."},
-  {"category": "verb", "german": "sprechen", "english": "to speak", "article": null, "example": "Wir sprechen Deutsch und Englisch."},
-  {"category": "verb", "german": "lernen", "english": "to learn", "article": null, "example": "Sie lernt neue Wörter."},
-  {"category": "verb", "german": "finden", "english": "to find", "article": null, "example": "Ich finde die Lösung."},
-  {"category": "verb", "german": "geben", "english": "to give", "article": null, "example": "Er gibt mir das Buch."},
-  {"category": "adjective", "german": "gut", "english": "good", "article": null, "example": "Das ist eine gute Idee."},
-  {"category": "adjective", "german": "neu", "english": "new", "article": null, "example": "Ich kaufe ein neues Handy."},
-  {"category": "adjective", "german": "alt", "english": "old", "article": null, "example": "Das alte Auto fährt noch."},
-  {"category": "adjective", "german": "klein", "english": "small", "article": null, "example": "Die kleine Katze schläft."},
-  {"category": "adjective", "german": "groß", "english": "big / tall", "article": null, "example": "Der große Baum steht im Park."},
-  {"category": "adjective", "german": "wichtig", "english": "important", "article": null, "example": "Diese Regel ist wichtig."},
-  {"category": "adjective", "german": "schnell", "english": "fast", "article": null, "example": "Der Zug ist sehr schnell."},
-  {"category": "adjective", "german": "schön", "english": "beautiful", "article": null, "example": "Wir haben schönes Wetter."},
-  {"category": "adverb", "german": "heute", "english": "today", "article": null, "example": "Heute lernen wir Artikel."},
-  {"category": "adverb", "german": "morgen", "english": "tomorrow", "article": null, "example": "Morgen fahren wir nach Köln."},
-  {"category": "adverb", "german": "gern", "english": "gladly / like to", "article": null, "example": "Ich trinke gern Kaffee."},
-  {"category": "adverb", "german": "oft", "english": "often", "article": null, "example": "Wir üben oft zusammen."},
-  {"category": "adverb", "german": "immer", "english": "always", "article": null, "example": "Sie ist immer pünktlich."},
-  {"category": "adverb", "german": "nie", "english": "never", "article": null, "example": "Er kommt nie zu spät."},
-  {"category": "adverb", "german": "hier", "english": "here", "article": null, "example": "Bitte warten Sie hier."},
-  {"category": "adverb", "german": "dort", "english": "there", "article": null, "example": "Dort ist der Eingang."}
+  {
+    "category": "noun",
+    "german": "Haus",
+    "english": "house",
+    "article": "das",
+    "example": "Das Haus ist groß."
+  },
+  {
+    "category": "noun",
+    "german": "Zeit",
+    "english": "time",
+    "article": "die",
+    "example": "Die Zeit vergeht schnell."
+  },
+  {
+    "category": "noun",
+    "german": "Mensch",
+    "english": "person",
+    "article": "der",
+    "example": "Der Mensch lernt jeden Tag."
+  },
+  {
+    "category": "noun",
+    "german": "Stadt",
+    "english": "city",
+    "article": "die",
+    "example": "Die Stadt ist laut."
+  },
+  {
+    "category": "noun",
+    "german": "Kind",
+    "english": "child",
+    "article": "das",
+    "example": "Das Kind spielt draußen."
+  },
+  {
+    "category": "noun",
+    "german": "Tag",
+    "english": "day",
+    "article": "der",
+    "example": "Der Tag beginnt früh."
+  },
+  {
+    "category": "noun",
+    "german": "Arbeit",
+    "english": "work",
+    "article": "die",
+    "example": "Die Arbeit ist wichtig."
+  },
+  {
+    "category": "noun",
+    "german": "Buch",
+    "english": "book",
+    "article": "das",
+    "example": "Das Buch liegt hier."
+  },
+  {
+    "category": "noun",
+    "german": "Freund",
+    "english": "friend",
+    "article": "der",
+    "example": "Der Freund hilft mir."
+  },
+  {
+    "category": "noun",
+    "german": "Sprache",
+    "english": "language",
+    "article": "die",
+    "example": "Die Sprache klingt schön."
+  },
+  {
+    "category": "noun",
+    "german": "Wasser",
+    "english": "water",
+    "article": "das",
+    "example": "Das Wasser ist frisch."
+  },
+  {
+    "category": "noun",
+    "german": "Weg",
+    "english": "way",
+    "article": "der",
+    "example": "Der Weg ist kurz."
+  },
+  {
+    "category": "noun",
+    "german": "Tisch",
+    "english": "table",
+    "article": "der",
+    "example": "Der Tisch steht am Fenster."
+  },
+  {
+    "category": "noun",
+    "german": "Lampe",
+    "english": "lamp",
+    "article": "die",
+    "example": "Die Lampe ist hell."
+  },
+  {
+    "category": "noun",
+    "german": "Auto",
+    "english": "car",
+    "article": "das",
+    "example": "Das Auto fährt schnell."
+  },
+  {
+    "category": "noun",
+    "german": "Zug",
+    "english": "train",
+    "article": "der",
+    "example": "Der Zug kommt pünktlich."
+  },
+  {
+    "category": "noun",
+    "german": "Frage",
+    "english": "question",
+    "article": "die",
+    "example": "Die Frage ist einfach."
+  },
+  {
+    "category": "noun",
+    "german": "Problem",
+    "english": "problem",
+    "article": "das",
+    "example": "Das Problem ist gelöst."
+  },
+  {
+    "category": "noun",
+    "german": "Computer",
+    "english": "computer",
+    "article": "der",
+    "example": "Der Computer ist neu."
+  },
+  {
+    "category": "noun",
+    "german": "Tür",
+    "english": "door",
+    "article": "die",
+    "example": "Die Tür ist offen."
+  },
+  {
+    "category": "noun",
+    "german": "Fenster",
+    "english": "window",
+    "article": "das",
+    "example": "Das Fenster ist sauber."
+  },
+  {
+    "category": "noun",
+    "german": "Garten",
+    "english": "garden",
+    "article": "der",
+    "example": "Der Garten ist grün."
+  },
+  {
+    "category": "noun",
+    "german": "Schule",
+    "english": "school",
+    "article": "die",
+    "example": "Die Schule beginnt um acht."
+  },
+  {
+    "category": "noun",
+    "german": "Essen",
+    "english": "food",
+    "article": "das",
+    "example": "Das Essen schmeckt gut."
+  },
+  {
+    "category": "noun",
+    "german": "Kaffee",
+    "english": "coffee",
+    "article": "der",
+    "example": "Der Kaffee ist heiß."
+  },
+  {
+    "category": "noun",
+    "german": "Milch",
+    "english": "milk",
+    "article": "die",
+    "example": "Die Milch steht im Kühlschrank."
+  },
+  {
+    "category": "noun",
+    "german": "Brot",
+    "english": "bread",
+    "article": "das",
+    "example": "Das Brot ist frisch."
+  },
+  {
+    "category": "noun",
+    "german": "Apfel",
+    "english": "apple",
+    "article": "der",
+    "example": "Der Apfel ist rot."
+  },
+  {
+    "category": "noun",
+    "german": "Banane",
+    "english": "banana",
+    "article": "die",
+    "example": "Die Banane ist gelb."
+  },
+  {
+    "category": "noun",
+    "german": "Telefon",
+    "english": "phone",
+    "article": "das",
+    "example": "Das Telefon klingelt."
+  },
+  {
+    "category": "noun",
+    "german": "Film",
+    "english": "movie",
+    "article": "der",
+    "example": "Der Film ist spannend."
+  },
+  {
+    "category": "noun",
+    "german": "Musik",
+    "english": "music",
+    "article": "die",
+    "example": "Die Musik ist ruhig."
+  },
+  {
+    "category": "noun",
+    "german": "Bild",
+    "english": "picture",
+    "article": "das",
+    "example": "Das Bild hängt an der Wand."
+  },
+  {
+    "category": "noun",
+    "german": "Hund",
+    "english": "dog",
+    "article": "der",
+    "example": "Der Hund schläft."
+  },
+  {
+    "category": "noun",
+    "german": "Katze",
+    "english": "cat",
+    "article": "die",
+    "example": "Die Katze springt."
+  },
+  {
+    "category": "noun",
+    "german": "Pferd",
+    "english": "horse",
+    "article": "das",
+    "example": "Das Pferd läuft."
+  },
+  {
+    "category": "noun",
+    "german": "Kopf",
+    "english": "head",
+    "article": "der",
+    "example": "Der Kopf tut weh."
+  },
+  {
+    "category": "noun",
+    "german": "Hand",
+    "english": "hand",
+    "article": "die",
+    "example": "Die Hand ist warm."
+  },
+  {
+    "category": "noun",
+    "german": "Auge",
+    "english": "eye",
+    "article": "das",
+    "example": "Das Auge ist blau."
+  },
+  {
+    "category": "noun",
+    "german": "Name",
+    "english": "name",
+    "article": "der",
+    "example": "Der Name ist bekannt."
+  },
+  {
+    "category": "noun",
+    "german": "Nummer",
+    "english": "number",
+    "article": "die",
+    "example": "Die Nummer ist falsch."
+  },
+  {
+    "category": "noun",
+    "german": "Jahr",
+    "english": "year",
+    "article": "das",
+    "example": "Das Jahr ist lang."
+  },
+  {
+    "category": "noun",
+    "german": "Monat",
+    "english": "month",
+    "article": "der",
+    "example": "Der Monat endet bald."
+  },
+  {
+    "category": "noun",
+    "german": "Woche",
+    "english": "week",
+    "article": "die",
+    "example": "Die Woche war gut."
+  },
+  {
+    "category": "noun",
+    "german": "Zimmer",
+    "english": "room",
+    "article": "das",
+    "example": "Das Zimmer ist klein."
+  },
+  {
+    "category": "verb",
+    "german": "sein",
+    "english": "to be",
+    "article": null,
+    "example": "Ich bin zu Hause."
+  },
+  {
+    "category": "verb",
+    "german": "haben",
+    "english": "to have",
+    "article": null,
+    "example": "Wir haben Zeit."
+  },
+  {
+    "category": "verb",
+    "german": "machen",
+    "english": "to do",
+    "article": null,
+    "example": "Sie macht Sport."
+  },
+  {
+    "category": "verb",
+    "german": "gehen",
+    "english": "to go",
+    "article": null,
+    "example": "Er geht zur Schule."
+  },
+  {
+    "category": "verb",
+    "german": "kommen",
+    "english": "to come",
+    "article": null,
+    "example": "Sie kommt später."
+  },
+  {
+    "category": "verb",
+    "german": "sehen",
+    "english": "to see",
+    "article": null,
+    "example": "Ich sehe den Hund."
+  },
+  {
+    "category": "verb",
+    "german": "sprechen",
+    "english": "to speak",
+    "article": null,
+    "example": "Wir sprechen Deutsch."
+  },
+  {
+    "category": "verb",
+    "german": "lernen",
+    "english": "to learn",
+    "article": null,
+    "example": "Er lernt schnell."
+  },
+  {
+    "category": "verb",
+    "german": "finden",
+    "english": "to find",
+    "article": null,
+    "example": "Ich finde den Schlüssel."
+  },
+  {
+    "category": "verb",
+    "german": "geben",
+    "english": "to give",
+    "article": null,
+    "example": "Sie gibt mir ein Buch."
+  },
+  {
+    "category": "verb",
+    "german": "nehmen",
+    "english": "to take",
+    "article": null,
+    "example": "Er nimmt den Bus."
+  },
+  {
+    "category": "verb",
+    "german": "bringen",
+    "english": "to bring",
+    "article": null,
+    "example": "Ich bringe Kaffee."
+  },
+  {
+    "category": "verb",
+    "german": "fragen",
+    "english": "to ask",
+    "article": null,
+    "example": "Sie fragt den Lehrer."
+  },
+  {
+    "category": "verb",
+    "german": "antworten",
+    "english": "to answer",
+    "article": null,
+    "example": "Er antwortet sofort."
+  },
+  {
+    "category": "verb",
+    "german": "arbeiten",
+    "english": "to work",
+    "article": null,
+    "example": "Wir arbeiten zusammen."
+  },
+  {
+    "category": "verb",
+    "german": "wohnen",
+    "english": "to live",
+    "article": null,
+    "example": "Ich wohne in Berlin."
+  },
+  {
+    "category": "verb",
+    "german": "kaufen",
+    "english": "to buy",
+    "article": null,
+    "example": "Sie kauft Brot."
+  },
+  {
+    "category": "verb",
+    "german": "verkaufen",
+    "english": "to sell",
+    "article": null,
+    "example": "Er verkauft sein Auto."
+  },
+  {
+    "category": "verb",
+    "german": "bezahlen",
+    "english": "to pay",
+    "article": null,
+    "example": "Ich bezahle die Rechnung."
+  },
+  {
+    "category": "verb",
+    "german": "öffnen",
+    "english": "to open",
+    "article": null,
+    "example": "Bitte öffne die Tür."
+  },
+  {
+    "category": "verb",
+    "german": "schließen",
+    "english": "to close",
+    "article": null,
+    "example": "Sie schließt das Fenster."
+  },
+  {
+    "category": "verb",
+    "german": "lesen",
+    "english": "to read",
+    "article": null,
+    "example": "Er liest ein Buch."
+  },
+  {
+    "category": "verb",
+    "german": "schreiben",
+    "english": "to write",
+    "article": null,
+    "example": "Ich schreibe eine Nachricht."
+  },
+  {
+    "category": "verb",
+    "german": "hören",
+    "english": "to hear",
+    "article": null,
+    "example": "Wir hören Musik."
+  },
+  {
+    "category": "verb",
+    "german": "spielen",
+    "english": "to play",
+    "article": null,
+    "example": "Die Kinder spielen."
+  },
+  {
+    "category": "verb",
+    "german": "laufen",
+    "english": "to run",
+    "article": null,
+    "example": "Er läuft im Park."
+  },
+  {
+    "category": "verb",
+    "german": "fahren",
+    "english": "to drive",
+    "article": null,
+    "example": "Sie fährt nach Hause."
+  },
+  {
+    "category": "verb",
+    "german": "reisen",
+    "english": "to travel",
+    "article": null,
+    "example": "Wir reisen im Sommer."
+  },
+  {
+    "category": "verb",
+    "german": "kochen",
+    "english": "to cook",
+    "article": null,
+    "example": "Ich koche Suppe."
+  },
+  {
+    "category": "verb",
+    "german": "essen",
+    "english": "to eat",
+    "article": null,
+    "example": "Sie isst einen Apfel."
+  },
+  {
+    "category": "verb",
+    "german": "trinken",
+    "english": "to drink",
+    "article": null,
+    "example": "Er trinkt Wasser."
+  },
+  {
+    "category": "verb",
+    "german": "schlafen",
+    "english": "to sleep",
+    "article": null,
+    "example": "Das Kind schläft."
+  },
+  {
+    "category": "verb",
+    "german": "warten",
+    "english": "to wait",
+    "article": null,
+    "example": "Ich warte hier."
+  },
+  {
+    "category": "verb",
+    "german": "brauchen",
+    "english": "to need",
+    "article": null,
+    "example": "Wir brauchen Hilfe."
+  },
+  {
+    "category": "verb",
+    "german": "mögen",
+    "english": "to like",
+    "article": null,
+    "example": "Sie mag Kaffee."
+  },
+  {
+    "category": "verb",
+    "german": "lieben",
+    "english": "to love",
+    "article": null,
+    "example": "Er liebt Musik."
+  },
+  {
+    "category": "verb",
+    "german": "denken",
+    "english": "to think",
+    "article": null,
+    "example": "Ich denke oft daran."
+  },
+  {
+    "category": "verb",
+    "german": "verstehen",
+    "english": "to understand",
+    "article": null,
+    "example": "Wir verstehen die Aufgabe."
+  },
+  {
+    "category": "verb",
+    "german": "erklären",
+    "english": "to explain",
+    "article": null,
+    "example": "Sie erklärt die Regel."
+  },
+  {
+    "category": "verb",
+    "german": "verbessern",
+    "english": "to improve",
+    "article": null,
+    "example": "Wir verbessern den Text."
+  },
+  {
+    "category": "adjective",
+    "german": "gut",
+    "english": "good",
+    "article": null,
+    "example": "Das ist eine gute Idee."
+  },
+  {
+    "category": "adjective",
+    "german": "neu",
+    "english": "new",
+    "article": null,
+    "example": "Das neue Auto ist teuer."
+  },
+  {
+    "category": "adjective",
+    "german": "alt",
+    "english": "old",
+    "article": null,
+    "example": "Der alte Baum steht im Park."
+  },
+  {
+    "category": "adjective",
+    "german": "klein",
+    "english": "small",
+    "article": null,
+    "example": "Die kleine Katze schläft."
+  },
+  {
+    "category": "adjective",
+    "german": "groß",
+    "english": "big",
+    "article": null,
+    "example": "Das große Haus ist schön."
+  },
+  {
+    "category": "adjective",
+    "german": "wichtig",
+    "english": "important",
+    "article": null,
+    "example": "Diese Regel ist wichtig."
+  },
+  {
+    "category": "adjective",
+    "german": "schnell",
+    "english": "fast",
+    "article": null,
+    "example": "Der Zug ist schnell."
+  },
+  {
+    "category": "adjective",
+    "german": "schön",
+    "english": "beautiful",
+    "article": null,
+    "example": "Das Bild ist schön."
+  },
+  {
+    "category": "adjective",
+    "german": "schlecht",
+    "english": "bad",
+    "article": null,
+    "example": "Das Wetter ist schlecht."
+  },
+  {
+    "category": "adjective",
+    "german": "leicht",
+    "english": "easy",
+    "article": null,
+    "example": "Die Aufgabe ist leicht."
+  },
+  {
+    "category": "adjective",
+    "german": "schwer",
+    "english": "difficult",
+    "article": null,
+    "example": "Der Test ist schwer."
+  },
+  {
+    "category": "adjective",
+    "german": "teuer",
+    "english": "expensive",
+    "article": null,
+    "example": "Das Handy ist teuer."
+  },
+  {
+    "category": "adjective",
+    "german": "billig",
+    "english": "cheap",
+    "article": null,
+    "example": "Das Brot ist billig."
+  },
+  {
+    "category": "adjective",
+    "german": "kalt",
+    "english": "cold",
+    "article": null,
+    "example": "Das Wasser ist kalt."
+  },
+  {
+    "category": "adjective",
+    "german": "warm",
+    "english": "warm",
+    "article": null,
+    "example": "Der Tee ist warm."
+  },
+  {
+    "category": "adjective",
+    "german": "heiß",
+    "english": "hot",
+    "article": null,
+    "example": "Der Kaffee ist heiß."
+  },
+  {
+    "category": "adjective",
+    "german": "lang",
+    "english": "long",
+    "article": null,
+    "example": "Der Weg ist lang."
+  },
+  {
+    "category": "adjective",
+    "german": "kurz",
+    "english": "short",
+    "article": null,
+    "example": "Die Pause ist kurz."
+  },
+  {
+    "category": "adjective",
+    "german": "hell",
+    "english": "bright",
+    "article": null,
+    "example": "Das Zimmer ist hell."
+  },
+  {
+    "category": "adjective",
+    "german": "dunkel",
+    "english": "dark",
+    "article": null,
+    "example": "Der Raum ist dunkel."
+  },
+  {
+    "category": "adjective",
+    "german": "ruhig",
+    "english": "quiet",
+    "article": null,
+    "example": "Die Straße ist ruhig."
+  },
+  {
+    "category": "adjective",
+    "german": "laut",
+    "english": "loud",
+    "article": null,
+    "example": "Die Musik ist laut."
+  },
+  {
+    "category": "adjective",
+    "german": "freundlich",
+    "english": "friendly",
+    "article": null,
+    "example": "Der Mann ist freundlich."
+  },
+  {
+    "category": "adjective",
+    "german": "müde",
+    "english": "tired",
+    "article": null,
+    "example": "Ich bin müde."
+  },
+  {
+    "category": "adjective",
+    "german": "gesund",
+    "english": "healthy",
+    "article": null,
+    "example": "Das Essen ist gesund."
+  },
+  {
+    "category": "adjective",
+    "german": "krank",
+    "english": "sick",
+    "article": null,
+    "example": "Sie ist krank."
+  },
+  {
+    "category": "adjective",
+    "german": "stark",
+    "english": "strong",
+    "article": null,
+    "example": "Er ist stark."
+  },
+  {
+    "category": "adjective",
+    "german": "schwach",
+    "english": "weak",
+    "article": null,
+    "example": "Das Signal ist schwach."
+  },
+  {
+    "category": "adjective",
+    "german": "richtig",
+    "english": "correct",
+    "article": null,
+    "example": "Die Antwort ist richtig."
+  },
+  {
+    "category": "adjective",
+    "german": "falsch",
+    "english": "wrong",
+    "article": null,
+    "example": "Die Nummer ist falsch."
+  },
+  {
+    "category": "adjective",
+    "german": "frei",
+    "english": "free",
+    "article": null,
+    "example": "Der Platz ist frei."
+  },
+  {
+    "category": "adjective",
+    "german": "besetzt",
+    "english": "occupied",
+    "article": null,
+    "example": "Der Tisch ist besetzt."
+  },
+  {
+    "category": "adjective",
+    "german": "sauber",
+    "english": "clean",
+    "article": null,
+    "example": "Das Fenster ist sauber."
+  },
+  {
+    "category": "adjective",
+    "german": "schmutzig",
+    "english": "dirty",
+    "article": null,
+    "example": "Die Schuhe sind schmutzig."
+  },
+  {
+    "category": "adjective",
+    "german": "einfach",
+    "english": "simple",
+    "article": null,
+    "example": "Die Lösung ist einfach."
+  },
+  {
+    "category": "adjective",
+    "german": "kompliziert",
+    "english": "complicated",
+    "article": null,
+    "example": "Der Plan ist kompliziert."
+  },
+  {
+    "category": "adjective",
+    "german": "zuverlässig",
+    "english": "reliable",
+    "article": null,
+    "example": "Sie ist zuverlässig."
+  },
+  {
+    "category": "adjective",
+    "german": "gefährlich",
+    "english": "dangerous",
+    "article": null,
+    "example": "Der Weg ist gefährlich."
+  },
+  {
+    "category": "adjective",
+    "german": "nützlich",
+    "english": "useful",
+    "article": null,
+    "example": "Das Werkzeug ist nützlich."
+  },
+  {
+    "category": "adjective",
+    "german": "bekannt",
+    "english": "known",
+    "article": null,
+    "example": "Der Name ist bekannt."
+  },
+  {
+    "category": "adverb",
+    "german": "heute",
+    "english": "today",
+    "article": null,
+    "example": "Heute lernen wir Deutsch."
+  },
+  {
+    "category": "adverb",
+    "german": "morgen",
+    "english": "tomorrow",
+    "article": null,
+    "example": "Morgen fahren wir weg."
+  },
+  {
+    "category": "adverb",
+    "german": "gern",
+    "english": "gladly",
+    "article": null,
+    "example": "Ich helfe gern."
+  },
+  {
+    "category": "adverb",
+    "german": "oft",
+    "english": "often",
+    "article": null,
+    "example": "Wir üben oft."
+  },
+  {
+    "category": "adverb",
+    "german": "immer",
+    "english": "always",
+    "article": null,
+    "example": "Sie ist immer pünktlich."
+  },
+  {
+    "category": "adverb",
+    "german": "nie",
+    "english": "never",
+    "article": null,
+    "example": "Er kommt nie zu spät."
+  },
+  {
+    "category": "adverb",
+    "german": "hier",
+    "english": "here",
+    "article": null,
+    "example": "Bitte warte hier."
+  },
+  {
+    "category": "adverb",
+    "german": "dort",
+    "english": "there",
+    "article": null,
+    "example": "Dort ist der Eingang."
+  },
+  {
+    "category": "adverb",
+    "german": "jetzt",
+    "english": "now",
+    "article": null,
+    "example": "Komm bitte jetzt."
+  },
+  {
+    "category": "adverb",
+    "german": "später",
+    "english": "later",
+    "article": null,
+    "example": "Wir sprechen später."
+  },
+  {
+    "category": "adverb",
+    "german": "früh",
+    "english": "early",
+    "article": null,
+    "example": "Ich stehe früh auf."
+  },
+  {
+    "category": "adverb",
+    "german": "bald",
+    "english": "soon",
+    "article": null,
+    "example": "Der Zug kommt bald."
+  },
+  {
+    "category": "adverb",
+    "german": "schon",
+    "english": "already",
+    "article": null,
+    "example": "Sie ist schon da."
+  },
+  {
+    "category": "adverb",
+    "german": "noch",
+    "english": "still",
+    "article": null,
+    "example": "Ich warte noch."
+  },
+  {
+    "category": "adverb",
+    "german": "zusammen",
+    "english": "together",
+    "article": null,
+    "example": "Wir lernen zusammen."
+  },
+  {
+    "category": "adverb",
+    "german": "allein",
+    "english": "alone",
+    "article": null,
+    "example": "Er wohnt allein."
+  },
+  {
+    "category": "adverb",
+    "german": "vielleicht",
+    "english": "maybe",
+    "article": null,
+    "example": "Vielleicht regnet es."
+  },
+  {
+    "category": "adverb",
+    "german": "sicher",
+    "english": "certainly",
+    "article": null,
+    "example": "Das klappt sicher."
+  },
+  {
+    "category": "adverb",
+    "german": "wirklich",
+    "english": "really",
+    "article": null,
+    "example": "Das ist wirklich gut."
+  },
+  {
+    "category": "adverb",
+    "german": "fast",
+    "english": "almost",
+    "article": null,
+    "example": "Ich bin fast fertig."
+  },
+  {
+    "category": "adverb",
+    "german": "sehr",
+    "english": "very",
+    "article": null,
+    "example": "Das ist sehr wichtig."
+  },
+  {
+    "category": "adverb",
+    "german": "ziemlich",
+    "english": "quite",
+    "article": null,
+    "example": "Der Film ist ziemlich lang."
+  },
+  {
+    "category": "adverb",
+    "german": "besonders",
+    "english": "especially",
+    "article": null,
+    "example": "Das gefällt mir besonders."
+  },
+  {
+    "category": "adverb",
+    "german": "genug",
+    "english": "enough",
+    "article": null,
+    "example": "Wir haben genug Zeit."
+  },
+  {
+    "category": "adverb",
+    "german": "sofort",
+    "english": "immediately",
+    "article": null,
+    "example": "Komm sofort zurück."
+  },
+  {
+    "category": "adverb",
+    "german": "langsam",
+    "english": "slowly",
+    "article": null,
+    "example": "Bitte sprich langsam."
+  },
+  {
+    "category": "adverb",
+    "german": "schnell",
+    "english": "quickly",
+    "article": null,
+    "example": "Er läuft schnell."
+  },
+  {
+    "category": "adverb",
+    "german": "leise",
+    "english": "quietly",
+    "article": null,
+    "example": "Sie spricht leise."
+  },
+  {
+    "category": "adverb",
+    "german": "laut",
+    "english": "loudly",
+    "article": null,
+    "example": "Er lacht laut."
+  },
+  {
+    "category": "adverb",
+    "german": "gerade",
+    "english": "currently",
+    "article": null,
+    "example": "Ich arbeite gerade."
+  },
+  {
+    "category": "adverb",
+    "german": "manchmal",
+    "english": "sometimes",
+    "article": null,
+    "example": "Manchmal lese ich abends."
+  },
+  {
+    "category": "adverb",
+    "german": "meistens",
+    "english": "mostly",
+    "article": null,
+    "example": "Meistens trinke ich Tee."
+  },
+  {
+    "category": "adverb",
+    "german": "überall",
+    "english": "everywhere",
+    "article": null,
+    "example": "Überall liegen Bücher."
+  },
+  {
+    "category": "adverb",
+    "german": "nirgendwo",
+    "english": "nowhere",
+    "article": null,
+    "example": "Ich finde es nirgendwo."
+  },
+  {
+    "category": "adverb",
+    "german": "links",
+    "english": "left",
+    "article": null,
+    "example": "Biege links ab."
+  },
+  {
+    "category": "adverb",
+    "german": "rechts",
+    "english": "right",
+    "article": null,
+    "example": "Gehe rechts weiter."
+  },
+  {
+    "category": "adverb",
+    "german": "oben",
+    "english": "above",
+    "article": null,
+    "example": "Das Bild hängt oben."
+  },
+  {
+    "category": "adverb",
+    "german": "unten",
+    "english": "below",
+    "article": null,
+    "example": "Die Tasche steht unten."
+  },
+  {
+    "category": "adverb",
+    "german": "drinnen",
+    "english": "inside",
+    "article": null,
+    "example": "Wir bleiben drinnen."
+  },
+  {
+    "category": "adverb",
+    "german": "draußen",
+    "english": "outside",
+    "article": null,
+    "example": "Die Kinder spielen draußen."
+  }
 ]

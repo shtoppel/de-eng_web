@@ -80,20 +80,23 @@ class ServerTests(unittest.TestCase):
         self.assertIn("Article mode", body)
         self.assertIn("Multichoice mode", body)
         self.assertIn("Cards mode", body)
+        self.assertIn("10 words", body)
+        self.assertIn("100 words", body)
+        self.assertIn("Infinite mode", body)
 
     def test_custom_word_can_be_added(self) -> None:
         status, payload = self.post_json(
             "/api/words",
             {
                 "category": "adverb",
-                "german": "sofort",
-                "english": "immediately",
+                "german": "neulich",
+                "english": "recently",
                 "article": None,
-                "example": "Wir starten sofort.",
+                "example": "Neulich war ich dort.",
             },
         )
         self.assertEqual(201, status)
-        self.assertEqual("sofort", payload["german"])
+        self.assertEqual("neulich", payload["german"])
         self.assertEqual("Adverbs", payload["category_label"])
 
 

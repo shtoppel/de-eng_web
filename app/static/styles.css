@@ -54,7 +54,7 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   padding: 14px;
   backdrop-filter: blur(14px);
 }
-.styleMenuTitle { margin: 0 0 12px; color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
+.styleMenuTitle, .deckSizeLabel { margin: 0 0 12px; color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
 .styleButton {
   width: 100%;
   min-height: 52px;
@@ -66,6 +66,9 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   font-weight: 900;
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
+.deckSizeLabel { display: block; margin: 18px 0 8px; }
+.deckSizeSelect { width: 100%; min-height: 48px; border: 1px solid rgba(255,255,255,.28); border-radius: 16px; background: rgba(255,255,255,.14); color: white; padding: 0 12px; font-weight: 900; }
+.deckSizeSelect option { color: #0f172a; }
 .heroStage {
   position: relative;
   min-height: 64vh;
@@ -187,6 +190,8 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   .styleMenu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .styleMenuTitle { grid-column: 1 / -1; margin-bottom: 0; }
   .styleButton { margin-top: 0; }
+  .deckSizeLabel { grid-column: 1 / -1; margin: 0; }
+  .deckSizeSelect { grid-column: 1 / -1; }
   .heroStage { min-height: 72vh; }
   .promptCard { top: 48%; }
   .answerButton { min-width: 124px; max-width: 42vw; padding: 11px 12px; }

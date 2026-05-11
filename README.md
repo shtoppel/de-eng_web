@@ -5,8 +5,8 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 ## Features
 
 - Flag-backed practice arena with separate English, German, and article modes.
-- Words are not repeated within a mode/category deck until the score is reset.
-- Left-side training style submenu for multichoice mode and cards mode.
+- Words are not repeated within a mode/category deck until the score is reset; infinite mode reshuffles only after the full deck has been shown.
+- Left-side training style submenu for multichoice mode and cards mode, plus deck-size choices for 10, 30, 100, or infinite words.
 - Multichoice answers automatically advance to the next word after two seconds.
 - Cards mode accepts typed translations, flashes the prompt card green or red, and advances automatically without revealing wrong answers.
 - English mode shows a German prompt in the center and English answer choices around it.
@@ -15,7 +15,7 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 - Word categories for nouns, verbs, adjectives, and adverbs.
 - Random mode across the full vocabulary database.
 - Automatic SQLite database creation and seed data loading on application startup.
-- Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code.
+- Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code; the default seed now includes 165 words.
 - German article practice for noun genders: `der`, `die`, and `das`.
 - Fully redesigned static frontend with flag backgrounds, animated answer arena, scoring, and round controls.
 - Custom word form and `POST /api/words` endpoint for extending the local vocabulary.

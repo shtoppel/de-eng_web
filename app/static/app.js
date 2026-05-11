@@ -2,6 +2,7 @@ const stage = document.querySelector('#stage');
 const modeButtons = [...document.querySelectorAll('.modeButton')];
 const styleButtons = [...document.querySelectorAll('.styleButton')];
 const categoryFilter = document.querySelector('#categoryFilter');
+const deckSizeSelect = document.querySelector('#deckSizeSelect');
 const scoreElement = document.querySelector('#score');
 const roundElement = document.querySelector('#round');
 const promptCard = document.querySelector('#promptCard');
@@ -36,7 +37,7 @@ const state = {
   selected: null,
   score: 0,
   round: 1,
-  usedByDeck: new Map(),
+  sessionsByDeck: new Map(),
   advanceTimer: null,
 };
 
@@ -64,9 +65,18 @@ async function fetchJson(url, options) {
   return payload;
 }
 
+function selectedDeckSize() {
+  return deckSizeSelect.value;
+}
+
+function deckLimit() {
+  const size = selectedDeckSize();
+  return size === 'infinite' ? Infinity : Number(size);
+}
+
 function deckKey() {
   const category = state.mode === 'articles' ? 'noun' : categoryFilter.value || 'all';
-  return `${state.mode}:${category}`;
+  return `${state.mode}:${category}:${selectedDeckSize()}`;
 }
 
 function clearAdvanceTimer() {
@@ -96,22 +106,33 @@ function currentPool() {
   return filtered.length ? filtered : state.words;
 }
 
-function usedSetForCurrentDeck() {
+function createDeckSession() {
+  const pool = shuffle(currentPool());
+  const limit = deckLimit();
+  const deck = Number.isFinite(limit) ? pool.slice(0, limit) : pool;
+  return { deck, index: 0 };
+}
+
+function sessionForCurrentDeck() {
   const key = deckKey();
-  if (!state.usedByDeck.has(key)) {
-    state.usedByDeck.set(key, new Set());
+  if (!state.sessionsByDeck.has(key)) {
+    state.sessionsByDeck.set(key, createDeckSession());
   }
-  return state.usedByDeck.get(key);
+  return state.sessionsByDeck.get(key);
 }
 
 function chooseUnseenWord() {
-  const pool = currentPool();
-  const used = usedSetForCurrentDeck();
-  const available = pool.filter((word) => !used.has(word.id));
-  if (!available.length) return null;
+  let session = sessionForCurrentDeck();
+  if (!session.deck.length) return null;
 
-  const word = available[Math.floor(Math.random() * available.length)];
-  used.add(word.id);
+  if (session.index >= session.deck.length) {
+    if (selectedDeckSize() !== 'infinite') return null;
+    session = createDeckSession();
+    state.sessionsByDeck.set(deckKey(), session);
+  }
+
+  const word = session.deck[session.index];
+  session.index += 1;
   return word;
 }
 
@@ -126,7 +147,7 @@ function showDeckComplete() {
   promptCard.classList.remove('correct', 'wrong');
   promptLabel.textContent = 'Deck complete';
   promptWord.textContent = 'Great job!';
-  promptHint.textContent = 'You have seen every word in this mode. Reset the score to start again.';
+  promptHint.textContent = 'You have seen every word in this deck. Reset the score or choose infinite mode to continue.';
   feedback.className = 'feedback ok';
   feedback.textContent = 'No repeats before reset: this deck is complete.';
   updateChrome();
@@ -328,7 +349,7 @@ function resetGame() {
   clearAdvanceTimer();
   state.score = 0;
   state.round = 1;
-  state.usedByDeck.clear();
+  state.sessionsByDeck.clear();
   buildRound();
 }
 
@@ -379,6 +400,7 @@ async function addCustomWord(event) {
 modeButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
 styleButtons.forEach((button) => button.addEventListener('click', () => setAnswerStyle(button.dataset.style)));
 categoryFilter.addEventListener('change', nextRound);
+deckSizeSelect.addEventListener('change', resetGame);
 nextButton.addEventListener('click', nextRound);
 resetButton.addEventListener('click', resetGame);
 cardAnswerForm.addEventListener('submit', checkCardAnswer);
