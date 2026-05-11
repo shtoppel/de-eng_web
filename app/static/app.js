@@ -2,6 +2,7 @@ const stage = document.querySelector('#stage');
 const modeButtons = [...document.querySelectorAll('.modeButton')];
 const styleButtons = [...document.querySelectorAll('.styleButton')];
 const categoryFilter = document.querySelector('#categoryFilter');
+const categoryFilterOptions = [...categoryFilter.options];
 const deckSizeSelect = document.querySelector('#deckSizeSelect');
 const scoreElement = document.querySelector('#score');
 const answeredElement = document.querySelector('#answered');
@@ -61,6 +62,23 @@ function sampleOptions(correct, candidates, limit) {
 function currentCategoryWords() {
   if (!state.current) return [];
   return state.words.filter((word) => word.category === state.current.category);
+}
+
+function countWordsByCategory() {
+  return state.words.reduce((counts, word) => {
+    counts[word.category] = (counts[word.category] || 0) + 1;
+    return counts;
+  }, {});
+}
+
+function updateCategoryFilterCounts() {
+  const counts = countWordsByCategory();
+  categoryFilterOptions.forEach((option) => {
+    const label = option.dataset.label || option.textContent.replace(/\s+\(\d+\)$/, '');
+    option.dataset.label = label;
+    const count = option.value ? counts[option.value] || 0 : state.words.length;
+    option.textContent = `${label} (${count})`;
+  });
 }
 
 function normalizeAnswer(value) {
@@ -336,6 +354,7 @@ function renderNeurons() {
 async function loadWords() {
   try {
     state.words = await fetchJson('/api/words');
+    updateCategoryFilterCounts();
     buildRound();
   } catch (error) {
     feedback.className = 'feedback bad';
@@ -408,6 +427,7 @@ async function addCustomWord(event) {
       body: JSON.stringify(formPayload()),
     });
     state.words.push(createdWord);
+    updateCategoryFilterCounts();
     formResult.className = 'formResult ok';
     formResult.textContent = `Added: ${wordGerman(createdWord)} — ${createdWord.english}`;
     wordForm.reset();

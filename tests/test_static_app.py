@@ -67,6 +67,14 @@ class StaticAppTests(unittest.TestCase):
             elements.get('#categoryFilter').value = '';
             elements.get('#categoryInput').value = 'noun';
 
+            elements.get('#categoryFilter').options = [
+              Object.assign(makeElement({{ label: 'All categories' }}), {{ value: '', textContent: 'All categories' }}),
+              Object.assign(makeElement({{ label: 'Nouns' }}), {{ value: 'noun', textContent: 'Nouns' }}),
+              Object.assign(makeElement({{ label: 'Verbs' }}), {{ value: 'verb', textContent: 'Verbs' }}),
+              Object.assign(makeElement({{ label: 'Adjectives' }}), {{ value: 'adjective', textContent: 'Adjectives' }}),
+              Object.assign(makeElement({{ label: 'Adverbs' }}), {{ value: 'adverb', textContent: 'Adverbs' }}),
+            ];
+
             const modeButtons = [makeElement({{ mode: 'english' }}), makeElement({{ mode: 'german' }}), makeElement({{ mode: 'articles' }})];
             const styleButtons = [makeElement({{ style: 'multi' }}), makeElement({{ style: 'cards' }})];
 
@@ -98,6 +106,12 @@ class StaticAppTests(unittest.TestCase):
 
             vm.runInNewContext(appSource, context);
             setImmediate(() => {{
+              const categoryLabels = elements.get('#categoryFilter').options.map((option) => option.textContent);
+              const expectedCategoryLabels = ['All categories (4)', 'Nouns (3)', 'Verbs (1)', 'Adjectives (0)', 'Adverbs (0)'];
+              if (categoryLabels.join('|') !== expectedCategoryLabels.join('|')) {{
+                throw new Error(`Expected category counts, got ${{categoryLabels.join('|')}}`);
+              }}
+
               styleButtons[1].click();
               if (elements.get('#cardAnswerForm').hidden) throw new Error('Cards form was not shown before switching modes');
 
