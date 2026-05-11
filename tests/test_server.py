@@ -51,6 +51,16 @@ class ServerTests(unittest.TestCase):
         with urllib.request.urlopen(f"{self.base_url}{path}", timeout=3) as response:
             return json.loads(response.read().decode("utf-8"))
 
+    def post_json(self, path: str, payload: dict) -> tuple[int, dict]:
+        request = urllib.request.Request(
+            f"{self.base_url}{path}",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        with urllib.request.urlopen(request, timeout=3) as response:
+            return response.status, json.loads(response.read().decode("utf-8"))
+
     def test_health_endpoint(self) -> None:
         self.assertEqual({"status": "ok"}, self.get_json("/health"))
 
@@ -66,6 +76,21 @@ class ServerTests(unittest.TestCase):
         with urllib.request.urlopen(self.base_url, timeout=3) as response:
             body = response.read().decode("utf-8")
         self.assertIn("DE-ENG Vocabulary Trainer", body)
+
+    def test_custom_word_can_be_added(self) -> None:
+        status, payload = self.post_json(
+            "/api/words",
+            {
+                "category": "adverb",
+                "german": "sofort",
+                "english": "immediately",
+                "article": None,
+                "example": "Wir starten sofort.",
+            },
+        )
+        self.assertEqual(201, status)
+        self.assertEqual("sofort", payload["german"])
+        self.assertEqual("Adverbs", payload["category_label"])
 
 
 if __name__ == "__main__":

@@ -36,6 +36,43 @@
         <button class="secondary" id="showButton">Show translation</button>
       </div>
     </section>
+
+    <section class="panel">
+      <h2>Add a custom word</h2>
+      <form id="wordForm" class="word-form">
+        <label>
+          Category
+          <select id="categoryInput" name="category" required>
+            <option value="noun">Noun</option>
+            <option value="verb">Verb</option>
+            <option value="adjective">Adjective</option>
+            <option value="adverb">Adverb</option>
+          </select>
+        </label>
+        <label>
+          Article for nouns
+          <select id="articleInput" name="article" required>
+            <option value="der">der</option>
+            <option value="die">die</option>
+            <option value="das">das</option>
+          </select>
+        </label>
+        <label>
+          German
+          <input name="german" autocomplete="off" required />
+        </label>
+        <label>
+          English
+          <input name="english" autocomplete="off" required />
+        </label>
+        <label class="full-width">
+          Example sentence
+          <input name="example" autocomplete="off" required />
+        </label>
+        <button class="primary" type="submit">Add word</button>
+      </form>
+      <p class="result" id="formResult" aria-live="polite"></p>
+    </section>
   </main>
   <script src="/static/app.js"></script>
 </body>

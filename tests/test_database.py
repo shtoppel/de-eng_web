@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from app.database import article_question, check_article, fetch_words, init_db, random_word
+from app.database import add_word, article_question, check_article, fetch_words, init_db, random_word
 from app.vocabulary import ARTICLES, CATEGORIES, load_seed_words
 
 
@@ -45,6 +45,45 @@ class DatabaseTests(unittest.TestCase):
         question = article_question(self.db_path)
         with self.assertRaises(ValueError):
             check_article(int(question["id"]), "the", self.db_path)
+
+    def test_add_custom_word(self) -> None:
+        created = add_word(
+            {
+                "category": "noun",
+                "german": "Tisch",
+                "english": "table",
+                "article": "der",
+                "example": "Der Tisch ist rund.",
+            },
+            self.db_path,
+        )
+        self.assertEqual("Tisch", created["german"])
+        self.assertEqual("der", created["article"])
+
+    def test_duplicate_custom_word_is_rejected(self) -> None:
+        payload = {
+            "category": "verb",
+            "german": "arbeiten",
+            "english": "to work",
+            "article": None,
+            "example": "Wir arbeiten heute.",
+        }
+        add_word(payload, self.db_path)
+        with self.assertRaises(ValueError):
+            add_word(payload, self.db_path)
+
+    def test_non_noun_article_is_rejected(self) -> None:
+        with self.assertRaises(ValueError):
+            add_word(
+                {
+                    "category": "verb",
+                    "german": "laufen",
+                    "english": "to run",
+                    "article": "der",
+                    "example": "Ich laufe schnell.",
+                },
+                self.db_path,
+            )
 
 
 if __name__ == "__main__":

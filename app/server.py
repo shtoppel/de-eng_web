@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from app.config import HOST, PORT, STATIC_DIR
-from app.database import article_question, check_article, fetch_words, init_db, random_word
+from app.database import add_word, article_question, check_article, fetch_words, init_db, random_word
 from app.vocabulary import CATEGORIES
 
 
@@ -39,12 +39,15 @@ class VocabularyHandler(BaseHTTPRequestHandler):
             self.send_error_json(HTTPStatus.NOT_FOUND, str(error))
 
     def do_POST(self) -> None:
-        if urlparse(self.path).path != "/api/articles/check":
-            self.send_error_json(HTTPStatus.NOT_FOUND, "Not found")
-            return
+        path = urlparse(self.path).path
         try:
             payload = self.read_json()
-            self.send_json(check_article(int(payload["word_id"]), str(payload["article"])))
+            if path == "/api/articles/check":
+                self.send_json(check_article(int(payload["word_id"]), str(payload["article"])))
+            elif path == "/api/words":
+                self.send_json(add_word(payload), HTTPStatus.CREATED)
+            else:
+                self.send_error_json(HTTPStatus.NOT_FOUND, "Not found")
         except (KeyError, TypeError, ValueError, json.JSONDecodeError) as error:
             self.send_error_json(HTTPStatus.BAD_REQUEST, str(error))
         except LookupError as error:

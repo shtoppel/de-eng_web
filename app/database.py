@@ -4,7 +4,7 @@ import random
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
-from typing import Iterator
+from typing import Iterator, Mapping
 
 from app.config import DB_PATH
 from app.vocabulary import ARTICLES, CATEGORIES, load_seed_words
@@ -72,6 +72,59 @@ def fetch_words(category: str | None = None, db_path: Path | None = None) -> lis
     with db(db_path) as connection:
         rows = connection.execute(query, params).fetchall()
     return [row_to_word(row) for row in rows]
+
+
+def normalize_word_payload(payload: Mapping[str, object]) -> dict[str, str | None]:
+    category = str(payload.get("category", "")).strip()
+    german = str(payload.get("german", "")).strip()
+    english = str(payload.get("english", "")).strip()
+    example = str(payload.get("example", "")).strip()
+    raw_article = payload.get("article")
+    article = str(raw_article).lower().strip() if raw_article not in (None, "") else None
+
+    if category not in CATEGORIES:
+        raise ValueError("Unknown category")
+    for field_name, value in {"german": german, "english": english, "example": example}.items():
+        if not value:
+            raise ValueError(f"{field_name} is required")
+    if category == "noun":
+        if article not in ARTICLES:
+            raise ValueError("Nouns require der, die, or das")
+    elif article is not None:
+        raise ValueError("Only nouns may have articles")
+
+    return {
+        "category": category,
+        "german": german,
+        "english": english,
+        "article": article,
+        "example": example,
+    }
+
+
+def get_word(word_id: int, db_path: Path | None = None) -> dict[str, str | int | None]:
+    with db(db_path) as connection:
+        row = connection.execute("SELECT * FROM words WHERE id = ?", (word_id,)).fetchone()
+    if row is None:
+        raise LookupError("Word not found")
+    return row_to_word(row)
+
+
+def add_word(payload: Mapping[str, object], db_path: Path | None = None) -> dict[str, str | int | None]:
+    word = normalize_word_payload(payload)
+    try:
+        with db(db_path) as connection:
+            cursor = connection.execute(
+                """
+                INSERT INTO words (category, german, english, article, example)
+                VALUES (:category, :german, :english, :article, :example)
+                """,
+                word,
+            )
+            word_id = int(cursor.lastrowid)
+    except sqlite3.IntegrityError as error:
+        raise ValueError("Word already exists") from error
+    return get_word(word_id, db_path)
 
 
 def random_word(category: str | None = None, db_path: Path | None = None) -> dict[str, str | int | None]:

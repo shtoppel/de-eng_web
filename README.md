@@ -10,7 +10,9 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 - Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code.
 - German article practice for noun genders: `der`, `die`, and `das`.
 - Static frontend files separated from backend code.
+- Custom word form and `POST /api/words` endpoint for extending the local vocabulary.
 - Health endpoint for container and deployment checks.
+- GitHub Actions CI for compile checks, tests, and Docker image builds.
 - Dockerfile and Docker Compose setup for local containerized runs.
 - Zero runtime Python package dependencies; the app uses only the Python standard library.
 
@@ -59,6 +61,7 @@ make docker-up # Build and run with Docker Compose
 - `GET /api/words/random?category=verb` — returns a random word from a selected category.
 - `GET /api/articles/random` — returns a noun for German article practice.
 - `POST /api/articles/check` — checks an article answer.
+- `POST /api/words` — adds a custom word to the SQLite database.
 
 Example article-check request body:
 
@@ -66,6 +69,18 @@ Example article-check request body:
 {
   "word_id": 1,
   "article": "der"
+}
+```
+
+Example custom-word request body:
+
+```json
+{
+  "category": "noun",
+  "german": "Tisch",
+  "english": "table",
+  "article": "der",
+  "example": "Der Tisch ist rund."
 }
 ```
 
@@ -80,6 +95,7 @@ app/config.py           # Environment-based configuration
 app/static/index.html   # Frontend markup
 app/static/styles.css   # Frontend styles
 app/static/app.js       # Frontend behavior
+.github/workflows/ci.yml # CI compile, test, and Docker build workflow
 data/seed_words.json    # Initial vocabulary data
 Dockerfile              # Container image definition
 docker-compose.yml      # Local container orchestration with persistent SQLite volume
