@@ -1156,2347 +1156,2361 @@
   },
   {
     "category": "noun",
-    "german": "Lernnomen 001",
-    "english": "study noun 001",
+    "german": "Abend",
+    "english": "evening",
     "article": "der",
-    "example": "Der Lernnomen 001 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb001en",
-    "english": "to practice verb 001",
-    "article": null,
-    "example": "Wir lernverb001en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft001",
-    "english": "practice adjective 001",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft001."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise001",
-    "english": "practice adverb 001",
-    "article": null,
-    "example": "Wir üben lernweise001."
+    "example": "Der Abend ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 002",
-    "english": "study noun 002",
+    "german": "Adresse",
+    "english": "address",
     "article": "die",
-    "example": "Die Lernnomen 002 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb002en",
-    "english": "to practice verb 002",
-    "article": null,
-    "example": "Wir lernverb002en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft002",
-    "english": "practice adjective 002",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft002."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise002",
-    "english": "practice adverb 002",
-    "article": null,
-    "example": "Wir üben lernweise002."
+    "example": "Die Adresse ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 003",
-    "english": "study noun 003",
+    "german": "Alter",
+    "english": "age",
     "article": "das",
-    "example": "Das Lernnomen 003 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb003en",
-    "english": "to practice verb 003",
-    "article": null,
-    "example": "Wir lernverb003en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft003",
-    "english": "practice adjective 003",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft003."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise003",
-    "english": "practice adverb 003",
-    "article": null,
-    "example": "Wir üben lernweise003."
+    "example": "Das Alter ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 004",
-    "english": "study noun 004",
+    "german": "Anfang",
+    "english": "beginning",
     "article": "der",
-    "example": "Der Lernnomen 004 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb004en",
-    "english": "to practice verb 004",
-    "article": null,
-    "example": "Wir lernverb004en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft004",
-    "english": "practice adjective 004",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft004."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise004",
-    "english": "practice adverb 004",
-    "article": null,
-    "example": "Wir üben lernweise004."
+    "example": "Der Anfang ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 005",
-    "english": "study noun 005",
+    "german": "Antwort",
+    "english": "answer",
     "article": "die",
-    "example": "Die Lernnomen 005 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb005en",
-    "english": "to practice verb 005",
-    "article": null,
-    "example": "Wir lernverb005en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft005",
-    "english": "practice adjective 005",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft005."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise005",
-    "english": "practice adverb 005",
-    "article": null,
-    "example": "Wir üben lernweise005."
+    "example": "Die Antwort ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 006",
-    "english": "study noun 006",
+    "german": "Angebot",
+    "english": "offer",
     "article": "das",
-    "example": "Das Lernnomen 006 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb006en",
-    "english": "to practice verb 006",
-    "article": null,
-    "example": "Wir lernverb006en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft006",
-    "english": "practice adjective 006",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft006."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise006",
-    "english": "practice adverb 006",
-    "article": null,
-    "example": "Wir üben lernweise006."
+    "example": "Das Angebot ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 007",
-    "english": "study noun 007",
+    "german": "Arzt",
+    "english": "doctor",
     "article": "der",
-    "example": "Der Lernnomen 007 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb007en",
-    "english": "to practice verb 007",
-    "article": null,
-    "example": "Wir lernverb007en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft007",
-    "english": "practice adjective 007",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft007."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise007",
-    "english": "practice adverb 007",
-    "article": null,
-    "example": "Wir üben lernweise007."
+    "example": "Der Arzt ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 008",
-    "english": "study noun 008",
+    "german": "Ärztin",
+    "english": "female doctor",
     "article": "die",
-    "example": "Die Lernnomen 008 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb008en",
-    "english": "to practice verb 008",
-    "article": null,
-    "example": "Wir lernverb008en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft008",
-    "english": "practice adjective 008",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft008."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise008",
-    "english": "practice adverb 008",
-    "article": null,
-    "example": "Wir üben lernweise008."
+    "example": "Die Ärztin ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 009",
-    "english": "study noun 009",
+    "german": "Baby",
+    "english": "baby",
     "article": "das",
-    "example": "Das Lernnomen 009 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb009en",
-    "english": "to practice verb 009",
-    "article": null,
-    "example": "Wir lernverb009en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft009",
-    "english": "practice adjective 009",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft009."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise009",
-    "english": "practice adverb 009",
-    "article": null,
-    "example": "Wir üben lernweise009."
+    "example": "Das Baby ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 010",
-    "english": "study noun 010",
+    "german": "Bahnhof",
+    "english": "train station",
     "article": "der",
-    "example": "Der Lernnomen 010 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb010en",
-    "english": "to practice verb 010",
-    "article": null,
-    "example": "Wir lernverb010en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft010",
-    "english": "practice adjective 010",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft010."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise010",
-    "english": "practice adverb 010",
-    "article": null,
-    "example": "Wir üben lernweise010."
+    "example": "Der Bahnhof ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 011",
-    "english": "study noun 011",
+    "german": "Bank",
+    "english": "bank",
     "article": "die",
-    "example": "Die Lernnomen 011 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb011en",
-    "english": "to practice verb 011",
-    "article": null,
-    "example": "Wir lernverb011en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft011",
-    "english": "practice adjective 011",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft011."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise011",
-    "english": "practice adverb 011",
-    "article": null,
-    "example": "Wir üben lernweise011."
+    "example": "Die Bank ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 012",
-    "english": "study noun 012",
+    "german": "Beispiel",
+    "english": "example",
     "article": "das",
-    "example": "Das Lernnomen 012 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb012en",
-    "english": "to practice verb 012",
-    "article": null,
-    "example": "Wir lernverb012en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft012",
-    "english": "practice adjective 012",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft012."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise012",
-    "english": "practice adverb 012",
-    "article": null,
-    "example": "Wir üben lernweise012."
+    "example": "Das Beispiel ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 013",
-    "english": "study noun 013",
+    "german": "Beruf",
+    "english": "profession",
     "article": "der",
-    "example": "Der Lernnomen 013 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb013en",
-    "english": "to practice verb 013",
-    "article": null,
-    "example": "Wir lernverb013en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft013",
-    "english": "practice adjective 013",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft013."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise013",
-    "english": "practice adverb 013",
-    "article": null,
-    "example": "Wir üben lernweise013."
+    "example": "Der Beruf ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 014",
-    "english": "study noun 014",
+    "german": "Bibliothek",
+    "english": "library",
     "article": "die",
-    "example": "Die Lernnomen 014 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb014en",
-    "english": "to practice verb 014",
-    "article": null,
-    "example": "Wir lernverb014en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft014",
-    "english": "practice adjective 014",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft014."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise014",
-    "english": "practice adverb 014",
-    "article": null,
-    "example": "Wir üben lernweise014."
+    "example": "Die Bibliothek ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 015",
-    "english": "study noun 015",
+    "german": "Büro",
+    "english": "office",
     "article": "das",
-    "example": "Das Lernnomen 015 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb015en",
-    "english": "to practice verb 015",
-    "article": null,
-    "example": "Wir lernverb015en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft015",
-    "english": "practice adjective 015",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft015."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise015",
-    "english": "practice adverb 015",
-    "article": null,
-    "example": "Wir üben lernweise015."
+    "example": "Das Büro ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 016",
-    "english": "study noun 016",
+    "german": "Bus",
+    "english": "bus",
     "article": "der",
-    "example": "Der Lernnomen 016 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb016en",
-    "english": "to practice verb 016",
-    "article": null,
-    "example": "Wir lernverb016en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft016",
-    "english": "practice adjective 016",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft016."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise016",
-    "english": "practice adverb 016",
-    "article": null,
-    "example": "Wir üben lernweise016."
+    "example": "Der Bus ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 017",
-    "english": "study noun 017",
+    "german": "Chance",
+    "english": "chance",
     "article": "die",
-    "example": "Die Lernnomen 017 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb017en",
-    "english": "to practice verb 017",
-    "article": null,
-    "example": "Wir lernverb017en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft017",
-    "english": "practice adjective 017",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft017."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise017",
-    "english": "practice adverb 017",
-    "article": null,
-    "example": "Wir üben lernweise017."
+    "example": "Die Chance ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 018",
-    "english": "study noun 018",
+    "german": "Dorf",
+    "english": "village",
     "article": "das",
-    "example": "Das Lernnomen 018 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb018en",
-    "english": "to practice verb 018",
-    "article": null,
-    "example": "Wir lernverb018en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft018",
-    "english": "practice adjective 018",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft018."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise018",
-    "english": "practice adverb 018",
-    "article": null,
-    "example": "Wir üben lernweise018."
+    "example": "Das Dorf ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 019",
-    "english": "study noun 019",
+    "german": "Eingang",
+    "english": "entrance",
     "article": "der",
-    "example": "Der Lernnomen 019 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb019en",
-    "english": "to practice verb 019",
-    "article": null,
-    "example": "Wir lernverb019en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft019",
-    "english": "practice adjective 019",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft019."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise019",
-    "english": "practice adverb 019",
-    "article": null,
-    "example": "Wir üben lernweise019."
+    "example": "Der Eingang ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 020",
-    "english": "study noun 020",
+    "german": "Einladung",
+    "english": "invitation",
     "article": "die",
-    "example": "Die Lernnomen 020 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb020en",
-    "english": "to practice verb 020",
-    "article": null,
-    "example": "Wir lernverb020en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft020",
-    "english": "practice adjective 020",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft020."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise020",
-    "english": "practice adverb 020",
-    "article": null,
-    "example": "Wir üben lernweise020."
+    "example": "Die Einladung ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 021",
-    "english": "study noun 021",
+    "german": "Ende",
+    "english": "end",
     "article": "das",
-    "example": "Das Lernnomen 021 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb021en",
-    "english": "to practice verb 021",
-    "article": null,
-    "example": "Wir lernverb021en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft021",
-    "english": "practice adjective 021",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft021."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise021",
-    "english": "practice adverb 021",
-    "article": null,
-    "example": "Wir üben lernweise021."
+    "example": "Das Ende ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 022",
-    "english": "study noun 022",
+    "german": "Fehler",
+    "english": "mistake",
     "article": "der",
-    "example": "Der Lernnomen 022 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb022en",
-    "english": "to practice verb 022",
-    "article": null,
-    "example": "Wir lernverb022en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft022",
-    "english": "practice adjective 022",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft022."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise022",
-    "english": "practice adverb 022",
-    "article": null,
-    "example": "Wir üben lernweise022."
+    "example": "Der Fehler ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 023",
-    "english": "study noun 023",
+    "german": "Familie",
+    "english": "family",
     "article": "die",
-    "example": "Die Lernnomen 023 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb023en",
-    "english": "to practice verb 023",
-    "article": null,
-    "example": "Wir lernverb023en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft023",
-    "english": "practice adjective 023",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft023."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise023",
-    "english": "practice adverb 023",
-    "article": null,
-    "example": "Wir üben lernweise023."
+    "example": "Die Familie ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 024",
-    "english": "study noun 024",
+    "german": "Fahrrad",
+    "english": "bicycle",
     "article": "das",
-    "example": "Das Lernnomen 024 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb024en",
-    "english": "to practice verb 024",
-    "article": null,
-    "example": "Wir lernverb024en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft024",
-    "english": "practice adjective 024",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft024."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise024",
-    "english": "practice adverb 024",
-    "article": null,
-    "example": "Wir üben lernweise024."
+    "example": "Das Fahrrad ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 025",
-    "english": "study noun 025",
+    "german": "Flughafen",
+    "english": "airport",
     "article": "der",
-    "example": "Der Lernnomen 025 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb025en",
-    "english": "to practice verb 025",
-    "article": null,
-    "example": "Wir lernverb025en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft025",
-    "english": "practice adjective 025",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft025."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise025",
-    "english": "practice adverb 025",
-    "article": null,
-    "example": "Wir üben lernweise025."
+    "example": "Der Flughafen ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 026",
-    "english": "study noun 026",
+    "german": "Freiheit",
+    "english": "freedom",
     "article": "die",
-    "example": "Die Lernnomen 026 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb026en",
-    "english": "to practice verb 026",
-    "article": null,
-    "example": "Wir lernverb026en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft026",
-    "english": "practice adjective 026",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft026."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise026",
-    "english": "practice adverb 026",
-    "article": null,
-    "example": "Wir üben lernweise026."
+    "example": "Die Freiheit ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 027",
-    "english": "study noun 027",
+    "german": "Geld",
+    "english": "money",
     "article": "das",
-    "example": "Das Lernnomen 027 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb027en",
-    "english": "to practice verb 027",
-    "article": null,
-    "example": "Wir lernverb027en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft027",
-    "english": "practice adjective 027",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft027."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise027",
-    "english": "practice adverb 027",
-    "article": null,
-    "example": "Wir üben lernweise027."
+    "example": "Das Geld ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 028",
-    "english": "study noun 028",
+    "german": "Geburtstag",
+    "english": "birthday",
     "article": "der",
-    "example": "Der Lernnomen 028 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb028en",
-    "english": "to practice verb 028",
-    "article": null,
-    "example": "Wir lernverb028en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft028",
-    "english": "practice adjective 028",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft028."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise028",
-    "english": "practice adverb 028",
-    "article": null,
-    "example": "Wir üben lernweise028."
+    "example": "Der Geburtstag ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 029",
-    "english": "study noun 029",
+    "german": "Geschichte",
+    "english": "story",
     "article": "die",
-    "example": "Die Lernnomen 029 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb029en",
-    "english": "to practice verb 029",
-    "article": null,
-    "example": "Wir lernverb029en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft029",
-    "english": "practice adjective 029",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft029."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise029",
-    "english": "practice adverb 029",
-    "article": null,
-    "example": "Wir üben lernweise029."
+    "example": "Die Geschichte ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 030",
-    "english": "study noun 030",
+    "german": "Geschäft",
+    "english": "shop",
     "article": "das",
-    "example": "Das Lernnomen 030 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb030en",
-    "english": "to practice verb 030",
-    "article": null,
-    "example": "Wir lernverb030en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft030",
-    "english": "practice adjective 030",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft030."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise030",
-    "english": "practice adverb 030",
-    "article": null,
-    "example": "Wir üben lernweise030."
+    "example": "Das Geschäft ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 031",
-    "english": "study noun 031",
+    "german": "Hafen",
+    "english": "harbor",
     "article": "der",
-    "example": "Der Lernnomen 031 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb031en",
-    "english": "to practice verb 031",
-    "article": null,
-    "example": "Wir lernverb031en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft031",
-    "english": "practice adjective 031",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft031."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise031",
-    "english": "practice adverb 031",
-    "article": null,
-    "example": "Wir üben lernweise031."
+    "example": "Der Hafen ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 032",
-    "english": "study noun 032",
+    "german": "Hilfe",
+    "english": "help",
     "article": "die",
-    "example": "Die Lernnomen 032 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb032en",
-    "english": "to practice verb 032",
-    "article": null,
-    "example": "Wir lernverb032en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft032",
-    "english": "practice adjective 032",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft032."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise032",
-    "english": "practice adverb 032",
-    "article": null,
-    "example": "Wir üben lernweise032."
+    "example": "Die Hilfe ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 033",
-    "english": "study noun 033",
+    "german": "Hotel",
+    "english": "hotel",
     "article": "das",
-    "example": "Das Lernnomen 033 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb033en",
-    "english": "to practice verb 033",
-    "article": null,
-    "example": "Wir lernverb033en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft033",
-    "english": "practice adjective 033",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft033."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise033",
-    "english": "practice adverb 033",
-    "article": null,
-    "example": "Wir üben lernweise033."
+    "example": "Das Hotel ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 034",
-    "english": "study noun 034",
+    "german": "Hunger",
+    "english": "hunger",
     "article": "der",
-    "example": "Der Lernnomen 034 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb034en",
-    "english": "to practice verb 034",
-    "article": null,
-    "example": "Wir lernverb034en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft034",
-    "english": "practice adjective 034",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft034."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise034",
-    "english": "practice adverb 034",
-    "article": null,
-    "example": "Wir üben lernweise034."
+    "example": "Der Hunger ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 035",
-    "english": "study noun 035",
+    "german": "Idee",
+    "english": "idea",
     "article": "die",
-    "example": "Die Lernnomen 035 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb035en",
-    "english": "to practice verb 035",
-    "article": null,
-    "example": "Wir lernverb035en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft035",
-    "english": "practice adjective 035",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft035."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise035",
-    "english": "practice adverb 035",
-    "article": null,
-    "example": "Wir üben lernweise035."
+    "example": "Die Idee ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 036",
-    "english": "study noun 036",
+    "german": "Internet",
+    "english": "internet",
     "article": "das",
-    "example": "Das Lernnomen 036 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb036en",
-    "english": "to practice verb 036",
-    "article": null,
-    "example": "Wir lernverb036en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft036",
-    "english": "practice adjective 036",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft036."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise036",
-    "english": "practice adverb 036",
-    "article": null,
-    "example": "Wir üben lernweise036."
+    "example": "Das Internet ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 037",
-    "english": "study noun 037",
+    "german": "Käse",
+    "english": "cheese",
     "article": "der",
-    "example": "Der Lernnomen 037 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb037en",
-    "english": "to practice verb 037",
-    "article": null,
-    "example": "Wir lernverb037en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft037",
-    "english": "practice adjective 037",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft037."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise037",
-    "english": "practice adverb 037",
-    "article": null,
-    "example": "Wir üben lernweise037."
+    "example": "Der Käse ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 038",
-    "english": "study noun 038",
+    "german": "Karte",
+    "english": "map",
     "article": "die",
-    "example": "Die Lernnomen 038 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb038en",
-    "english": "to practice verb 038",
-    "article": null,
-    "example": "Wir lernverb038en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft038",
-    "english": "practice adjective 038",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft038."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise038",
-    "english": "practice adverb 038",
-    "article": null,
-    "example": "Wir üben lernweise038."
+    "example": "Die Karte ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 039",
-    "english": "study noun 039",
+    "german": "Kleid",
+    "english": "dress",
     "article": "das",
-    "example": "Das Lernnomen 039 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb039en",
-    "english": "to practice verb 039",
-    "article": null,
-    "example": "Wir lernverb039en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft039",
-    "english": "practice adjective 039",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft039."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise039",
-    "english": "practice adverb 039",
-    "article": null,
-    "example": "Wir üben lernweise039."
+    "example": "Das Kleid ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 040",
-    "english": "study noun 040",
+    "german": "Kunde",
+    "english": "customer",
     "article": "der",
-    "example": "Der Lernnomen 040 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb040en",
-    "english": "to practice verb 040",
-    "article": null,
-    "example": "Wir lernverb040en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft040",
-    "english": "practice adjective 040",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft040."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise040",
-    "english": "practice adverb 040",
-    "article": null,
-    "example": "Wir üben lernweise040."
+    "example": "Der Kunde ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 041",
-    "english": "study noun 041",
+    "german": "Küche",
+    "english": "kitchen",
     "article": "die",
-    "example": "Die Lernnomen 041 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb041en",
-    "english": "to practice verb 041",
-    "article": null,
-    "example": "Wir lernverb041en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft041",
-    "english": "practice adjective 041",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft041."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise041",
-    "english": "practice adverb 041",
-    "article": null,
-    "example": "Wir üben lernweise041."
+    "example": "Die Küche ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 042",
-    "english": "study noun 042",
+    "german": "Land",
+    "english": "country",
     "article": "das",
-    "example": "Das Lernnomen 042 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb042en",
-    "english": "to practice verb 042",
-    "article": null,
-    "example": "Wir lernverb042en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft042",
-    "english": "practice adjective 042",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft042."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise042",
-    "english": "practice adverb 042",
-    "article": null,
-    "example": "Wir üben lernweise042."
+    "example": "Das Land ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 043",
-    "english": "study noun 043",
+    "german": "Lehrer",
+    "english": "teacher",
     "article": "der",
-    "example": "Der Lernnomen 043 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb043en",
-    "english": "to practice verb 043",
-    "article": null,
-    "example": "Wir lernverb043en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft043",
-    "english": "practice adjective 043",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft043."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise043",
-    "english": "practice adverb 043",
-    "article": null,
-    "example": "Wir üben lernweise043."
+    "example": "Der Lehrer ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 044",
-    "english": "study noun 044",
+    "german": "Lehrerin",
+    "english": "female teacher",
     "article": "die",
-    "example": "Die Lernnomen 044 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb044en",
-    "english": "to practice verb 044",
-    "article": null,
-    "example": "Wir lernverb044en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft044",
-    "english": "practice adjective 044",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft044."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise044",
-    "english": "practice adverb 044",
-    "article": null,
-    "example": "Wir üben lernweise044."
+    "example": "Die Lehrerin ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 045",
-    "english": "study noun 045",
+    "german": "Leben",
+    "english": "life",
     "article": "das",
-    "example": "Das Lernnomen 045 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb045en",
-    "english": "to practice verb 045",
-    "article": null,
-    "example": "Wir lernverb045en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft045",
-    "english": "practice adjective 045",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft045."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise045",
-    "english": "practice adverb 045",
-    "article": null,
-    "example": "Wir üben lernweise045."
+    "example": "Das Leben ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 046",
-    "english": "study noun 046",
+    "german": "Markt",
+    "english": "market",
     "article": "der",
-    "example": "Der Lernnomen 046 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb046en",
-    "english": "to practice verb 046",
-    "article": null,
-    "example": "Wir lernverb046en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft046",
-    "english": "practice adjective 046",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft046."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise046",
-    "english": "practice adverb 046",
-    "article": null,
-    "example": "Wir üben lernweise046."
+    "example": "Der Markt ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 047",
-    "english": "study noun 047",
+    "german": "Maschine",
+    "english": "machine",
     "article": "die",
-    "example": "Die Lernnomen 047 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb047en",
-    "english": "to practice verb 047",
-    "article": null,
-    "example": "Wir lernverb047en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft047",
-    "english": "practice adjective 047",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft047."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise047",
-    "english": "practice adverb 047",
-    "article": null,
-    "example": "Wir üben lernweise047."
+    "example": "Die Maschine ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 048",
-    "english": "study noun 048",
+    "german": "Mädchen",
+    "english": "girl",
     "article": "das",
-    "example": "Das Lernnomen 048 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb048en",
-    "english": "to practice verb 048",
-    "article": null,
-    "example": "Wir lernverb048en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft048",
-    "english": "practice adjective 048",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft048."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise048",
-    "english": "practice adverb 048",
-    "article": null,
-    "example": "Wir üben lernweise048."
+    "example": "Das Mädchen ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 049",
-    "english": "study noun 049",
+    "german": "Morgen",
+    "english": "morning",
     "article": "der",
-    "example": "Der Lernnomen 049 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb049en",
-    "english": "to practice verb 049",
-    "article": null,
-    "example": "Wir lernverb049en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft049",
-    "english": "practice adjective 049",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft049."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise049",
-    "english": "practice adverb 049",
-    "article": null,
-    "example": "Wir üben lernweise049."
+    "example": "Der Morgen ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 050",
-    "english": "study noun 050",
+    "german": "Natur",
+    "english": "nature",
     "article": "die",
-    "example": "Die Lernnomen 050 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb050en",
-    "english": "to practice verb 050",
-    "article": null,
-    "example": "Wir lernverb050en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft050",
-    "english": "practice adjective 050",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft050."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise050",
-    "english": "practice adverb 050",
-    "article": null,
-    "example": "Wir üben lernweise050."
+    "example": "Die Natur ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 051",
-    "english": "study noun 051",
+    "german": "Netz",
+    "english": "network",
     "article": "das",
-    "example": "Das Lernnomen 051 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb051en",
-    "english": "to practice verb 051",
-    "article": null,
-    "example": "Wir lernverb051en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft051",
-    "english": "practice adjective 051",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft051."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise051",
-    "english": "practice adverb 051",
-    "article": null,
-    "example": "Wir üben lernweise051."
+    "example": "Das Netz ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 052",
-    "english": "study noun 052",
+    "german": "Ort",
+    "english": "place",
     "article": "der",
-    "example": "Der Lernnomen 052 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb052en",
-    "english": "to practice verb 052",
-    "article": null,
-    "example": "Wir lernverb052en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft052",
-    "english": "practice adjective 052",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft052."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise052",
-    "english": "practice adverb 052",
-    "article": null,
-    "example": "Wir üben lernweise052."
+    "example": "Der Ort ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 053",
-    "english": "study noun 053",
+    "german": "Pause",
+    "english": "break",
     "article": "die",
-    "example": "Die Lernnomen 053 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb053en",
-    "english": "to practice verb 053",
-    "article": null,
-    "example": "Wir lernverb053en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft053",
-    "english": "practice adjective 053",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft053."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise053",
-    "english": "practice adverb 053",
-    "article": null,
-    "example": "Wir üben lernweise053."
+    "example": "Die Pause ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 054",
-    "english": "study noun 054",
+    "german": "Papier",
+    "english": "paper",
     "article": "das",
-    "example": "Das Lernnomen 054 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb054en",
-    "english": "to practice verb 054",
-    "article": null,
-    "example": "Wir lernverb054en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft054",
-    "english": "practice adjective 054",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft054."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise054",
-    "english": "practice adverb 054",
-    "article": null,
-    "example": "Wir üben lernweise054."
+    "example": "Das Papier ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 055",
-    "english": "study noun 055",
+    "german": "Park",
+    "english": "park",
     "article": "der",
-    "example": "Der Lernnomen 055 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb055en",
-    "english": "to practice verb 055",
-    "article": null,
-    "example": "Wir lernverb055en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft055",
-    "english": "practice adjective 055",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft055."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise055",
-    "english": "practice adverb 055",
-    "article": null,
-    "example": "Wir üben lernweise055."
+    "example": "Der Park ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 056",
-    "english": "study noun 056",
+    "german": "Party",
+    "english": "party",
     "article": "die",
-    "example": "Die Lernnomen 056 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb056en",
-    "english": "to practice verb 056",
-    "article": null,
-    "example": "Wir lernverb056en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft056",
-    "english": "practice adjective 056",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft056."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise056",
-    "english": "practice adverb 056",
-    "article": null,
-    "example": "Wir üben lernweise056."
+    "example": "Die Party ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 057",
-    "english": "study noun 057",
+    "german": "Radio",
+    "english": "radio",
     "article": "das",
-    "example": "Das Lernnomen 057 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb057en",
-    "english": "to practice verb 057",
-    "article": null,
-    "example": "Wir lernverb057en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft057",
-    "english": "practice adjective 057",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft057."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise057",
-    "english": "practice adverb 057",
-    "article": null,
-    "example": "Wir üben lernweise057."
+    "example": "Das Radio ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 058",
-    "english": "study noun 058",
+    "german": "Regen",
+    "english": "rain",
     "article": "der",
-    "example": "Der Lernnomen 058 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb058en",
-    "english": "to practice verb 058",
-    "article": null,
-    "example": "Wir lernverb058en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft058",
-    "english": "practice adjective 058",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft058."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise058",
-    "english": "practice adverb 058",
-    "article": null,
-    "example": "Wir üben lernweise058."
+    "example": "Der Regen ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 059",
-    "english": "study noun 059",
+    "german": "Reise",
+    "english": "trip",
     "article": "die",
-    "example": "Die Lernnomen 059 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb059en",
-    "english": "to practice verb 059",
-    "article": null,
-    "example": "Wir lernverb059en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft059",
-    "english": "practice adjective 059",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft059."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise059",
-    "english": "practice adverb 059",
-    "article": null,
-    "example": "Wir üben lernweise059."
+    "example": "Die Reise ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 060",
-    "english": "study noun 060",
+    "german": "Restaurant",
+    "english": "restaurant",
     "article": "das",
-    "example": "Das Lernnomen 060 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb060en",
-    "english": "to practice verb 060",
-    "article": null,
-    "example": "Wir lernverb060en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft060",
-    "english": "practice adjective 060",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft060."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise060",
-    "english": "practice adverb 060",
-    "article": null,
-    "example": "Wir üben lernweise060."
+    "example": "Das Restaurant ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 061",
-    "english": "study noun 061",
+    "german": "Schlüssel",
+    "english": "key",
     "article": "der",
-    "example": "Der Lernnomen 061 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb061en",
-    "english": "to practice verb 061",
-    "article": null,
-    "example": "Wir lernverb061en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft061",
-    "english": "practice adjective 061",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft061."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise061",
-    "english": "practice adverb 061",
-    "article": null,
-    "example": "Wir üben lernweise061."
+    "example": "Der Schlüssel ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 062",
-    "english": "study noun 062",
+    "german": "Sonne",
+    "english": "sun",
     "article": "die",
-    "example": "Die Lernnomen 062 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb062en",
-    "english": "to practice verb 062",
-    "article": null,
-    "example": "Wir lernverb062en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft062",
-    "english": "practice adjective 062",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft062."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise062",
-    "english": "practice adverb 062",
-    "article": null,
-    "example": "Wir üben lernweise062."
+    "example": "Die Sonne ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 063",
-    "english": "study noun 063",
+    "german": "Spiel",
+    "english": "game",
     "article": "das",
-    "example": "Das Lernnomen 063 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb063en",
-    "english": "to practice verb 063",
-    "article": null,
-    "example": "Wir lernverb063en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft063",
-    "english": "practice adjective 063",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft063."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise063",
-    "english": "practice adverb 063",
-    "article": null,
-    "example": "Wir üben lernweise063."
+    "example": "Das Spiel ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 064",
-    "english": "study noun 064",
+    "german": "Sport",
+    "english": "sport",
     "article": "der",
-    "example": "Der Lernnomen 064 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb064en",
-    "english": "to practice verb 064",
-    "article": null,
-    "example": "Wir lernverb064en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft064",
-    "english": "practice adjective 064",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft064."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise064",
-    "english": "practice adverb 064",
-    "article": null,
-    "example": "Wir üben lernweise064."
+    "example": "Der Sport ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 065",
-    "english": "study noun 065",
+    "german": "Straße",
+    "english": "street",
     "article": "die",
-    "example": "Die Lernnomen 065 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb065en",
-    "english": "to practice verb 065",
-    "article": null,
-    "example": "Wir lernverb065en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft065",
-    "english": "practice adjective 065",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft065."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise065",
-    "english": "practice adverb 065",
-    "article": null,
-    "example": "Wir üben lernweise065."
+    "example": "Die Straße ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 066",
-    "english": "study noun 066",
+    "german": "Studium",
+    "english": "studies",
     "article": "das",
-    "example": "Das Lernnomen 066 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb066en",
-    "english": "to practice verb 066",
-    "article": null,
-    "example": "Wir lernverb066en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft066",
-    "english": "practice adjective 066",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft066."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise066",
-    "english": "practice adverb 066",
-    "article": null,
-    "example": "Wir üben lernweise066."
+    "example": "Das Studium ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 067",
-    "english": "study noun 067",
+    "german": "Termin",
+    "english": "appointment",
     "article": "der",
-    "example": "Der Lernnomen 067 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb067en",
-    "english": "to practice verb 067",
-    "article": null,
-    "example": "Wir lernverb067en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft067",
-    "english": "practice adjective 067",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft067."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise067",
-    "english": "practice adverb 067",
-    "article": null,
-    "example": "Wir üben lernweise067."
+    "example": "Der Termin ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 068",
-    "english": "study noun 068",
+    "german": "Uhr",
+    "english": "clock",
     "article": "die",
-    "example": "Die Lernnomen 068 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb068en",
-    "english": "to practice verb 068",
-    "article": null,
-    "example": "Wir lernverb068en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft068",
-    "english": "practice adjective 068",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft068."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise068",
-    "english": "practice adverb 068",
-    "article": null,
-    "example": "Wir üben lernweise068."
+    "example": "Die Uhr ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 069",
-    "english": "study noun 069",
+    "german": "Wetter",
+    "english": "weather",
     "article": "das",
-    "example": "Das Lernnomen 069 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb069en",
-    "english": "to practice verb 069",
-    "article": null,
-    "example": "Wir lernverb069en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft069",
-    "english": "practice adjective 069",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft069."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise069",
-    "english": "practice adverb 069",
-    "article": null,
-    "example": "Wir üben lernweise069."
+    "example": "Das Wetter ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 070",
-    "english": "study noun 070",
+    "german": "Wind",
+    "english": "wind",
     "article": "der",
-    "example": "Der Lernnomen 070 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb070en",
-    "english": "to practice verb 070",
-    "article": null,
-    "example": "Wir lernverb070en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft070",
-    "english": "practice adjective 070",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft070."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise070",
-    "english": "practice adverb 070",
-    "article": null,
-    "example": "Wir üben lernweise070."
+    "example": "Der Wind ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 071",
-    "english": "study noun 071",
+    "german": "Wohnung",
+    "english": "apartment",
     "article": "die",
-    "example": "Die Lernnomen 071 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb071en",
-    "english": "to practice verb 071",
-    "article": null,
-    "example": "Wir lernverb071en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft071",
-    "english": "practice adjective 071",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft071."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise071",
-    "english": "practice adverb 071",
-    "article": null,
-    "example": "Wir üben lernweise071."
+    "example": "Die Wohnung ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 072",
-    "english": "study noun 072",
+    "german": "Wort",
+    "english": "word",
     "article": "das",
-    "example": "Das Lernnomen 072 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb072en",
-    "english": "to practice verb 072",
-    "article": null,
-    "example": "Wir lernverb072en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft072",
-    "english": "practice adjective 072",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft072."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise072",
-    "english": "practice adverb 072",
-    "article": null,
-    "example": "Wir üben lernweise072."
+    "example": "Das Wort ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 073",
-    "english": "study noun 073",
+    "german": "Wunsch",
+    "english": "wish",
     "article": "der",
-    "example": "Der Lernnomen 073 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb073en",
-    "english": "to practice verb 073",
-    "article": null,
-    "example": "Wir lernverb073en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft073",
-    "english": "practice adjective 073",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft073."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise073",
-    "english": "practice adverb 073",
-    "article": null,
-    "example": "Wir üben lernweise073."
+    "example": "Der Wunsch ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 074",
-    "english": "study noun 074",
+    "german": "Zeitung",
+    "english": "newspaper",
     "article": "die",
-    "example": "Die Lernnomen 074 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb074en",
-    "english": "to practice verb 074",
-    "article": null,
-    "example": "Wir lernverb074en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft074",
-    "english": "practice adjective 074",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft074."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise074",
-    "english": "practice adverb 074",
-    "article": null,
-    "example": "Wir üben lernweise074."
+    "example": "Die Zeitung ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 075",
-    "english": "study noun 075",
+    "german": "Ziel",
+    "english": "goal",
     "article": "das",
-    "example": "Das Lernnomen 075 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb075en",
-    "english": "to practice verb 075",
-    "article": null,
-    "example": "Wir lernverb075en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft075",
-    "english": "practice adjective 075",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft075."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise075",
-    "english": "practice adverb 075",
-    "article": null,
-    "example": "Wir üben lernweise075."
+    "example": "Das Ziel ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 076",
-    "english": "study noun 076",
+    "german": "Preis",
+    "english": "price",
     "article": "der",
-    "example": "Der Lernnomen 076 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb076en",
-    "english": "to practice verb 076",
-    "article": null,
-    "example": "Wir lernverb076en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft076",
-    "english": "practice adjective 076",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft076."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise076",
-    "english": "practice adverb 076",
-    "article": null,
-    "example": "Wir üben lernweise076."
+    "example": "Der Preis ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 077",
-    "english": "study noun 077",
+    "german": "Rechnung",
+    "english": "bill",
     "article": "die",
-    "example": "Die Lernnomen 077 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb077en",
-    "english": "to practice verb 077",
-    "article": null,
-    "example": "Wir lernverb077en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft077",
-    "english": "practice adjective 077",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft077."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise077",
-    "english": "practice adverb 077",
-    "article": null,
-    "example": "Wir üben lernweise077."
+    "example": "Die Rechnung ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 078",
-    "english": "study noun 078",
+    "german": "Ticket",
+    "english": "ticket",
     "article": "das",
-    "example": "Das Lernnomen 078 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb078en",
-    "english": "to practice verb 078",
-    "article": null,
-    "example": "Wir lernverb078en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft078",
-    "english": "practice adjective 078",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft078."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise078",
-    "english": "practice adverb 078",
-    "article": null,
-    "example": "Wir üben lernweise078."
+    "example": "Das Ticket ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 079",
-    "english": "study noun 079",
+    "german": "Urlaub",
+    "english": "vacation",
     "article": "der",
-    "example": "Der Lernnomen 079 ist Teil der Übung."
-  },
-  {
-    "category": "verb",
-    "german": "lernverb079en",
-    "english": "to practice verb 079",
-    "article": null,
-    "example": "Wir lernverb079en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft079",
-    "english": "practice adjective 079",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft079."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise079",
-    "english": "practice adverb 079",
-    "article": null,
-    "example": "Wir üben lernweise079."
+    "example": "Der Urlaub ist wichtig."
   },
   {
     "category": "noun",
-    "german": "Lernnomen 080",
-    "english": "study noun 080",
+    "german": "Zukunft",
+    "english": "future",
     "article": "die",
-    "example": "Die Lernnomen 080 ist Teil der Übung."
+    "example": "Die Zukunft ist wichtig."
   },
   {
     "category": "verb",
-    "german": "lernverb080en",
-    "english": "to practice verb 080",
+    "german": "anrufen",
+    "english": "to call",
     "article": null,
-    "example": "Wir lernverb080en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft080",
-    "english": "practice adjective 080",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft080."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise080",
-    "english": "practice adverb 080",
-    "article": null,
-    "example": "Wir üben lernweise080."
+    "example": "Wir können anrufen."
   },
   {
     "category": "verb",
-    "german": "lernverb081en",
-    "english": "to practice verb 081",
+    "german": "aufstehen",
+    "english": "to get up",
     "article": null,
-    "example": "Wir lernverb081en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft081",
-    "english": "practice adjective 081",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft081."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise081",
-    "english": "practice adverb 081",
-    "article": null,
-    "example": "Wir üben lernweise081."
+    "example": "Wir können aufstehen."
   },
   {
     "category": "verb",
-    "german": "lernverb082en",
-    "english": "to practice verb 082",
+    "german": "aussehen",
+    "english": "to look",
     "article": null,
-    "example": "Wir lernverb082en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft082",
-    "english": "practice adjective 082",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft082."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise082",
-    "english": "practice adverb 082",
-    "article": null,
-    "example": "Wir üben lernweise082."
+    "example": "Wir können aussehen."
   },
   {
     "category": "verb",
-    "german": "lernverb083en",
-    "english": "to practice verb 083",
+    "german": "backen",
+    "english": "to bake",
     "article": null,
-    "example": "Wir lernverb083en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft083",
-    "english": "practice adjective 083",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft083."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise083",
-    "english": "practice adverb 083",
-    "article": null,
-    "example": "Wir üben lernweise083."
+    "example": "Wir können backen."
   },
   {
     "category": "verb",
-    "german": "lernverb084en",
-    "english": "to practice verb 084",
+    "german": "beginnen",
+    "english": "to begin",
     "article": null,
-    "example": "Wir lernverb084en heute zusammen."
-  },
-  {
-    "category": "adjective",
-    "german": "lernhaft084",
-    "english": "practice adjective 084",
-    "article": null,
-    "example": "Das Beispiel ist lernhaft084."
-  },
-  {
-    "category": "adverb",
-    "german": "lernweise084",
-    "english": "practice adverb 084",
-    "article": null,
-    "example": "Wir üben lernweise084."
+    "example": "Wir können beginnen."
   },
   {
     "category": "verb",
-    "german": "lernverb085en",
-    "english": "to practice verb 085",
+    "german": "bekommen",
+    "english": "to receive",
     "article": null,
-    "example": "Wir lernverb085en heute zusammen."
+    "example": "Wir können bekommen."
+  },
+  {
+    "category": "verb",
+    "german": "besuchen",
+    "english": "to visit",
+    "article": null,
+    "example": "Wir können besuchen."
+  },
+  {
+    "category": "verb",
+    "german": "bleiben",
+    "english": "to stay",
+    "article": null,
+    "example": "Wir können bleiben."
+  },
+  {
+    "category": "verb",
+    "german": "danken",
+    "english": "to thank",
+    "article": null,
+    "example": "Wir können danken."
+  },
+  {
+    "category": "verb",
+    "german": "dauern",
+    "english": "to last",
+    "article": null,
+    "example": "Wir können dauern."
+  },
+  {
+    "category": "verb",
+    "german": "drucken",
+    "english": "to print",
+    "article": null,
+    "example": "Wir können drucken."
+  },
+  {
+    "category": "verb",
+    "german": "dürfen",
+    "english": "to be allowed",
+    "article": null,
+    "example": "Wir können dürfen."
+  },
+  {
+    "category": "verb",
+    "german": "einkaufen",
+    "english": "to shop",
+    "article": null,
+    "example": "Wir können einkaufen."
+  },
+  {
+    "category": "verb",
+    "german": "einladen",
+    "english": "to invite",
+    "article": null,
+    "example": "Wir können einladen."
+  },
+  {
+    "category": "verb",
+    "german": "empfehlen",
+    "english": "to recommend",
+    "article": null,
+    "example": "Wir können empfehlen."
+  },
+  {
+    "category": "verb",
+    "german": "enden",
+    "english": "to end",
+    "article": null,
+    "example": "Wir können enden."
+  },
+  {
+    "category": "verb",
+    "german": "entscheiden",
+    "english": "to decide",
+    "article": null,
+    "example": "Wir können entscheiden."
+  },
+  {
+    "category": "verb",
+    "german": "entschuldigen",
+    "english": "to apologize",
+    "article": null,
+    "example": "Wir können entschuldigen."
+  },
+  {
+    "category": "verb",
+    "german": "erzählen",
+    "english": "to tell",
+    "article": null,
+    "example": "Wir können erzählen."
+  },
+  {
+    "category": "verb",
+    "german": "fehlen",
+    "english": "to be missing",
+    "article": null,
+    "example": "Wir können fehlen."
+  },
+  {
+    "category": "verb",
+    "german": "feiern",
+    "english": "to celebrate",
+    "article": null,
+    "example": "Wir können feiern."
+  },
+  {
+    "category": "verb",
+    "german": "fliegen",
+    "english": "to fly",
+    "article": null,
+    "example": "Wir können fliegen."
+  },
+  {
+    "category": "verb",
+    "german": "folgen",
+    "english": "to follow",
+    "article": null,
+    "example": "Wir können folgen."
+  },
+  {
+    "category": "verb",
+    "german": "fotografieren",
+    "english": "to photograph",
+    "article": null,
+    "example": "Wir können fotografieren."
+  },
+  {
+    "category": "verb",
+    "german": "fühlen",
+    "english": "to feel",
+    "article": null,
+    "example": "Wir können fühlen."
+  },
+  {
+    "category": "verb",
+    "german": "gefallen",
+    "english": "to please",
+    "article": null,
+    "example": "Wir können gefallen."
+  },
+  {
+    "category": "verb",
+    "german": "gehören",
+    "english": "to belong",
+    "article": null,
+    "example": "Wir können gehören."
+  },
+  {
+    "category": "verb",
+    "german": "gewinnen",
+    "english": "to win",
+    "article": null,
+    "example": "Wir können gewinnen."
+  },
+  {
+    "category": "verb",
+    "german": "glauben",
+    "english": "to believe",
+    "article": null,
+    "example": "Wir können glauben."
+  },
+  {
+    "category": "verb",
+    "german": "grüßen",
+    "english": "to greet",
+    "article": null,
+    "example": "Wir können grüßen."
+  },
+  {
+    "category": "verb",
+    "german": "halten",
+    "english": "to hold",
+    "article": null,
+    "example": "Wir können halten."
+  },
+  {
+    "category": "verb",
+    "german": "heiraten",
+    "english": "to marry",
+    "article": null,
+    "example": "Wir können heiraten."
+  },
+  {
+    "category": "verb",
+    "german": "heißen",
+    "english": "to be called",
+    "article": null,
+    "example": "Wir können heißen."
+  },
+  {
+    "category": "verb",
+    "german": "helfen",
+    "english": "to help",
+    "article": null,
+    "example": "Wir können helfen."
+  },
+  {
+    "category": "verb",
+    "german": "hoffen",
+    "english": "to hope",
+    "article": null,
+    "example": "Wir können hoffen."
+  },
+  {
+    "category": "verb",
+    "german": "interessieren",
+    "english": "to interest",
+    "article": null,
+    "example": "Wir können interessieren."
+  },
+  {
+    "category": "verb",
+    "german": "kennen",
+    "english": "to know",
+    "article": null,
+    "example": "Wir können kennen."
+  },
+  {
+    "category": "verb",
+    "german": "klappen",
+    "english": "to work out",
+    "article": null,
+    "example": "Wir können klappen."
+  },
+  {
+    "category": "verb",
+    "german": "kosten",
+    "english": "to cost",
+    "article": null,
+    "example": "Wir können kosten."
+  },
+  {
+    "category": "verb",
+    "german": "kümmern",
+    "english": "to care",
+    "article": null,
+    "example": "Wir können kümmern."
+  },
+  {
+    "category": "verb",
+    "german": "lachen",
+    "english": "to laugh",
+    "article": null,
+    "example": "Wir können lachen."
+  },
+  {
+    "category": "verb",
+    "german": "leben",
+    "english": "to live",
+    "article": null,
+    "example": "Wir können leben."
+  },
+  {
+    "category": "verb",
+    "german": "legen",
+    "english": "to lay",
+    "article": null,
+    "example": "Wir können legen."
+  },
+  {
+    "category": "verb",
+    "german": "leihen",
+    "english": "to lend",
+    "article": null,
+    "example": "Wir können leihen."
+  },
+  {
+    "category": "verb",
+    "german": "mieten",
+    "english": "to rent",
+    "article": null,
+    "example": "Wir können mieten."
+  },
+  {
+    "category": "verb",
+    "german": "passen",
+    "english": "to fit",
+    "article": null,
+    "example": "Wir können passen."
+  },
+  {
+    "category": "verb",
+    "german": "planen",
+    "english": "to plan",
+    "article": null,
+    "example": "Wir können planen."
+  },
+  {
+    "category": "verb",
+    "german": "probieren",
+    "english": "to try",
+    "article": null,
+    "example": "Wir können probieren."
+  },
+  {
+    "category": "verb",
+    "german": "putzen",
+    "english": "to clean",
+    "article": null,
+    "example": "Wir können putzen."
+  },
+  {
+    "category": "verb",
+    "german": "regnen",
+    "english": "to rain",
+    "article": null,
+    "example": "Wir können regnen."
+  },
+  {
+    "category": "verb",
+    "german": "reparieren",
+    "english": "to repair",
+    "article": null,
+    "example": "Wir können reparieren."
+  },
+  {
+    "category": "verb",
+    "german": "reservieren",
+    "english": "to reserve",
+    "article": null,
+    "example": "Wir können reservieren."
+  },
+  {
+    "category": "verb",
+    "german": "rufen",
+    "english": "to call out",
+    "article": null,
+    "example": "Wir können rufen."
+  },
+  {
+    "category": "verb",
+    "german": "sagen",
+    "english": "to say",
+    "article": null,
+    "example": "Wir können sagen."
+  },
+  {
+    "category": "verb",
+    "german": "sammeln",
+    "english": "to collect",
+    "article": null,
+    "example": "Wir können sammeln."
+  },
+  {
+    "category": "verb",
+    "german": "schenken",
+    "english": "to gift",
+    "article": null,
+    "example": "Wir können schenken."
+  },
+  {
+    "category": "verb",
+    "german": "schicken",
+    "english": "to send",
+    "article": null,
+    "example": "Wir können schicken."
+  },
+  {
+    "category": "verb",
+    "german": "schmecken",
+    "english": "to taste",
+    "article": null,
+    "example": "Wir können schmecken."
+  },
+  {
+    "category": "verb",
+    "german": "schneiden",
+    "english": "to cut",
+    "article": null,
+    "example": "Wir können schneiden."
+  },
+  {
+    "category": "verb",
+    "german": "schwimmen",
+    "english": "to swim",
+    "article": null,
+    "example": "Wir können schwimmen."
+  },
+  {
+    "category": "verb",
+    "german": "sitzen",
+    "english": "to sit",
+    "article": null,
+    "example": "Wir können sitzen."
+  },
+  {
+    "category": "verb",
+    "german": "sollen",
+    "english": "should",
+    "article": null,
+    "example": "Wir können sollen."
+  },
+  {
+    "category": "verb",
+    "german": "sparen",
+    "english": "to save",
+    "article": null,
+    "example": "Wir können sparen."
+  },
+  {
+    "category": "verb",
+    "german": "spazieren",
+    "english": "to stroll",
+    "article": null,
+    "example": "Wir können spazieren."
+  },
+  {
+    "category": "verb",
+    "german": "stellen",
+    "english": "to put",
+    "article": null,
+    "example": "Wir können stellen."
+  },
+  {
+    "category": "verb",
+    "german": "studieren",
+    "english": "to study",
+    "article": null,
+    "example": "Wir können studieren."
+  },
+  {
+    "category": "verb",
+    "german": "suchen",
+    "english": "to search",
+    "article": null,
+    "example": "Wir können suchen."
+  },
+  {
+    "category": "verb",
+    "german": "tanzen",
+    "english": "to dance",
+    "article": null,
+    "example": "Wir können tanzen."
+  },
+  {
+    "category": "verb",
+    "german": "teilen",
+    "english": "to share",
+    "article": null,
+    "example": "Wir können teilen."
+  },
+  {
+    "category": "verb",
+    "german": "tragen",
+    "english": "to carry",
+    "article": null,
+    "example": "Wir können tragen."
+  },
+  {
+    "category": "verb",
+    "german": "treffen",
+    "english": "to meet",
+    "article": null,
+    "example": "Wir können treffen."
+  },
+  {
+    "category": "verb",
+    "german": "tun",
+    "english": "to do",
+    "article": null,
+    "example": "Wir können tun."
+  },
+  {
+    "category": "verb",
+    "german": "üben",
+    "english": "to practice",
+    "article": null,
+    "example": "Wir können üben."
+  },
+  {
+    "category": "verb",
+    "german": "verdienen",
+    "english": "to earn",
+    "article": null,
+    "example": "Wir können verdienen."
+  },
+  {
+    "category": "verb",
+    "german": "verlieren",
+    "english": "to lose",
+    "article": null,
+    "example": "Wir können verlieren."
+  },
+  {
+    "category": "verb",
+    "german": "versuchen",
+    "english": "to attempt",
+    "article": null,
+    "example": "Wir können versuchen."
+  },
+  {
+    "category": "verb",
+    "german": "vorbereiten",
+    "english": "to prepare",
+    "article": null,
+    "example": "Wir können vorbereiten."
+  },
+  {
+    "category": "verb",
+    "german": "wählen",
+    "english": "to choose",
+    "article": null,
+    "example": "Wir können wählen."
+  },
+  {
+    "category": "verb",
+    "german": "waschen",
+    "english": "to wash",
+    "article": null,
+    "example": "Wir können waschen."
+  },
+  {
+    "category": "verb",
+    "german": "wechseln",
+    "english": "to change",
+    "article": null,
+    "example": "Wir können wechseln."
+  },
+  {
+    "category": "verb",
+    "german": "werden",
+    "english": "to become",
+    "article": null,
+    "example": "Wir können werden."
+  },
+  {
+    "category": "verb",
+    "german": "wissen",
+    "english": "to know",
+    "article": null,
+    "example": "Wir können wissen."
+  },
+  {
+    "category": "verb",
+    "german": "wollen",
+    "english": "to want",
+    "article": null,
+    "example": "Wir können wollen."
+  },
+  {
+    "category": "verb",
+    "german": "wünschen",
+    "english": "to wish",
+    "article": null,
+    "example": "Wir können wünschen."
+  },
+  {
+    "category": "verb",
+    "german": "zeigen",
+    "english": "to show",
+    "article": null,
+    "example": "Wir können zeigen."
   },
   {
     "category": "adjective",
-    "german": "lernhaft085",
-    "english": "practice adjective 085",
+    "german": "aktuell",
+    "english": "current",
     "article": null,
-    "example": "Das Beispiel ist lernhaft085."
+    "example": "Das Beispiel ist aktuell."
+  },
+  {
+    "category": "adjective",
+    "german": "angenehm",
+    "english": "pleasant",
+    "article": null,
+    "example": "Das Beispiel ist angenehm."
+  },
+  {
+    "category": "adjective",
+    "german": "arm",
+    "english": "poor",
+    "article": null,
+    "example": "Das Beispiel ist arm."
+  },
+  {
+    "category": "adjective",
+    "german": "bereit",
+    "english": "ready",
+    "article": null,
+    "example": "Das Beispiel ist bereit."
+  },
+  {
+    "category": "adjective",
+    "german": "berühmt",
+    "english": "famous",
+    "article": null,
+    "example": "Das Beispiel ist berühmt."
+  },
+  {
+    "category": "adjective",
+    "german": "besser",
+    "english": "better",
+    "article": null,
+    "example": "Das Beispiel ist besser."
+  },
+  {
+    "category": "adjective",
+    "german": "breit",
+    "english": "wide",
+    "article": null,
+    "example": "Das Beispiel ist breit."
+  },
+  {
+    "category": "adjective",
+    "german": "direkt",
+    "english": "direct",
+    "article": null,
+    "example": "Das Beispiel ist direkt."
+  },
+  {
+    "category": "adjective",
+    "german": "dumm",
+    "english": "stupid",
+    "article": null,
+    "example": "Das Beispiel ist dumm."
+  },
+  {
+    "category": "adjective",
+    "german": "dünn",
+    "english": "thin",
+    "article": null,
+    "example": "Das Beispiel ist dünn."
+  },
+  {
+    "category": "adjective",
+    "german": "ehrlich",
+    "english": "honest",
+    "article": null,
+    "example": "Das Beispiel ist ehrlich."
+  },
+  {
+    "category": "adjective",
+    "german": "eilig",
+    "english": "urgent",
+    "article": null,
+    "example": "Das Beispiel ist eilig."
+  },
+  {
+    "category": "adjective",
+    "german": "eng",
+    "english": "narrow",
+    "article": null,
+    "example": "Das Beispiel ist eng."
+  },
+  {
+    "category": "adjective",
+    "german": "erfolgreich",
+    "english": "successful",
+    "article": null,
+    "example": "Das Beispiel ist erfolgreich."
+  },
+  {
+    "category": "adjective",
+    "german": "ernst",
+    "english": "serious",
+    "article": null,
+    "example": "Das Beispiel ist ernst."
+  },
+  {
+    "category": "adjective",
+    "german": "fleißig",
+    "english": "hardworking",
+    "article": null,
+    "example": "Das Beispiel ist fleißig."
+  },
+  {
+    "category": "adjective",
+    "german": "frisch",
+    "english": "fresh",
+    "article": null,
+    "example": "Das Beispiel ist frisch."
+  },
+  {
+    "category": "adjective",
+    "german": "froh",
+    "english": "glad",
+    "article": null,
+    "example": "Das Beispiel ist froh."
+  },
+  {
+    "category": "adjective",
+    "german": "früh",
+    "english": "early",
+    "article": null,
+    "example": "Das Beispiel ist früh."
+  },
+  {
+    "category": "adjective",
+    "german": "geduldig",
+    "english": "patient",
+    "article": null,
+    "example": "Das Beispiel ist geduldig."
+  },
+  {
+    "category": "adjective",
+    "german": "gelb",
+    "english": "yellow",
+    "article": null,
+    "example": "Das Beispiel ist gelb."
+  },
+  {
+    "category": "adjective",
+    "german": "gemeinsam",
+    "english": "common",
+    "article": null,
+    "example": "Das Beispiel ist gemeinsam."
+  },
+  {
+    "category": "adjective",
+    "german": "genau",
+    "english": "exact",
+    "article": null,
+    "example": "Das Beispiel ist genau."
+  },
+  {
+    "category": "adjective",
+    "german": "gerecht",
+    "english": "fair",
+    "article": null,
+    "example": "Das Beispiel ist gerecht."
+  },
+  {
+    "category": "adjective",
+    "german": "glücklich",
+    "english": "happy",
+    "article": null,
+    "example": "Das Beispiel ist glücklich."
+  },
+  {
+    "category": "adjective",
+    "german": "grün",
+    "english": "green",
+    "article": null,
+    "example": "Das Beispiel ist grün."
+  },
+  {
+    "category": "adjective",
+    "german": "hart",
+    "english": "hard",
+    "article": null,
+    "example": "Das Beispiel ist hart."
+  },
+  {
+    "category": "adjective",
+    "german": "häufig",
+    "english": "frequent",
+    "article": null,
+    "example": "Das Beispiel ist häufig."
+  },
+  {
+    "category": "adjective",
+    "german": "höflich",
+    "english": "polite",
+    "article": null,
+    "example": "Das Beispiel ist höflich."
+  },
+  {
+    "category": "adjective",
+    "german": "hungrig",
+    "english": "hungry",
+    "article": null,
+    "example": "Das Beispiel ist hungrig."
+  },
+  {
+    "category": "adjective",
+    "german": "interessant",
+    "english": "interesting",
+    "article": null,
+    "example": "Das Beispiel ist interessant."
+  },
+  {
+    "category": "adjective",
+    "german": "jung",
+    "english": "young",
+    "article": null,
+    "example": "Das Beispiel ist jung."
+  },
+  {
+    "category": "adjective",
+    "german": "klar",
+    "english": "clear",
+    "article": null,
+    "example": "Das Beispiel ist klar."
+  },
+  {
+    "category": "adjective",
+    "german": "klug",
+    "english": "clever",
+    "article": null,
+    "example": "Das Beispiel ist klug."
+  },
+  {
+    "category": "adjective",
+    "german": "komisch",
+    "english": "strange",
+    "article": null,
+    "example": "Das Beispiel ist komisch."
+  },
+  {
+    "category": "adjective",
+    "german": "kostenlos",
+    "english": "free of charge",
+    "article": null,
+    "example": "Das Beispiel ist kostenlos."
+  },
+  {
+    "category": "adjective",
+    "german": "kreativ",
+    "english": "creative",
+    "article": null,
+    "example": "Das Beispiel ist kreativ."
+  },
+  {
+    "category": "adjective",
+    "german": "langsam",
+    "english": "slow",
+    "article": null,
+    "example": "Das Beispiel ist langsam."
+  },
+  {
+    "category": "adjective",
+    "german": "leer",
+    "english": "empty",
+    "article": null,
+    "example": "Das Beispiel ist leer."
+  },
+  {
+    "category": "adjective",
+    "german": "lecker",
+    "english": "delicious",
+    "article": null,
+    "example": "Das Beispiel ist lecker."
+  },
+  {
+    "category": "adjective",
+    "german": "lieb",
+    "english": "kind",
+    "article": null,
+    "example": "Das Beispiel ist lieb."
+  },
+  {
+    "category": "adjective",
+    "german": "modern",
+    "english": "modern",
+    "article": null,
+    "example": "Das Beispiel ist modern."
+  },
+  {
+    "category": "adjective",
+    "german": "möglich",
+    "english": "possible",
+    "article": null,
+    "example": "Das Beispiel ist möglich."
+  },
+  {
+    "category": "adjective",
+    "german": "nah",
+    "english": "near",
+    "article": null,
+    "example": "Das Beispiel ist nah."
+  },
+  {
+    "category": "adjective",
+    "german": "nass",
+    "english": "wet",
+    "article": null,
+    "example": "Das Beispiel ist nass."
+  },
+  {
+    "category": "adjective",
+    "german": "notwendig",
+    "english": "necessary",
+    "article": null,
+    "example": "Das Beispiel ist notwendig."
+  },
+  {
+    "category": "adjective",
+    "german": "offen",
+    "english": "open",
+    "article": null,
+    "example": "Das Beispiel ist offen."
+  },
+  {
+    "category": "adjective",
+    "german": "persönlich",
+    "english": "personal",
+    "article": null,
+    "example": "Das Beispiel ist persönlich."
+  },
+  {
+    "category": "adjective",
+    "german": "praktisch",
+    "english": "practical",
+    "article": null,
+    "example": "Das Beispiel ist praktisch."
+  },
+  {
+    "category": "adjective",
+    "german": "privat",
+    "english": "private",
+    "article": null,
+    "example": "Das Beispiel ist privat."
+  },
+  {
+    "category": "adjective",
+    "german": "pünktlich",
+    "english": "punctual",
+    "article": null,
+    "example": "Das Beispiel ist pünktlich."
+  },
+  {
+    "category": "adjective",
+    "german": "reich",
+    "english": "rich",
+    "article": null,
+    "example": "Das Beispiel ist reich."
+  },
+  {
+    "category": "adjective",
+    "german": "rund",
+    "english": "round",
+    "article": null,
+    "example": "Das Beispiel ist rund."
+  },
+  {
+    "category": "adjective",
+    "german": "satt",
+    "english": "full",
+    "article": null,
+    "example": "Das Beispiel ist satt."
+  },
+  {
+    "category": "adjective",
+    "german": "sauer",
+    "english": "sour",
+    "article": null,
+    "example": "Das Beispiel ist sauer."
+  },
+  {
+    "category": "adjective",
+    "german": "scharf",
+    "english": "spicy",
+    "article": null,
+    "example": "Das Beispiel ist scharf."
+  },
+  {
+    "category": "adjective",
+    "german": "schlank",
+    "english": "slim",
+    "article": null,
+    "example": "Das Beispiel ist schlank."
+  },
+  {
+    "category": "adjective",
+    "german": "schlimm",
+    "english": "bad",
+    "article": null,
+    "example": "Das Beispiel ist schlimm."
+  },
+  {
+    "category": "adjective",
+    "german": "schriftlich",
+    "english": "written",
+    "article": null,
+    "example": "Das Beispiel ist schriftlich."
+  },
+  {
+    "category": "adjective",
+    "german": "selten",
+    "english": "rare",
+    "article": null,
+    "example": "Das Beispiel ist selten."
+  },
+  {
+    "category": "adjective",
+    "german": "sicher",
+    "english": "safe",
+    "article": null,
+    "example": "Das Beispiel ist sicher."
+  },
+  {
+    "category": "adjective",
+    "german": "süß",
+    "english": "sweet",
+    "article": null,
+    "example": "Das Beispiel ist süß."
+  },
+  {
+    "category": "adjective",
+    "german": "sympathisch",
+    "english": "likable",
+    "article": null,
+    "example": "Das Beispiel ist sympathisch."
+  },
+  {
+    "category": "adjective",
+    "german": "tief",
+    "english": "deep",
+    "article": null,
+    "example": "Das Beispiel ist tief."
+  },
+  {
+    "category": "adjective",
+    "german": "trocken",
+    "english": "dry",
+    "article": null,
+    "example": "Das Beispiel ist trocken."
+  },
+  {
+    "category": "adjective",
+    "german": "typisch",
+    "english": "typical",
+    "article": null,
+    "example": "Das Beispiel ist typisch."
+  },
+  {
+    "category": "adjective",
+    "german": "verboten",
+    "english": "forbidden",
+    "article": null,
+    "example": "Das Beispiel ist verboten."
+  },
+  {
+    "category": "adjective",
+    "german": "verheiratet",
+    "english": "married",
+    "article": null,
+    "example": "Das Beispiel ist verheiratet."
+  },
+  {
+    "category": "adjective",
+    "german": "voll",
+    "english": "full",
+    "article": null,
+    "example": "Das Beispiel ist voll."
+  },
+  {
+    "category": "adjective",
+    "german": "weich",
+    "english": "soft",
+    "article": null,
+    "example": "Das Beispiel ist weich."
+  },
+  {
+    "category": "adjective",
+    "german": "weit",
+    "english": "far",
+    "article": null,
+    "example": "Das Beispiel ist weit."
+  },
+  {
+    "category": "adjective",
+    "german": "wenig",
+    "english": "little",
+    "article": null,
+    "example": "Das Beispiel ist wenig."
+  },
+  {
+    "category": "adjective",
+    "german": "wertvoll",
+    "english": "valuable",
+    "article": null,
+    "example": "Das Beispiel ist wertvoll."
+  },
+  {
+    "category": "adjective",
+    "german": "wild",
+    "english": "wild",
+    "article": null,
+    "example": "Das Beispiel ist wild."
+  },
+  {
+    "category": "adjective",
+    "german": "wunderbar",
+    "english": "wonderful",
+    "article": null,
+    "example": "Das Beispiel ist wunderbar."
+  },
+  {
+    "category": "adjective",
+    "german": "zufrieden",
+    "english": "satisfied",
+    "article": null,
+    "example": "Das Beispiel ist zufrieden."
+  },
+  {
+    "category": "adjective",
+    "german": "zusätzlich",
+    "english": "additional",
+    "article": null,
+    "example": "Das Beispiel ist zusätzlich."
+  },
+  {
+    "category": "adjective",
+    "german": "blau",
+    "english": "blue",
+    "article": null,
+    "example": "Das Beispiel ist blau."
+  },
+  {
+    "category": "adjective",
+    "german": "rot",
+    "english": "red",
+    "article": null,
+    "example": "Das Beispiel ist rot."
+  },
+  {
+    "category": "adjective",
+    "german": "weiß",
+    "english": "white",
+    "article": null,
+    "example": "Das Beispiel ist weiß."
+  },
+  {
+    "category": "adjective",
+    "german": "schwarz",
+    "english": "black",
+    "article": null,
+    "example": "Das Beispiel ist schwarz."
+  },
+  {
+    "category": "adjective",
+    "german": "normal",
+    "english": "normal",
+    "article": null,
+    "example": "Das Beispiel ist normal."
+  },
+  {
+    "category": "adjective",
+    "german": "international",
+    "english": "international",
+    "article": null,
+    "example": "Das Beispiel ist international."
+  },
+  {
+    "category": "adjective",
+    "german": "lokal",
+    "english": "local",
+    "article": null,
+    "example": "Das Beispiel ist lokal."
+  },
+  {
+    "category": "adjective",
+    "german": "mutig",
+    "english": "brave",
+    "article": null,
+    "example": "Das Beispiel ist mutig."
   },
   {
     "category": "adverb",
-    "german": "lernweise085",
-    "english": "practice adverb 085",
+    "german": "abends",
+    "english": "in the evenings",
     "article": null,
-    "example": "Wir üben lernweise085."
+    "example": "Wir üben abends."
+  },
+  {
+    "category": "adverb",
+    "german": "anders",
+    "english": "differently",
+    "article": null,
+    "example": "Wir üben anders."
+  },
+  {
+    "category": "adverb",
+    "german": "anfangs",
+    "english": "initially",
+    "article": null,
+    "example": "Wir üben anfangs."
+  },
+  {
+    "category": "adverb",
+    "german": "anschließend",
+    "english": "afterwards",
+    "article": null,
+    "example": "Wir üben anschließend."
+  },
+  {
+    "category": "adverb",
+    "german": "auswärts",
+    "english": "away",
+    "article": null,
+    "example": "Wir üben auswärts."
+  },
+  {
+    "category": "adverb",
+    "german": "bereits",
+    "english": "already",
+    "article": null,
+    "example": "Wir üben bereits."
+  },
+  {
+    "category": "adverb",
+    "german": "bisher",
+    "english": "so far",
+    "article": null,
+    "example": "Wir üben bisher."
+  },
+  {
+    "category": "adverb",
+    "german": "damals",
+    "english": "back then",
+    "article": null,
+    "example": "Wir üben damals."
+  },
+  {
+    "category": "adverb",
+    "german": "danach",
+    "english": "after that",
+    "article": null,
+    "example": "Wir üben danach."
+  },
+  {
+    "category": "adverb",
+    "german": "daneben",
+    "english": "beside it",
+    "article": null,
+    "example": "Wir üben daneben."
+  },
+  {
+    "category": "adverb",
+    "german": "dann",
+    "english": "then",
+    "article": null,
+    "example": "Wir üben dann."
+  },
+  {
+    "category": "adverb",
+    "german": "darum",
+    "english": "therefore",
+    "article": null,
+    "example": "Wir üben darum."
+  },
+  {
+    "category": "adverb",
+    "german": "eben",
+    "english": "just",
+    "article": null,
+    "example": "Wir üben eben."
+  },
+  {
+    "category": "adverb",
+    "german": "eigentlich",
+    "english": "actually",
+    "article": null,
+    "example": "Wir üben eigentlich."
+  },
+  {
+    "category": "adverb",
+    "german": "einmal",
+    "english": "once",
+    "article": null,
+    "example": "Wir üben einmal."
+  },
+  {
+    "category": "adverb",
+    "german": "endlich",
+    "english": "finally",
+    "article": null,
+    "example": "Wir üben endlich."
+  },
+  {
+    "category": "adverb",
+    "german": "etwa",
+    "english": "approximately",
+    "article": null,
+    "example": "Wir üben etwa."
+  },
+  {
+    "category": "adverb",
+    "german": "früher",
+    "english": "earlier",
+    "article": null,
+    "example": "Wir üben früher."
+  },
+  {
+    "category": "adverb",
+    "german": "gestern",
+    "english": "yesterday",
+    "article": null,
+    "example": "Wir üben gestern."
+  },
+  {
+    "category": "adverb",
+    "german": "gleich",
+    "english": "right away",
+    "article": null,
+    "example": "Wir üben gleich."
+  },
+  {
+    "category": "adverb",
+    "german": "hinein",
+    "english": "inside",
+    "article": null,
+    "example": "Wir üben hinein."
+  },
+  {
+    "category": "adverb",
+    "german": "hinten",
+    "english": "at the back",
+    "article": null,
+    "example": "Wir üben hinten."
+  },
+  {
+    "category": "adverb",
+    "german": "irgendwo",
+    "english": "somewhere",
+    "article": null,
+    "example": "Wir üben irgendwo."
+  },
+  {
+    "category": "adverb",
+    "german": "jährlich",
+    "english": "annually",
+    "article": null,
+    "example": "Wir üben jährlich."
+  },
+  {
+    "category": "adverb",
+    "german": "kaum",
+    "english": "hardly",
+    "article": null,
+    "example": "Wir üben kaum."
+  },
+  {
+    "category": "adverb",
+    "german": "kürzlich",
+    "english": "recently",
+    "article": null,
+    "example": "Wir üben kürzlich."
+  },
+  {
+    "category": "adverb",
+    "german": "leider",
+    "english": "unfortunately",
+    "article": null,
+    "example": "Wir üben leider."
+  },
+  {
+    "category": "adverb",
+    "german": "mehr",
+    "english": "more",
+    "article": null,
+    "example": "Wir üben mehr."
+  },
+  {
+    "category": "adverb",
+    "german": "mittags",
+    "english": "at noon",
+    "article": null,
+    "example": "Wir üben mittags."
+  },
+  {
+    "category": "adverb",
+    "german": "nachts",
+    "english": "at night",
+    "article": null,
+    "example": "Wir üben nachts."
+  },
+  {
+    "category": "adverb",
+    "german": "nebenan",
+    "english": "next door",
+    "article": null,
+    "example": "Wir üben nebenan."
+  },
+  {
+    "category": "adverb",
+    "german": "nochmals",
+    "english": "again",
+    "article": null,
+    "example": "Wir üben nochmals."
+  },
+  {
+    "category": "adverb",
+    "german": "normalerweise",
+    "english": "normally",
+    "article": null,
+    "example": "Wir üben normalerweise."
+  },
+  {
+    "category": "adverb",
+    "german": "nun",
+    "english": "now",
+    "article": null,
+    "example": "Wir üben nun."
+  },
+  {
+    "category": "adverb",
+    "german": "plötzlich",
+    "english": "suddenly",
+    "article": null,
+    "example": "Wir üben plötzlich."
+  },
+  {
+    "category": "adverb",
+    "german": "regelmäßig",
+    "english": "regularly",
+    "article": null,
+    "example": "Wir üben regelmäßig."
+  },
+  {
+    "category": "adverb",
+    "german": "schließlich",
+    "english": "finally",
+    "article": null,
+    "example": "Wir üben schließlich."
+  },
+  {
+    "category": "adverb",
+    "german": "sonst",
+    "english": "otherwise",
+    "article": null,
+    "example": "Wir üben sonst."
+  },
+  {
+    "category": "adverb",
+    "german": "täglich",
+    "english": "daily",
+    "article": null,
+    "example": "Wir üben täglich."
+  },
+  {
+    "category": "adverb",
+    "german": "trotzdem",
+    "english": "nevertheless",
+    "article": null,
+    "example": "Wir üben trotzdem."
+  },
+  {
+    "category": "adverb",
+    "german": "übermorgen",
+    "english": "the day after tomorrow",
+    "article": null,
+    "example": "Wir üben übermorgen."
+  },
+  {
+    "category": "adverb",
+    "german": "ungefähr",
+    "english": "approximately",
+    "article": null,
+    "example": "Wir üben ungefähr."
+  },
+  {
+    "category": "adverb",
+    "german": "vorgestern",
+    "english": "the day before yesterday",
+    "article": null,
+    "example": "Wir üben vorgestern."
+  },
+  {
+    "category": "adverb",
+    "german": "vorher",
+    "english": "beforehand",
+    "article": null,
+    "example": "Wir üben vorher."
+  },
+  {
+    "category": "adverb",
+    "german": "vorne",
+    "english": "at the front",
+    "article": null,
+    "example": "Wir üben vorne."
+  },
+  {
+    "category": "adverb",
+    "german": "wahrscheinlich",
+    "english": "probably",
+    "article": null,
+    "example": "Wir üben wahrscheinlich."
+  },
+  {
+    "category": "adverb",
+    "german": "weiter",
+    "english": "further",
+    "article": null,
+    "example": "Wir üben weiter."
+  },
+  {
+    "category": "adverb",
+    "german": "wenigstens",
+    "english": "at least",
+    "article": null,
+    "example": "Wir üben wenigstens."
+  },
+  {
+    "category": "adverb",
+    "german": "wieder",
+    "english": "again",
+    "article": null,
+    "example": "Wir üben wieder."
+  },
+  {
+    "category": "adverb",
+    "german": "zuerst",
+    "english": "first",
+    "article": null,
+    "example": "Wir üben zuerst."
+  },
+  {
+    "category": "adverb",
+    "german": "zufällig",
+    "english": "by chance",
+    "article": null,
+    "example": "Wir üben zufällig."
+  },
+  {
+    "category": "adverb",
+    "german": "zurück",
+    "english": "back",
+    "article": null,
+    "example": "Wir üben zurück."
+  },
+  {
+    "category": "adverb",
+    "german": "außerdem",
+    "english": "besides",
+    "article": null,
+    "example": "Wir üben außerdem."
+  },
+  {
+    "category": "adverb",
+    "german": "deshalb",
+    "english": "therefore",
+    "article": null,
+    "example": "Wir üben deshalb."
+  },
+  {
+    "category": "adverb",
+    "german": "drüben",
+    "english": "over there",
+    "article": null,
+    "example": "Wir üben drüben."
+  },
+  {
+    "category": "adverb",
+    "german": "jedenfalls",
+    "english": "in any case",
+    "article": null,
+    "example": "Wir üben jedenfalls."
+  },
+  {
+    "category": "adverb",
+    "german": "mehrmals",
+    "english": "several times",
+    "article": null,
+    "example": "Wir üben mehrmals."
+  },
+  {
+    "category": "adverb",
+    "german": "mittlerweile",
+    "english": "meanwhile",
+    "article": null,
+    "example": "Wir üben mittlerweile."
+  },
+  {
+    "category": "adverb",
+    "german": "selbst",
+    "english": "even",
+    "article": null,
+    "example": "Wir üben selbst."
+  },
+  {
+    "category": "adverb",
+    "german": "vergeblich",
+    "english": "in vain",
+    "article": null,
+    "example": "Wir üben vergeblich."
+  },
+  {
+    "category": "adverb",
+    "german": "völlig",
+    "english": "completely",
+    "article": null,
+    "example": "Wir üben völlig."
+  },
+  {
+    "category": "adverb",
+    "german": "zunächst",
+    "english": "initially",
+    "article": null,
+    "example": "Wir üben zunächst."
+  },
+  {
+    "category": "adverb",
+    "german": "zuletzt",
+    "english": "lastly",
+    "article": null,
+    "example": "Wir üben zuletzt."
+  },
+  {
+    "category": "adverb",
+    "german": "bestimmt",
+    "english": "definitely",
+    "article": null,
+    "example": "Wir üben bestimmt."
+  },
+  {
+    "category": "adverb",
+    "german": "oftmals",
+    "english": "often",
+    "article": null,
+    "example": "Wir üben oftmals."
+  },
+  {
+    "category": "adverb",
+    "german": "nachtsüber",
+    "english": "overnight",
+    "article": null,
+    "example": "Wir üben nachtsüber."
+  },
+  {
+    "category": "adverb",
+    "german": "heimlich",
+    "english": "secretly",
+    "article": null,
+    "example": "Wir üben heimlich."
+  },
+  {
+    "category": "adverb",
+    "german": "absichtlich",
+    "english": "intentionally",
+    "article": null,
+    "example": "Wir üben absichtlich."
+  },
+  {
+    "category": "adverb",
+    "german": "versehentlich",
+    "english": "accidentally",
+    "article": null,
+    "example": "Wir üben versehentlich."
+  },
+  {
+    "category": "adverb",
+    "german": "gründlich",
+    "english": "thoroughly",
+    "article": null,
+    "example": "Wir üben gründlich."
+  },
+  {
+    "category": "adverb",
+    "german": "deutlich",
+    "english": "clearly",
+    "article": null,
+    "example": "Wir üben deutlich."
+  },
+  {
+    "category": "adverb",
+    "german": "knapp",
+    "english": "barely",
+    "article": null,
+    "example": "Wir üben knapp."
+  },
+  {
+    "category": "adverb",
+    "german": "reichlich",
+    "english": "abundantly",
+    "article": null,
+    "example": "Wir üben reichlich."
+  },
+  {
+    "category": "adverb",
+    "german": "teilweise",
+    "english": "partly",
+    "article": null,
+    "example": "Wir üben teilweise."
+  },
+  {
+    "category": "adverb",
+    "german": "vollständig",
+    "english": "completely",
+    "article": null,
+    "example": "Wir üben vollständig."
+  },
+  {
+    "category": "adverb",
+    "german": "schriftlich",
+    "english": "in writing",
+    "article": null,
+    "example": "Wir üben schriftlich."
+  },
+  {
+    "category": "adverb",
+    "german": "mündlich",
+    "english": "orally",
+    "article": null,
+    "example": "Wir üben mündlich."
+  },
+  {
+    "category": "adverb",
+    "german": "persönlich",
+    "english": "personally",
+    "article": null,
+    "example": "Wir üben persönlich."
+  },
+  {
+    "category": "adverb",
+    "german": "pünktlich",
+    "english": "punctually",
+    "article": null,
+    "example": "Wir üben pünktlich."
+  },
+  {
+    "category": "adverb",
+    "german": "freundlich",
+    "english": "kindly",
+    "article": null,
+    "example": "Wir üben freundlich."
+  },
+  {
+    "category": "adverb",
+    "german": "höflich",
+    "english": "politely",
+    "article": null,
+    "example": "Wir üben höflich."
+  },
+  {
+    "category": "adverb",
+    "german": "ehrlich",
+    "english": "honestly",
+    "article": null,
+    "example": "Wir üben ehrlich."
+  },
+  {
+    "category": "adverb",
+    "german": "vorsichtig",
+    "english": "carefully",
+    "article": null,
+    "example": "Wir üben vorsichtig."
+  },
+  {
+    "category": "adverb",
+    "german": "mutig",
+    "english": "bravely",
+    "article": null,
+    "example": "Wir üben mutig."
+  },
+  {
+    "category": "adverb",
+    "german": "nebenbei",
+    "english": "incidentally",
+    "article": null,
+    "example": "Wir üben nebenbei."
+  },
+  {
+    "category": "adverb",
+    "german": "vorwärts",
+    "english": "forward",
+    "article": null,
+    "example": "Wir üben vorwärts."
+  },
+  {
+    "category": "adverb",
+    "german": "rückwärts",
+    "english": "backward",
+    "article": null,
+    "example": "Wir üben rückwärts."
   }
 ]

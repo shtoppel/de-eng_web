@@ -165,6 +165,7 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 72px); line-height: .95; }
   padding: 14px 20px;
   font-size: clamp(16px, 1.8vw, 26px);
   font-weight: 950;
+  overflow-wrap: anywhere;
   box-shadow: 0 18px 42px rgba(0,0,0,.34);
   backdrop-filter: blur(10px);
   animation: answerIn .42s cubic-bezier(.2,.7,.2,1) both;
