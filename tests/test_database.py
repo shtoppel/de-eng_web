@@ -24,31 +24,31 @@ class DatabaseTests(unittest.TestCase):
 
     def test_category_filtering(self) -> None:
         nouns = fetch_words("noun", self.db_path)
-        self.assertGreaterEqual(len(nouns), 1000)
+        self.assertEqual(125, len(nouns))
         self.assertTrue(all(word["category"] == "noun" for word in nouns))
         self.assertEqual(CATEGORIES["noun"], nouns[0]["category_label"])
 
-    def test_seed_database_has_four_thousand_words(self) -> None:
+    def test_seed_database_has_curated_real_words(self) -> None:
         words = fetch_words(db_path=self.db_path)
-        self.assertEqual(4000, len(words))
+        self.assertEqual(502, len(words))
         self.assertEqual(
-            {"adjective": 1000, "adverb": 1000, "noun": 1000, "verb": 1000},
+            {"adjective": 125, "adverb": 127, "noun": 125, "verb": 125},
             Counter(word["category"] for word in words),
         )
 
     def test_seed_words_do_not_include_generated_placeholder_compounds(self) -> None:
         german_words = {str(word["german"]) for word in fetch_words(db_path=self.db_path)}
-        self.assertFalse(
-            {
-                "Sommerfehler",
-                "Morgenmuseum",
-                "hinlernen",
-                "Wochenfehler",
-                "zu Hause reisen",
-                "telefonisch trinken",
-                "online trinken",
-            } & german_words
-        )
+        blocked_generated_terms = {
+            "Sommerfehler",
+            "Morgenmuseum",
+            "hinlernen",
+            "Wochenfehler",
+            "zu Hause reisen",
+            "telefonisch trinken",
+            "online trinken",
+        }
+        self.assertFalse(blocked_generated_terms & german_words)
+        self.assertTrue(all(" " not in word for word in german_words))
 
     def test_placeholder_seed_words_are_removed_from_existing_database(self) -> None:
         add_word(
