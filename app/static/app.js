@@ -24,6 +24,7 @@ const articleInput = document.querySelector('#articleInput');
 const formResult = document.querySelector('#formResult');
 
 const AUTO_ADVANCE_MS = 2000;
+const ARTICLE_MODE_STYLE = 'multi';
 const answerPositions = ['top', 'right', 'bottom', 'left'];
 const neuronStarts = [
   ['-42vw', '-32vh'], ['42vw', '-32vh'], ['-42vw', '32vh'], ['42vw', '32vh'],
@@ -235,7 +236,13 @@ function acceptedAnswers() {
 function updateChrome() {
   stage.className = `heroStage ${state.mode === 'english' ? 'british' : state.mode}`;
   modeButtons.forEach((button) => button.classList.toggle('active', button.dataset.mode === state.mode));
-  styleButtons.forEach((button) => button.classList.toggle('active', button.dataset.style === state.answerStyle));
+  styleButtons.forEach((button) => {
+    const isCardStyle = button.dataset.style === 'cards';
+    const cardsUnavailable = state.mode === 'articles' && isCardStyle;
+    button.disabled = cardsUnavailable;
+    button.classList.toggle('active', button.dataset.style === state.answerStyle);
+    button.setAttribute('aria-disabled', String(cardsUnavailable));
+  });
   scoreElement.textContent = state.score;
   answeredElement.textContent = state.answered;
   accuracyElement.textContent = state.answered ? `${Math.round((state.score / state.answered) * 100)}%` : '0%';
@@ -347,10 +354,16 @@ function resetSession() {
 
 function setMode(mode) {
   state.mode = mode;
+  if (mode === 'articles') {
+    state.answerStyle = ARTICLE_MODE_STYLE;
+  }
   resetSession();
 }
 
 function setAnswerStyle(answerStyle) {
+  if (state.mode === 'articles' && answerStyle === 'cards') {
+    return;
+  }
   state.answerStyle = answerStyle;
   resetSession();
 }
