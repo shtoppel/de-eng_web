@@ -36,6 +36,20 @@ class DatabaseTests(unittest.TestCase):
             Counter(word["category"] for word in words),
         )
 
+    def test_seed_words_do_not_include_generated_placeholder_compounds(self) -> None:
+        german_words = {str(word["german"]) for word in fetch_words(db_path=self.db_path)}
+        self.assertFalse(
+            {
+                "Sommerfehler",
+                "Morgenmuseum",
+                "hinlernen",
+                "Wochenfehler",
+                "zu Hause reisen",
+                "telefonisch trinken",
+                "online trinken",
+            } & german_words
+        )
+
     def test_placeholder_seed_words_are_removed_from_existing_database(self) -> None:
         add_word(
             {

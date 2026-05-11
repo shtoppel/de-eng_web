@@ -381,6 +381,7 @@ function showAnswer() {
   if (state.selected || !state.current) return;
 
   const expected = correctAnswer();
+  cardAnswerInput.value = expected;
   state.selected = true;
   state.answered += 1;
   feedback.className = 'feedback bad';

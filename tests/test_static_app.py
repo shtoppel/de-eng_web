@@ -122,6 +122,10 @@ class StaticAppTests(unittest.TestCase):
               elements.get('#showAnswerButton').click();
               if (!elements.get('#showAnswerButton').disabled) throw new Error('Show answer should disable after revealing the answer');
               if (!elements.get('#feedback').textContent.startsWith('Answer:')) throw new Error('Show answer did not reveal the answer');
+              const revealedAnswer = elements.get('#feedback').textContent.replace('Answer: ', '');
+              if (elements.get('#cardAnswerInput').value !== revealedAnswer) {{
+                throw new Error('Show answer did not autofill the typed-answer form');
+              }}
               if (String(elements.get('#answered').textContent) !== '1') throw new Error('Show answer should count as an answered miss');
 
               elements.get('#nextButton').click();
