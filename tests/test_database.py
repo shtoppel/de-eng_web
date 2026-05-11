@@ -23,12 +23,12 @@ class DatabaseTests(unittest.TestCase):
 
     def test_category_filtering(self) -> None:
         nouns = fetch_words("noun", self.db_path)
-        self.assertGreaterEqual(len(nouns), 40)
+        self.assertGreaterEqual(len(nouns), 125)
         self.assertTrue(all(word["category"] == "noun" for word in nouns))
         self.assertEqual(CATEGORIES["noun"], nouns[0]["category_label"])
 
     def test_seed_database_is_large_enough_for_hundred_word_deck(self) -> None:
-        self.assertGreaterEqual(len(fetch_words(db_path=self.db_path)), 100)
+        self.assertGreaterEqual(len(fetch_words(db_path=self.db_path)), 500)
 
     def test_unknown_category_is_rejected(self) -> None:
         with self.assertRaises(ValueError):

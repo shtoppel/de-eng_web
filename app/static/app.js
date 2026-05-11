@@ -57,6 +57,11 @@ function sampleOptions(correct, candidates, limit) {
   return shuffle([correct, ...shuffle(uniqueCandidates).slice(0, limit - 1)]);
 }
 
+function currentCategoryWords() {
+  if (!state.current) return [];
+  return state.words.filter((word) => word.category === state.current.category);
+}
+
 function normalizeAnswer(value) {
   return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
 }
@@ -202,9 +207,9 @@ function buildRound() {
   if (state.mode === 'articles') {
     state.options = ['der', 'die', 'das'];
   } else if (state.mode === 'english') {
-    state.options = sampleOptions(state.current.english, state.words.map((word) => word.english), 4);
+    state.options = sampleOptions(state.current.english, currentCategoryWords().map((word) => word.english), 4);
   } else {
-    state.options = sampleOptions(wordGerman(state.current), state.words.map(wordGerman), 4);
+    state.options = sampleOptions(wordGerman(state.current), currentCategoryWords().map(wordGerman), 4);
   }
 
   promptForCurrentMode();

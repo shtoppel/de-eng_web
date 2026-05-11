@@ -1,4 +1,4 @@
-# DE-ENG Vocabulary Trainer
+# De-Eng Vocabulary Trainer
 
 A small German-English vocabulary trainer with a SQLite database, category-based practice modes, random word practice, and a dedicated German article trainer.
 
@@ -11,13 +11,13 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 - Metrics show correct answers out of total answered plus the accuracy percentage.
 - Multichoice answers automatically advance to the next word after two seconds.
 - Cards mode accepts typed translations, flashes the prompt card green or red, and advances automatically without revealing wrong answers.
-- English mode shows a German prompt in the center and English answer choices around it.
-- German mode shows an English prompt in the center and German answer choices around it.
+- English mode shows a German prompt in the center and English answer choices from the same part-of-speech category.
+- German mode shows an English prompt in the center and German answer choices from the same part-of-speech category.
 - Article mode uses a German flag background and `der`, `die`, `das` answer choices.
 - Word categories for nouns, verbs, adjectives, and adverbs.
 - Random mode across the full vocabulary database.
 - Automatic SQLite database creation and seed data loading on application startup.
-- Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code; the default seed now includes 165 words.
+- Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code; the default seed now includes 500 words.
 - German article practice for noun genders: `der`, `die`, and `das`.
 - Fully redesigned static frontend with flag backgrounds, animated answer arena, scoring, round controls, and full-screen autoscaling layout.
 - Custom word form and `POST /api/words` endpoint for extending the local vocabulary.
