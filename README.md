@@ -1,24 +1,27 @@
 # DE-ENG Vocabulary Trainer
 
-Небольшой веб-тренажёр немецко-английских слов с SQLite-базой, меню по категориям и отдельной тренировкой немецких артиклей.
+A small German-English vocabulary trainer with a SQLite database, category-based practice modes, random word practice, and a dedicated German article trainer.
 
-## Возможности
+## Features
 
-- категории слов: существительные, глаголы, прилагательные, наречия;
-- случайный режим по всем словам;
-- автозаполнение SQLite-базы начальными словами при старте;
-- тренировка артиклей `der`, `die`, `das` для немецких существительных;
-- Dockerfile и Docker Compose для локального запуска.
+- Word categories for nouns, verbs, adjectives, and adverbs.
+- Random mode across the full vocabulary database.
+- Automatic SQLite database creation and seed data loading on application startup.
+- German article practice for noun genders: `der`, `die`, and `das`.
+- Dockerfile and Docker Compose setup for local containerized runs.
+- Zero runtime Python package dependencies; the app uses only the Python standard library.
 
-## Запуск через Docker Compose
+## Run with Docker Compose
 
 ```bash
 docker compose up --build
 ```
 
-Приложение будет доступно по адресу <http://localhost:8000>.
+The application will be available at <http://localhost:8000>.
 
-## Локальный запуск без Docker
+The Docker Compose setup stores the SQLite database in a named volume so vocabulary data persists between container restarts.
+
+## Run locally without Docker
 
 ```bash
 python -m venv .venv
@@ -27,12 +30,37 @@ pip install -r requirements.txt
 python -m app.main
 ```
 
-По умолчанию база создаётся в `words.db`. Для другого пути задайте переменную окружения `APP_DB_PATH`.
+By default, the application creates `words.db` in the project root. To use a different database path, set the `APP_DB_PATH` environment variable:
+
+```bash
+APP_DB_PATH=/tmp/de-eng-words.db python -m app.main
+```
+
+You can also override the host and port with `APP_HOST` and `APP_PORT`.
 
 ## API
 
-- `GET /api/categories` — список категорий;
-- `GET /api/words?category=noun` — слова выбранной категории;
-- `GET /api/words/random` — случайное слово;
-- `GET /api/articles/random` — вопрос для тренировки артикля;
-- `POST /api/articles/check` — проверка ответа, тело: `{ "word_id": 1, "article": "der" }`.
+- `GET /api/categories` — returns the available word categories.
+- `GET /api/words?category=noun` — returns words from the selected category.
+- `GET /api/words/random` — returns a random word from all categories.
+- `GET /api/words/random?category=verb` — returns a random word from a selected category.
+- `GET /api/articles/random` — returns a noun for German article practice.
+- `POST /api/articles/check` — checks an article answer.
+
+Example article-check request body:
+
+```json
+{
+  "word_id": 1,
+  "article": "der"
+}
+```
+
+## Project structure
+
+```text
+app/main.py          # HTTP server, SQLite initialization, seed data, API, and HTML UI
+Dockerfile           # Container image definition
+docker-compose.yml   # Local container orchestration with persistent SQLite volume
+requirements.txt     # Runtime dependency note
+```
