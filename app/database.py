@@ -10,6 +10,18 @@ from app.config import DB_PATH
 from app.vocabulary import ARTICLES, CATEGORIES, load_seed_words
 
 
+GENERATED_SEED_ARTIFACTS = (
+    "Jahresküche",
+    "Sommerfehler",
+    "Morgenmuseum",
+    "hinlernen",
+    "Wochenfehler",
+    "zu Hause reisen",
+    "telefonisch trinken",
+    "online trinken",
+)
+
+
 @contextmanager
 def db(db_path: Path | None = None) -> Iterator[sqlite3.Connection]:
     path = db_path or DB_PATH
@@ -40,6 +52,7 @@ def init_db(db_path: Path | None = None) -> None:
             """
         )
         remove_placeholder_seed_words(connection)
+        remove_generated_seed_artifacts(connection)
         connection.executemany(
             """
             INSERT OR IGNORE INTO words (category, german, english, article, example)
@@ -62,6 +75,14 @@ def remove_placeholder_seed_words(connection: sqlite3.Connection) -> None:
            OR english LIKE 'practice adjective %'
            OR english LIKE 'practice adverb %'
         """
+    )
+
+
+def remove_generated_seed_artifacts(connection: sqlite3.Connection) -> None:
+    placeholders = ", ".join("?" for _ in GENERATED_SEED_ARTIFACTS)
+    connection.execute(
+        f"DELETE FROM words WHERE german IN ({placeholders})",
+        GENERATED_SEED_ARTIFACTS,
     )
 
 

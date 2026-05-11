@@ -39,6 +39,7 @@ class DatabaseTests(unittest.TestCase):
     def test_seed_words_do_not_include_generated_placeholder_compounds(self) -> None:
         german_words = {str(word["german"]) for word in fetch_words(db_path=self.db_path)}
         blocked_generated_terms = {
+            "Jahresküche",
             "Sommerfehler",
             "Morgenmuseum",
             "hinlernen",
@@ -49,6 +50,21 @@ class DatabaseTests(unittest.TestCase):
         }
         self.assertFalse(blocked_generated_terms & german_words)
         self.assertTrue(all(" " not in word for word in german_words))
+
+    def test_generated_artifact_words_are_removed_from_existing_database(self) -> None:
+        add_word(
+            {
+                "category": "noun",
+                "german": "Jahresküche",
+                "english": "annual kitchen",
+                "article": "die",
+                "example": "Die Jahresküche ist ein generierter Artefakt.",
+            },
+            self.db_path,
+        )
+        init_db(self.db_path)
+        words = fetch_words(db_path=self.db_path)
+        self.assertTrue(all(word["german"] != "Jahresküche" for word in words))
 
     def test_placeholder_seed_words_are_removed_from_existing_database(self) -> None:
         add_word(
