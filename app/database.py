@@ -39,6 +39,7 @@ def init_db(db_path: Path | None = None) -> None:
             )
             """
         )
+        remove_placeholder_seed_words(connection)
         connection.executemany(
             """
             INSERT OR IGNORE INTO words (category, german, english, article, example)
@@ -46,6 +47,22 @@ def init_db(db_path: Path | None = None) -> None:
             """,
             load_seed_words(),
         )
+
+
+def remove_placeholder_seed_words(connection: sqlite3.Connection) -> None:
+    connection.execute(
+        """
+        DELETE FROM words
+        WHERE german LIKE 'Lernnomen %'
+           OR german LIKE 'lernverb%en'
+           OR german LIKE 'lernhaft%'
+           OR german LIKE 'lernweise%'
+           OR english LIKE 'study noun %'
+           OR english LIKE 'to practice verb %'
+           OR english LIKE 'practice adjective %'
+           OR english LIKE 'practice adverb %'
+        """
+    )
 
 
 def row_to_word(row: sqlite3.Row) -> dict[str, str | int | None]:

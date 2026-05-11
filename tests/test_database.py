@@ -30,6 +30,22 @@ class DatabaseTests(unittest.TestCase):
     def test_seed_database_is_large_enough_for_hundred_word_deck(self) -> None:
         self.assertGreaterEqual(len(fetch_words(db_path=self.db_path)), 500)
 
+    def test_placeholder_seed_words_are_removed_from_existing_database(self) -> None:
+        add_word(
+            {
+                "category": "verb",
+                "german": "lernverb048en",
+                "english": "to practice verb 048",
+                "article": None,
+                "example": "Wir lernverb048en heute zusammen.",
+            },
+            self.db_path,
+        )
+        init_db(self.db_path)
+        words = fetch_words(db_path=self.db_path)
+        self.assertTrue(all("lernverb" not in str(word["german"]) for word in words))
+        self.assertTrue(all("practice verb 048" not in str(word["english"]) for word in words))
+
     def test_unknown_category_is_rejected(self) -> None:
         with self.assertRaises(ValueError):
             fetch_words("unknown", self.db_path)
