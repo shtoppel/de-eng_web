@@ -7,29 +7,53 @@
   --cyan: #a5f3fc;
   --green: #10b981;
   --red: #ef4444;
+  --page-gap: clamp(10px, 1.4vw, 18px);
+  --panel-radius: clamp(18px, 2vw, 30px);
 }
-body { margin: 0; min-height: 100vh; background: #020617; color: white; }
+html { min-height: 100%; }
+body { margin: 0; min-height: 100dvh; overflow-x: hidden; background: #020617; color: white; }
 button, input, select { font: inherit; }
 button, select { cursor: pointer; }
-.appShell { width: min(1180px, 100%); min-height: 100vh; margin: 0 auto; padding: 22px; }
+.appShell {
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0;
+  padding: clamp(10px, 2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--page-gap);
+}
 .topBar, .modeMenu, .controlPanel, .addWordPanel {
   position: relative;
   z-index: 20;
   border: 1px solid var(--glass-border);
-  border-radius: 24px;
+  border-radius: var(--panel-radius);
   background: var(--glass);
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.36);
   backdrop-filter: blur(14px);
 }
-.topBar { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding: 18px 22px; }
-.eyebrow { margin: 0 0 6px; color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .28em; text-transform: uppercase; }
-h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
-.scoreBoard { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
-.scoreBoard span { border-radius: 999px; background: rgba(255,255,255,.14); padding: 10px 14px; }
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(12px, 2vw, 28px);
+  align-items: center;
+  padding: clamp(14px, 1.8vw, 24px) clamp(16px, 2.2vw, 32px);
+}
+.eyebrow { margin: 0 0 6px; color: var(--cyan); font-size: clamp(10px, .8vw, 13px); font-weight: 900; letter-spacing: .28em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(30px, 5vw, 72px); line-height: .95; }
+.scoreBoard { display: flex; gap: clamp(8px, 1vw, 14px); flex-wrap: wrap; justify-content: flex-end; }
+.scoreBoard span { border-radius: 999px; background: rgba(255,255,255,.14); padding: clamp(8px, .9vw, 12px) clamp(10px, 1.2vw, 16px); font-size: clamp(13px, 1vw, 17px); }
 .scoreBoard strong { color: var(--cyan); }
-.modeMenu { display: grid; grid-template-columns: repeat(4, minmax(140px, 1fr)); gap: 12px; margin: 16px 0; padding: 14px; }
+.modeMenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+  gap: clamp(8px, 1vw, 14px);
+  margin: 0;
+  padding: clamp(10px, 1vw, 16px);
+  width: 100%;
+}
 .modeButton, #categoryFilter, .controlButton {
-  min-height: 48px;
+  min-height: clamp(46px, 5.2vh, 64px);
   border: 1px solid rgba(255,255,255,.28);
   border-radius: 16px;
   background: rgba(255,255,255,.14);
@@ -42,23 +66,32 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
 .articleButton.active { border-color: #facc15; background: rgba(250, 204, 21, .22); }
 #categoryFilter { padding: 0 14px; color: #e2e8f0; }
 #categoryFilter option { color: #0f172a; }
-.trainerLayout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 16px; }
+.trainerLayout {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: clamp(190px, 18vw, 280px) minmax(0, 1fr);
+  gap: var(--page-gap);
+  width: 100%;
+}
 .styleMenu {
   position: relative;
   z-index: 20;
-  align-self: start;
+  align-self: stretch;
   border: 1px solid var(--glass-border);
-  border-radius: 24px;
+  border-radius: var(--panel-radius);
   background: var(--glass);
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.36);
-  padding: 14px;
+  padding: clamp(12px, 1.2vw, 18px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1vw, 14px);
   backdrop-filter: blur(14px);
 }
-.styleMenuTitle, .deckSizeLabel { margin: 0 0 12px; color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
+.styleMenuTitle, .deckSizeLabel { margin: 0; color: var(--cyan); font-size: clamp(10px, .8vw, 13px); font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
 .styleButton {
   width: 100%;
-  min-height: 52px;
-  margin-top: 10px;
+  min-height: clamp(50px, 6vh, 72px);
   border: 1px solid rgba(255,255,255,.28);
   border-radius: 16px;
   background: rgba(255,255,255,.14);
@@ -66,15 +99,16 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   font-weight: 900;
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
-.deckSizeLabel { display: block; margin: 18px 0 8px; }
-.deckSizeSelect { width: 100%; min-height: 48px; border: 1px solid rgba(255,255,255,.28); border-radius: 16px; background: rgba(255,255,255,.14); color: white; padding: 0 12px; font-weight: 900; }
+.deckSizeLabel { margin-top: clamp(4px, 1vh, 14px); }
+.deckSizeSelect { width: 100%; min-height: clamp(48px, 5.5vh, 64px); border: 1px solid rgba(255,255,255,.28); border-radius: 16px; background: rgba(255,255,255,.14); color: white; padding: 0 12px; font-weight: 900; }
 .deckSizeSelect option { color: #0f172a; }
 .heroStage {
   position: relative;
-  min-height: 64vh;
+  min-height: clamp(480px, calc(100dvh - 260px), 820px);
+  height: 100%;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.22);
-  border-radius: 34px;
+  border-radius: clamp(24px, 2.5vw, 38px);
   box-shadow: 0 28px 80px rgba(0,0,0,.42);
 }
 .flagLayer, .stageOverlay, .neuronLayer, .answers { position: absolute; inset: 0; }
@@ -101,9 +135,9 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   z-index: 12;
   left: 50%;
   top: 50%;
-  width: min(520px, calc(100% - 44px));
+  width: min(620px, calc(100% - 44px));
   transform: translate(-50%, -50%);
-  padding: clamp(24px, 5vw, 42px);
+  padding: clamp(24px, 5vw, 52px);
   border: 1px solid rgba(255,255,255,.34);
   border-radius: 30px;
   background: rgba(0,0,0,.58);
@@ -115,21 +149,21 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
 }
 .promptCard.correct { background: rgba(16,185,129,.78); border-color: #86efac; box-shadow: 0 0 55px rgba(16,185,129,.45); }
 .promptCard.wrong { background: rgba(239,68,68,.78); border-color: #fca5a5; box-shadow: 0 0 55px rgba(239,68,68,.45); }
-.promptLabel { margin: 0 0 12px; color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .28em; text-transform: uppercase; }
-.promptWord { margin: 0; font-size: clamp(42px, 8vw, 82px); line-height: .95; }
-.promptHint { margin: 14px 0 0; color: rgba(255,255,255,.74); }
+.promptLabel { margin: 0 0 12px; color: var(--cyan); font-size: clamp(11px, .9vw, 14px); font-weight: 900; letter-spacing: .28em; text-transform: uppercase; }
+.promptWord { margin: 0; font-size: clamp(42px, 7vw, 104px); line-height: .95; }
+.promptHint { margin: 14px 0 0; color: rgba(255,255,255,.74); font-size: clamp(14px, 1.2vw, 18px); }
 .answerButton {
   position: absolute;
   z-index: 14;
-  min-width: 170px;
-  max-width: min(260px, 38vw);
-  min-height: 58px;
+  min-width: clamp(150px, 14vw, 260px);
+  max-width: min(320px, 38vw);
+  min-height: clamp(54px, 6vh, 76px);
   border: 1px solid rgba(255,255,255,.34);
   border-radius: 20px;
   background: rgba(255,255,255,.20);
   color: white;
   padding: 14px 20px;
-  font-size: clamp(16px, 2vw, 22px);
+  font-size: clamp(16px, 1.8vw, 26px);
   font-weight: 950;
   box-shadow: 0 18px 42px rgba(0,0,0,.34);
   backdrop-filter: blur(10px);
@@ -146,7 +180,7 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
 .answerButton.right:hover { transform: translateY(-50%) scale(1.05); }
 .answerButton.bottom:hover { transform: translateX(-50%) scale(1.05); }
 .answerButton.left:hover { transform: translateY(-50%) scale(1.05); }
-.cardAnswerForm { position: absolute; z-index: 15; left: 50%; bottom: 8%; width: min(560px, calc(100% - 40px)); transform: translateX(-50%); padding: 16px; border: 1px solid rgba(255,255,255,.28); border-radius: 22px; background: rgba(0,0,0,.54); box-shadow: 0 18px 42px rgba(0,0,0,.34); backdrop-filter: blur(10px); }
+.cardAnswerForm { position: absolute; z-index: 15; left: 50%; bottom: 8%; width: min(640px, calc(100% - 40px)); transform: translateX(-50%); padding: clamp(12px, 1.2vw, 18px); border: 1px solid rgba(255,255,255,.28); border-radius: 22px; background: rgba(0,0,0,.54); box-shadow: 0 18px 42px rgba(0,0,0,.34); backdrop-filter: blur(10px); }
 .cardAnswerForm label { display: block; margin-bottom: 10px; color: rgba(255,255,255,.78); font-weight: 900; }
 .cardAnswerRow { display: flex; gap: 10px; }
 .cardAnswerRow input { flex: 1; min-width: 0; border: 1px solid rgba(255,255,255,.28); border-radius: 16px; background: rgba(255,255,255,.14); color: white; padding: 0 14px; font-weight: 800; }
@@ -154,7 +188,7 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
 .neuronLayer { z-index: 7; pointer-events: none; }
 .neuronDot { position: absolute; left: 50%; top: 50%; width: 16px; height: 16px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 28px rgba(165,243,252,.95); animation: neuronFly 1.65s ease-in-out both; }
 .centerPulse { position: absolute; left: 50%; top: 50%; width: 110px; height: 110px; margin: -55px 0 0 -55px; border: 1px solid var(--cyan); border-radius: 50%; box-shadow: 0 0 55px rgba(165,243,252,.95); animation: pulse 1.65s .85s ease-in-out both; }
-.controlPanel { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-top: 16px; padding: 16px 18px; }
+.controlPanel { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-top: 0; padding: clamp(12px, 1vw, 18px); }
 .feedback { margin: 0; font-weight: 800; }
 .feedback.ok { color: #86efac; }
 .feedback.bad { color: #fca5a5; }
@@ -162,7 +196,7 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
 .controlButton { padding: 0 20px; background: white; color: #111827; }
 .controlButton.secondary { background: rgba(255,255,255,.14); color: white; }
 .controlButton:disabled { cursor: not-allowed; opacity: .5; transform: none; }
-.addWordPanel { margin-top: 16px; padding: 16px 18px; }
+.addWordPanel { margin-top: 0; padding: 16px 18px; }
 .addWordPanel summary { cursor: pointer; font-weight: 950; }
 .wordForm { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 16px; }
 .wordForm label { display: grid; gap: 6px; color: rgba(255,255,255,.78); font-weight: 800; }
@@ -181,7 +215,11 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   100% { opacity: 0; transform: translate(0, 0) scale(.75); }
 }
 @keyframes pulse { 0% { opacity: 0; transform: scale(.2); } 45% { opacity: .9; transform: scale(1.8); } 100% { opacity: 0; transform: scale(1); } }
-@media (max-width: 760px) {
+@media (min-width: 1500px) {
+  .trainerLayout { grid-template-columns: clamp(240px, 17vw, 340px) minmax(0, 1fr); }
+  .heroStage { min-height: calc(100dvh - 275px); }
+}
+@media (max-width: 900px) {
   .appShell { padding: 12px; }
   .topBar, .controlPanel { align-items: flex-start; flex-direction: column; }
   .modeMenu { grid-template-columns: 1fr 1fr; }
@@ -192,7 +230,7 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   .styleButton { margin-top: 0; }
   .deckSizeLabel { grid-column: 1 / -1; margin: 0; }
   .deckSizeSelect { grid-column: 1 / -1; }
-  .heroStage { min-height: 72vh; }
+  .heroStage { min-height: 72dvh; }
   .promptCard { top: 48%; }
   .answerButton { min-width: 124px; max-width: 42vw; padding: 11px 12px; }
   .answerButton.top { top: 4%; }
