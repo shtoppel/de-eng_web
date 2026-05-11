@@ -7,7 +7,10 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 - Word categories for nouns, verbs, adjectives, and adverbs.
 - Random mode across the full vocabulary database.
 - Automatic SQLite database creation and seed data loading on application startup.
+- Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code.
 - German article practice for noun genders: `der`, `die`, and `das`.
+- Static frontend files separated from backend code.
+- Health endpoint for container and deployment checks.
 - Dockerfile and Docker Compose setup for local containerized runs.
 - Zero runtime Python package dependencies; the app uses only the Python standard library.
 
@@ -38,8 +41,18 @@ APP_DB_PATH=/tmp/de-eng-words.db python -m app.main
 
 You can also override the host and port with `APP_HOST` and `APP_PORT`.
 
+## Common commands
+
+```bash
+make run       # Start the local server
+make compile   # Compile-check Python files
+make test      # Run unit and HTTP smoke tests
+make docker-up # Build and run with Docker Compose
+```
+
 ## API
 
+- `GET /health` — returns service health status.
 - `GET /api/categories` — returns the available word categories.
 - `GET /api/words?category=noun` — returns words from the selected category.
 - `GET /api/words/random` — returns a random word from all categories.
@@ -59,8 +72,17 @@ Example article-check request body:
 ## Project structure
 
 ```text
-app/main.py          # HTTP server, SQLite initialization, seed data, API, and HTML UI
-Dockerfile           # Container image definition
-docker-compose.yml   # Local container orchestration with persistent SQLite volume
-requirements.txt     # Runtime dependency note
+app/main.py             # Application entrypoint
+app/server.py           # HTTP server, routing, JSON helpers, and static file serving
+app/database.py         # SQLite initialization, queries, and article-check logic
+app/vocabulary.py       # Category metadata and seed-data validation
+app/config.py           # Environment-based configuration
+app/static/index.html   # Frontend markup
+app/static/styles.css   # Frontend styles
+app/static/app.js       # Frontend behavior
+data/seed_words.json    # Initial vocabulary data
+Dockerfile              # Container image definition
+docker-compose.yml      # Local container orchestration with persistent SQLite volume
+requirements.txt        # Runtime dependency note
+tests/                  # Unit and HTTP smoke tests
 ```

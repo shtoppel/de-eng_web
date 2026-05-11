@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DE-ENG Vocabulary Trainer</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>DE-ENG Vocabulary Trainer</h1>
+    <p>Practice German-English vocabulary by part of speech, use random mode, and train German noun articles.</p>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>Practice modes</h2>
+      <div class="menu" id="menu">
+        <button data-mode="noun">Nouns</button>
+        <button data-mode="verb">Verbs</button>
+        <button data-mode="adjective">Adjectives</button>
+        <button data-mode="adverb">Adverbs</button>
+        <button data-mode="random">🎲 Random</button>
+        <button class="article-button" data-mode="articles">der / die / das</button>
+      </div>
+    </section>
+
+    <section class="panel word-card" id="trainer">
+      <p id="modeLabel">Choose a mode</p>
+      <h2 class="word" id="word">Willkommen!</h2>
+      <p class="translation" id="translation">Select a category to start practicing.</p>
+      <p class="example" id="example">Words are loaded into the SQLite database when the app starts.</p>
+      <div class="article-options" id="articleOptions" hidden></div>
+      <p class="result" id="result" aria-live="polite"></p>
+      <div class="actions">
+        <button class="primary" id="nextButton">Next word</button>
+        <button class="secondary" id="showButton">Show translation</button>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

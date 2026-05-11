@@ -1,0 +1,33 @@
+:root { color-scheme: light dark; font-family: Inter, system-ui, sans-serif; }
+body { margin: 0; background: #f5f7fb; color: #172033; }
+header { background: linear-gradient(135deg, #1d4ed8, #7c3aed); color: white; padding: 32px 20px; text-align: center; }
+main { max-width: 980px; margin: -24px auto 40px; padding: 0 16px; }
+.panel { background: white; border-radius: 20px; box-shadow: 0 18px 45px #1f29371f; padding: 24px; margin-bottom: 20px; }
+.menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 12px; }
+button { border: 0; border-radius: 14px; cursor: pointer; font-size: 16px; font-weight: 700; padding: 14px 16px; transition: .18s ease; }
+button:hover { transform: translateY(-1px); }
+button:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+button:disabled { cursor: wait; opacity: .65; transform: none; }
+.menu button { background: #e0e7ff; color: #1e3a8a; }
+.menu button.active { background: #2563eb; color: white; }
+.article-button { background: #fef3c7; color: #92400e; }
+.word-card { border: 1px solid #e5e7eb; border-radius: 18px; padding: 20px; min-height: 180px; }
+.word { font-size: clamp(36px, 7vw, 64px); font-weight: 900; margin: 0; }
+.translation { color: #475569; font-size: 24px; margin: 8px 0 16px; }
+.example { background: #f8fafc; border-left: 4px solid #2563eb; border-radius: 10px; padding: 12px 14px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.primary { background: #16a34a; color: white; }
+.secondary { background: #e2e8f0; color: #0f172a; }
+.article-options { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.article-options button { background: #ede9fe; color: #5b21b6; min-width: 90px; }
+.result { margin-top: 14px; font-weight: 800; }
+.ok { color: #15803d; }
+.bad { color: #b91c1c; }
+@media (prefers-color-scheme: dark) {
+  body { background: #0f172a; color: #e2e8f0; }
+  .panel { background: #111827; }
+  .word-card { border-color: #334155; }
+  .translation { color: #cbd5e1; }
+  .example { background: #1e293b; }
+  .secondary { background: #334155; color: #e2e8f0; }
+}
