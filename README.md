@@ -6,7 +6,9 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 
 - Flag-backed practice arena with separate English, German, and article modes.
 - Words are not repeated within a mode/category deck until the score is reset; infinite mode reshuffles only after the full deck has been shown.
-- Left-side training style submenu for multichoice mode and cards mode, plus deck-size choices for 10, 30, 100, or infinite words.
+- Left-side training style submenu for multichoice mode and cards mode, plus a visible deck-size dropdown for 10, 30, 100, or infinite words.
+- Switching mode, category, style, or deck size resets the round counter and starts a fresh deck.
+- Metrics show correct answers out of total answered plus the accuracy percentage.
 - Multichoice answers automatically advance to the next word after two seconds.
 - Cards mode accepts typed translations, flashes the prompt card green or red, and advances automatically without revealing wrong answers.
 - English mode shows a German prompt in the center and English answer choices around it.

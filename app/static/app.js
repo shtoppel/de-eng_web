@@ -4,6 +4,8 @@ const styleButtons = [...document.querySelectorAll('.styleButton')];
 const categoryFilter = document.querySelector('#categoryFilter');
 const deckSizeSelect = document.querySelector('#deckSizeSelect');
 const scoreElement = document.querySelector('#score');
+const answeredElement = document.querySelector('#answered');
+const accuracyElement = document.querySelector('#accuracy');
 const roundElement = document.querySelector('#round');
 const promptCard = document.querySelector('#promptCard');
 const promptLabel = document.querySelector('#promptLabel');
@@ -36,6 +38,7 @@ const state = {
   options: [],
   selected: null,
   score: 0,
+  answered: 0,
   round: 1,
   sessionsByDeck: new Map(),
   advanceTimer: null,
@@ -229,6 +232,8 @@ function updateChrome() {
   modeButtons.forEach((button) => button.classList.toggle('active', button.dataset.mode === state.mode));
   styleButtons.forEach((button) => button.classList.toggle('active', button.dataset.style === state.answerStyle));
   scoreElement.textContent = state.score;
+  answeredElement.textContent = state.answered;
+  accuracyElement.textContent = state.answered ? `${Math.round((state.score / state.answered) * 100)}%` : '0%';
   roundElement.textContent = state.round;
 }
 
@@ -265,6 +270,7 @@ function renderCardAnswerForm() {
 
 function finishAnswer(isCorrect, message) {
   state.selected = true;
+  state.answered += 1;
   if (isCorrect) state.score += 1;
   feedback.className = `feedback ${isCorrect ? 'ok' : 'bad'}`;
   feedback.textContent = message;
@@ -325,18 +331,23 @@ async function loadWords() {
   }
 }
 
-function setMode(mode) {
+function resetSession() {
   clearAdvanceTimer();
-  state.mode = mode;
-  state.round += 1;
+  state.score = 0;
+  state.answered = 0;
+  state.round = 1;
+  state.sessionsByDeck.clear();
   buildRound();
 }
 
+function setMode(mode) {
+  state.mode = mode;
+  resetSession();
+}
+
 function setAnswerStyle(answerStyle) {
-  clearAdvanceTimer();
   state.answerStyle = answerStyle;
-  state.round += 1;
-  buildRound();
+  resetSession();
 }
 
 function nextRound() {
@@ -346,11 +357,7 @@ function nextRound() {
 }
 
 function resetGame() {
-  clearAdvanceTimer();
-  state.score = 0;
-  state.round = 1;
-  state.sessionsByDeck.clear();
-  buildRound();
+  resetSession();
 }
 
 function updateArticleInputState() {
@@ -399,7 +406,7 @@ async function addCustomWord(event) {
 
 modeButtons.forEach((button) => button.addEventListener('click', () => setMode(button.dataset.mode)));
 styleButtons.forEach((button) => button.addEventListener('click', () => setAnswerStyle(button.dataset.style)));
-categoryFilter.addEventListener('change', nextRound);
+categoryFilter.addEventListener('change', resetSession);
 deckSizeSelect.addEventListener('change', resetGame);
 nextButton.addEventListener('click', nextRound);
 resetButton.addEventListener('click', resetGame);

@@ -78,6 +78,8 @@ class ServerTests(unittest.TestCase):
         self.assertIn("Vocabulary arena", body)
         self.assertIn("English mode", body)
         self.assertIn("Article mode", body)
+        self.assertIn("Correct", body)
+        self.assertIn("Accuracy", body)
         self.assertIn("Multichoice mode", body)
         self.assertIn("Cards mode", body)
         self.assertIn("10 words", body)
