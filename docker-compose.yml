@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      APP_DB_PATH: /data/words.db
+    volumes:
+      - words-data:/data
+    restart: unless-stopped
+
+volumes:
+  words-data:
