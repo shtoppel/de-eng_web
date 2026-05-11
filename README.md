@@ -17,7 +17,7 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 - Word categories for nouns, verbs, adjectives, and adverbs.
 - Random mode across the full vocabulary database.
 - Automatic SQLite database creation and seed data loading on application startup.
-- Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code; the default seed now includes 500+ words and startup removes old generated placeholder rows from existing local databases.
+- Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code; the default seed now includes 4,000 words and startup removes old generated placeholder rows from existing local databases.
 - German article practice for noun genders: `der`, `die`, and `das`.
 - Fully redesigned static frontend with flag backgrounds, animated answer arena, scoring, round controls, and full-screen autoscaling layout.
 - Custom word form and `POST /api/words` endpoint for extending the local vocabulary.

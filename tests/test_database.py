@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import tempfile
 import unittest
+from collections import Counter
 from pathlib import Path
 
 from app.database import add_word, article_question, check_article, fetch_words, init_db, random_word
@@ -23,12 +24,17 @@ class DatabaseTests(unittest.TestCase):
 
     def test_category_filtering(self) -> None:
         nouns = fetch_words("noun", self.db_path)
-        self.assertGreaterEqual(len(nouns), 125)
+        self.assertGreaterEqual(len(nouns), 1000)
         self.assertTrue(all(word["category"] == "noun" for word in nouns))
         self.assertEqual(CATEGORIES["noun"], nouns[0]["category_label"])
 
-    def test_seed_database_is_large_enough_for_hundred_word_deck(self) -> None:
-        self.assertGreaterEqual(len(fetch_words(db_path=self.db_path)), 500)
+    def test_seed_database_has_four_thousand_words(self) -> None:
+        words = fetch_words(db_path=self.db_path)
+        self.assertEqual(4000, len(words))
+        self.assertEqual(
+            {"adjective": 1000, "adverb": 1000, "noun": 1000, "verb": 1000},
+            Counter(word["category"] for word in words),
+        )
 
     def test_placeholder_seed_words_are_removed_from_existing_database(self) -> None:
         add_word(
