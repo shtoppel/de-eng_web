@@ -30,6 +30,7 @@ const state = {
   selected: null,
   score: 0,
   round: 1,
+  usedByDeck: new Map(),
 };
 
 function wordGerman(word) {
@@ -52,7 +53,16 @@ async function fetchJson(url, options) {
   return payload;
 }
 
+function deckKey() {
+  const category = state.mode === 'articles' ? 'noun' : categoryFilter.value || 'all';
+  return `${state.mode}:${category}`;
+}
+
 function currentPool() {
+  if (state.mode === 'articles') {
+    return state.words.filter((word) => word.category === 'noun' && word.article);
+  }
+
   const selectedCategory = categoryFilter.value;
   const filtered = selectedCategory
     ? state.words.filter((word) => word.category === selectedCategory)
@@ -60,9 +70,38 @@ function currentPool() {
   return filtered.length ? filtered : state.words;
 }
 
-function chooseWord() {
+function usedSetForCurrentDeck() {
+  const key = deckKey();
+  if (!state.usedByDeck.has(key)) {
+    state.usedByDeck.set(key, new Set());
+  }
+  return state.usedByDeck.get(key);
+}
+
+function chooseUnseenWord() {
   const pool = currentPool();
-  return pool[Math.floor(Math.random() * pool.length)];
+  const used = usedSetForCurrentDeck();
+  const available = pool.filter((word) => !used.has(word.id));
+  if (!available.length) return null;
+
+  const word = available[Math.floor(Math.random() * available.length)];
+  used.add(word.id);
+  return word;
+}
+
+function showDeckComplete() {
+  state.current = null;
+  state.options = [];
+  state.selected = null;
+  nextButton.disabled = true;
+  answers.replaceChildren();
+  promptLabel.textContent = 'Deck complete';
+  promptWord.textContent = 'Great job!';
+  promptHint.textContent = 'You have seen every word in this mode. Reset the score to start again.';
+  feedback.className = 'feedback ok';
+  feedback.textContent = 'No repeats before reset: this deck is complete.';
+  updateChrome();
+  renderNeurons();
 }
 
 function buildRound() {
@@ -72,23 +111,25 @@ function buildRound() {
   answers.replaceChildren();
   feedback.className = 'feedback';
 
+  state.current = chooseUnseenWord();
+  if (!state.current) {
+    showDeckComplete();
+    return;
+  }
+
   if (state.mode === 'articles') {
-    const nouns = state.words.filter((word) => word.category === 'noun' && word.article);
-    state.current = nouns[Math.floor(Math.random() * nouns.length)];
     state.options = ['der', 'die', 'das'];
     promptLabel.textContent = 'German noun';
     promptWord.textContent = state.current.german;
     promptHint.textContent = `Choose the correct article for “${state.current.english}”.`;
     feedback.textContent = 'The German flag marks article training.';
   } else if (state.mode === 'english') {
-    state.current = chooseWord();
     state.options = sampleOptions(state.current.english, state.words.map((word) => word.english), 4);
     promptLabel.textContent = 'German word';
     promptWord.textContent = wordGerman(state.current);
     promptHint.textContent = 'Choose the matching English word.';
     feedback.textContent = 'English mode: German prompt in the center, English answers around it.';
   } else {
-    state.current = chooseWord();
     state.options = sampleOptions(wordGerman(state.current), state.words.map(wordGerman), 4);
     promptLabel.textContent = 'English word';
     promptWord.textContent = state.current.english;
@@ -185,6 +226,7 @@ function nextRound() {
 function resetGame() {
   state.score = 0;
   state.round = 1;
+  state.usedByDeck.clear();
   buildRound();
 }
 
@@ -222,7 +264,6 @@ async function addCustomWord(event) {
     formResult.textContent = `Added: ${wordGerman(createdWord)} — ${createdWord.english}`;
     wordForm.reset();
     updateArticleInputState();
-    state.current = createdWord;
     state.round += 1;
     buildRound();
   } catch (error) {
