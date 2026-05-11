@@ -37,6 +37,7 @@
         <p class="styleMenuTitle">Training style</p>
         <button class="styleButton active" data-style="multi">Multichoice mode</button>
         <button class="styleButton" data-style="cards">Cards mode</button>
+        <button class="styleButton favoriteModeButton" id="favoriteModeButton" type="button">Favorite words (0)</button>
         <label class="deckSizeLabel" for="deckSizeSelect">Deck size</label>
         <select id="deckSizeSelect" class="deckSizeSelect" aria-label="Deck size">
           <option value="10">10 words</option>
@@ -87,6 +88,8 @@
       <p class="feedback" id="feedback" aria-live="polite">Pick the answer that matches the center card.</p>
       <div class="controls">
         <button class="controlButton" id="nextButton" disabled>Next word</button>
+        <button class="controlButton secondary" id="showAnswerButton" disabled>Show answer</button>
+        <button class="controlButton secondary favoriteButton" id="favoriteButton" disabled>☆ Add to favorites</button>
         <button class="controlButton secondary" id="resetButton">Reset score</button>
       </div>
     </footer>

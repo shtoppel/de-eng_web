@@ -1,9 +1,10 @@
 const stage = document.querySelector('#stage');
 const modeButtons = [...document.querySelectorAll('.modeButton')];
-const styleButtons = [...document.querySelectorAll('.styleButton')];
+const styleButtons = [...document.querySelectorAll('.styleButton[data-style]')];
 const categoryFilter = document.querySelector('#categoryFilter');
 const categoryFilterOptions = [...categoryFilter.options];
 const deckSizeSelect = document.querySelector('#deckSizeSelect');
+const favoriteModeButton = document.querySelector('#favoriteModeButton');
 const scoreElement = document.querySelector('#score');
 const answeredElement = document.querySelector('#answered');
 const accuracyElement = document.querySelector('#accuracy');
@@ -17,6 +18,8 @@ const cardAnswerForm = document.querySelector('#cardAnswerForm');
 const cardAnswerInput = document.querySelector('#cardAnswerInput');
 const feedback = document.querySelector('#feedback');
 const nextButton = document.querySelector('#nextButton');
+const showAnswerButton = document.querySelector('#showAnswerButton');
+const favoriteButton = document.querySelector('#favoriteButton');
 const resetButton = document.querySelector('#resetButton');
 const neuronLayer = document.querySelector('#neuronLayer');
 const wordForm = document.querySelector('#wordForm');
@@ -25,12 +28,22 @@ const articleInput = document.querySelector('#articleInput');
 const formResult = document.querySelector('#formResult');
 
 const AUTO_ADVANCE_MS = 2000;
+const FAVORITES_STORAGE_KEY = 'de-eng-favorite-word-ids';
 const ARTICLE_MODE_STYLE = 'multi';
 const answerPositions = ['top', 'right', 'bottom', 'left'];
 const neuronStarts = [
   ['-42vw', '-32vh'], ['42vw', '-32vh'], ['-42vw', '32vh'], ['42vw', '32vh'],
   ['-48vw', '0vh'], ['48vw', '0vh'], ['0vw', '-38vh'], ['0vw', '38vh'],
 ];
+
+function loadFavoriteIds() {
+  const savedFavorites = localStorage.getItem(FAVORITES_STORAGE_KEY);
+  return new Set(savedFavorites ? JSON.parse(savedFavorites).map(String) : []);
+}
+
+function saveFavoriteIds() {
+  localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...state.favoriteIds].sort()));
+}
 
 const state = {
   words: [],
@@ -42,12 +55,22 @@ const state = {
   score: 0,
   answered: 0,
   round: 1,
+  favoriteIds: loadFavoriteIds(),
+  favoritesOnly: false,
   sessionsByDeck: new Map(),
   advanceTimer: null,
 };
 
 function wordGerman(word) {
   return word.article ? `${word.article} ${word.german}` : word.german;
+}
+
+function wordKey(word) {
+  return String(word.id);
+}
+
+function isFavorite(word) {
+  return state.favoriteIds.has(wordKey(word));
 }
 
 function shuffle(items) {
@@ -103,7 +126,8 @@ function deckLimit() {
 
 function deckKey() {
   const category = state.mode === 'articles' ? 'noun' : categoryFilter.value || 'all';
-  return `${state.mode}:${category}:${selectedDeckSize()}`;
+  const favorites = state.favoritesOnly ? 'favorites' : 'all';
+  return `${state.mode}:${category}:${favorites}:${selectedDeckSize()}`;
 }
 
 function clearAdvanceTimer() {
@@ -122,15 +146,18 @@ function scheduleAutoAdvance() {
 }
 
 function currentPool() {
+  let pool;
   if (state.mode === 'articles') {
-    return state.words.filter((word) => word.category === 'noun' && word.article);
+    pool = state.words.filter((word) => word.category === 'noun' && word.article);
+  } else {
+    const selectedCategory = categoryFilter.value;
+    const filtered = selectedCategory
+      ? state.words.filter((word) => word.category === selectedCategory)
+      : state.words;
+    pool = filtered.length ? filtered : state.words;
   }
 
-  const selectedCategory = categoryFilter.value;
-  const filtered = selectedCategory
-    ? state.words.filter((word) => word.category === selectedCategory)
-    : state.words;
-  return filtered.length ? filtered : state.words;
+  return state.favoritesOnly ? pool.filter(isFavorite) : pool;
 }
 
 function createDeckSession() {
@@ -169,14 +196,24 @@ function showDeckComplete() {
   state.options = [];
   state.selected = null;
   nextButton.disabled = true;
+  showAnswerButton.disabled = true;
+  favoriteButton.disabled = true;
   answers.replaceChildren();
   cardAnswerForm.hidden = true;
   promptCard.classList.remove('correct', 'wrong');
-  promptLabel.textContent = 'Deck complete';
-  promptWord.textContent = 'Great job!';
-  promptHint.textContent = 'You have seen every word in this deck. Reset the score or choose infinite mode to continue.';
-  feedback.className = 'feedback ok';
-  feedback.textContent = 'No repeats before reset: this deck is complete.';
+  if (state.favoritesOnly && !state.favoriteIds.size) {
+    promptLabel.textContent = 'No favorites yet';
+    promptWord.textContent = 'Add words';
+    promptHint.textContent = 'Use the star button to add words to your favorites list.';
+    feedback.className = 'feedback';
+    feedback.textContent = 'Favorite words mode is empty.';
+  } else {
+    promptLabel.textContent = 'Deck complete';
+    promptWord.textContent = 'Great job!';
+    promptHint.textContent = 'You have seen every word in this deck. Reset the score or choose infinite mode to continue.';
+    feedback.className = 'feedback ok';
+    feedback.textContent = 'No repeats before reset: this deck is complete.';
+  }
   updateChrome();
   renderNeurons();
 }
@@ -211,6 +248,8 @@ function buildRound() {
   clearAdvanceTimer();
   state.selected = null;
   nextButton.disabled = true;
+  showAnswerButton.disabled = true;
+  favoriteButton.disabled = true;
   answers.replaceChildren();
   cardAnswerForm.hidden = true;
   cardAnswerInput.value = '';
@@ -261,6 +300,14 @@ function updateChrome() {
     button.classList.toggle('active', button.dataset.style === state.answerStyle);
     button.setAttribute('aria-disabled', String(cardsUnavailable));
   });
+  favoriteModeButton.classList.toggle('active', state.favoritesOnly);
+  favoriteModeButton.textContent = `Favorite words (${state.favoriteIds.size})`;
+  favoriteModeButton.setAttribute('aria-pressed', String(state.favoritesOnly));
+  favoriteButton.disabled = !state.current;
+  favoriteButton.textContent = state.current && isFavorite(state.current) ? '★ Remove favorite' : '☆ Add to favorites';
+  favoriteButton.setAttribute('aria-pressed', String(Boolean(state.current && isFavorite(state.current))));
+  showAnswerButton.disabled = !state.current || Boolean(state.selected);
+  nextButton.disabled = !state.current;
   scoreElement.textContent = state.score;
   answeredElement.textContent = state.answered;
   accuracyElement.textContent = state.answered ? `${Math.round((state.score / state.answered) * 100)}%` : '0%';
@@ -298,6 +345,14 @@ function renderCardAnswerForm() {
   window.setTimeout(() => cardAnswerInput.focus(), 0);
 }
 
+function disableCurrentAnswerControls() {
+  [...answers.children].forEach((button) => {
+    button.disabled = true;
+  });
+  cardAnswerInput.disabled = true;
+  cardAnswerForm.querySelector('button').disabled = true;
+}
+
 function finishAnswer(isCorrect, message) {
   state.selected = true;
   state.answered += 1;
@@ -305,6 +360,7 @@ function finishAnswer(isCorrect, message) {
   feedback.className = `feedback ${isCorrect ? 'ok' : 'bad'}`;
   feedback.textContent = message;
   nextButton.disabled = false;
+  showAnswerButton.disabled = true;
   updateChrome();
   scheduleAutoAdvance();
 }
@@ -321,14 +377,52 @@ function chooseMultipleChoiceAnswer(answer) {
   finishAnswer(isCorrect, isCorrect ? `Correct: ${expected}` : `Expected: ${expected}`);
 }
 
+function showAnswer() {
+  if (state.selected || !state.current) return;
+
+  const expected = correctAnswer();
+  state.selected = true;
+  state.answered += 1;
+  feedback.className = 'feedback bad';
+  feedback.textContent = `Answer: ${expected}`;
+  promptCard.classList.add('wrong');
+  [...answers.children].forEach((button) => {
+    button.disabled = true;
+    if (button.textContent === expected) button.classList.add('correct');
+  });
+  disableCurrentAnswerControls();
+  updateChrome();
+}
+
+function toggleFavorite() {
+  if (!state.current) return;
+
+  const id = wordKey(state.current);
+  if (state.favoriteIds.has(id)) {
+    state.favoriteIds.delete(id);
+    feedback.className = 'feedback';
+    feedback.textContent = 'Removed from favorites.';
+  } else {
+    state.favoriteIds.add(id);
+    feedback.className = 'feedback ok';
+    feedback.textContent = 'Added to favorites.';
+  }
+  saveFavoriteIds();
+  updateChrome();
+}
+
+function toggleFavoritesMode() {
+  state.favoritesOnly = !state.favoritesOnly;
+  resetSession();
+}
+
 function checkCardAnswer(event) {
   event.preventDefault();
   if (state.selected || !state.current) return;
 
   const isCorrect = acceptedAnswers().includes(normalizeAnswer(cardAnswerInput.value));
   promptCard.classList.add(isCorrect ? 'correct' : 'wrong');
-  cardAnswerInput.disabled = true;
-  cardAnswerForm.querySelector('button').disabled = true;
+  disableCurrentAnswerControls();
   finishAnswer(
     isCorrect,
     isCorrect ? 'Correct. Moving to the next word...' : 'Not quite. Moving to the next word...',
@@ -447,6 +541,9 @@ styleButtons.forEach((button) => button.addEventListener('click', () => setAnswe
 categoryFilter.addEventListener('change', resetSession);
 deckSizeSelect.addEventListener('change', resetGame);
 nextButton.addEventListener('click', nextRound);
+showAnswerButton.addEventListener('click', showAnswer);
+favoriteButton.addEventListener('click', toggleFavorite);
+favoriteModeButton.addEventListener('click', toggleFavoritesMode);
 resetButton.addEventListener('click', resetGame);
 cardAnswerForm.addEventListener('submit', checkCardAnswer);
 categoryInput.addEventListener('change', updateArticleInputState);

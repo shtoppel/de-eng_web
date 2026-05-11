@@ -60,7 +60,8 @@ class StaticAppTests(unittest.TestCase):
             for (const id of [
               'stage', 'categoryFilter', 'deckSizeSelect', 'score', 'answered', 'accuracy', 'round',
               'promptCard', 'promptLabel', 'promptWord', 'promptHint', 'answers', 'cardAnswerForm',
-              'cardAnswerInput', 'feedback', 'nextButton', 'resetButton', 'neuronLayer', 'wordForm',
+              'cardAnswerInput', 'feedback', 'nextButton', 'showAnswerButton', 'favoriteButton',
+              'favoriteModeButton', 'resetButton', 'neuronLayer', 'wordForm',
               'categoryInput', 'articleInput', 'formResult',
             ]) elements.set('#' + id, makeElement());
             elements.get('#deckSizeSelect').value = '10';
@@ -82,7 +83,7 @@ class StaticAppTests(unittest.TestCase):
               querySelector(selector) {{ return elements.get(selector); }},
               querySelectorAll(selector) {{
                 if (selector === '.modeButton') return modeButtons;
-                if (selector === '.styleButton') return styleButtons;
+                if (selector === '.styleButton[data-style]') return styleButtons;
                 return [];
               }},
               createDocumentFragment() {{ return {{ isFragment: true, children: [], append(child) {{ this.children.push(child); }} }}; }},
@@ -99,6 +100,11 @@ class StaticAppTests(unittest.TestCase):
               document,
               window: {{ setTimeout: (fn) => {{ fn(); return 1; }} }},
               fetch: async () => ({{ ok: true, json: async () => words }}),
+              localStorage: {{
+                values: new Map(),
+                getItem(key) {{ return this.values.has(key) ? this.values.get(key) : null; }},
+                setItem(key, value) {{ this.values.set(key, value); }},
+              }},
               setTimeout: (fn) => {{ fn(); return 1; }},
               clearTimeout: () => {{}},
               console,
@@ -111,6 +117,20 @@ class StaticAppTests(unittest.TestCase):
               if (categoryLabels.join('|') !== expectedCategoryLabels.join('|')) {{
                 throw new Error(`Expected category counts, got ${{categoryLabels.join('|')}}`);
               }}
+
+              if (elements.get('#nextButton').disabled) throw new Error('Next word should be available before answering');
+              elements.get('#showAnswerButton').click();
+              if (!elements.get('#showAnswerButton').disabled) throw new Error('Show answer should disable after revealing the answer');
+              if (!elements.get('#feedback').textContent.startsWith('Answer:')) throw new Error('Show answer did not reveal the answer');
+              if (String(elements.get('#answered').textContent) !== '1') throw new Error('Show answer should count as an answered miss');
+
+              elements.get('#nextButton').click();
+              elements.get('#favoriteButton').click();
+              if (!elements.get('#favoriteButton').textContent.includes('Remove favorite')) throw new Error('Favorite button did not toggle on');
+              elements.get('#favoriteModeButton').click();
+              if (!elements.get('#favoriteModeButton').classList.contains('active')) throw new Error('Favorite words mode is not active');
+              if (!elements.get('#favoriteModeButton').textContent.includes('(1)')) throw new Error('Favorite count did not update');
+              elements.get('#favoriteModeButton').click();
 
               styleButtons[1].click();
               if (elements.get('#cardAnswerForm').hidden) throw new Error('Cards form was not shown before switching modes');

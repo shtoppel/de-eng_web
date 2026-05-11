@@ -16,6 +16,8 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 - Article mode uses a German flag background and `der`, `die`, `das` answer choices.
 - Word categories for nouns, verbs, adjectives, and adverbs.
 - Random mode across the full vocabulary database.
+- Favorites mode stores starred words in the browser and lets you practice only those words.
+- Next word remains available when you want to skip, and Show answer reveals the current answer as a missed attempt.
 - Automatic SQLite database creation and seed data loading on application startup.
 - Seed vocabulary stored in `data/seed_words.json` so the word list can be edited without touching server code; the default seed now includes 4,000 words and startup removes old generated placeholder rows from existing local databases.
 - German article practice for noun genders: `der`, `die`, and `das`.
