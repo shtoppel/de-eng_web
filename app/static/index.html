@@ -32,33 +32,49 @@
       </select>
     </nav>
 
-    <main class="heroStage british" id="stage">
-      <div class="flagLayer britishFlag" aria-hidden="true">
-        <span class="diagonalWhite diagonalOne"></span>
-        <span class="diagonalWhite diagonalTwo"></span>
-        <span class="diagonalRed diagonalOne"></span>
-        <span class="diagonalRed diagonalTwo"></span>
-        <span class="horizontalWhite"></span>
-        <span class="verticalWhite"></span>
-        <span class="horizontalRed"></span>
-        <span class="verticalRed"></span>
-      </div>
-      <div class="flagLayer germanFlag" aria-hidden="true">
-        <span class="germanBlack"></span>
-        <span class="germanRed"></span>
-        <span class="germanGold"></span>
-      </div>
-      <div class="stageOverlay" aria-hidden="true"></div>
-      <div class="neuronLayer" id="neuronLayer" aria-hidden="true"></div>
+    <div class="trainerLayout">
+      <aside class="styleMenu" aria-label="Answer style">
+        <p class="styleMenuTitle">Training style</p>
+        <button class="styleButton active" data-style="multi">Multichoice mode</button>
+        <button class="styleButton" data-style="cards">Cards mode</button>
+      </aside>
 
-      <section class="promptCard" aria-live="polite">
-        <p class="promptLabel" id="promptLabel">German word</p>
-        <h2 class="promptWord" id="promptWord">Loading...</h2>
-        <p class="promptHint" id="promptHint">Choose the correct English translation.</p>
-      </section>
+      <main class="heroStage british" id="stage">
+        <div class="flagLayer britishFlag" aria-hidden="true">
+          <span class="diagonalWhite diagonalOne"></span>
+          <span class="diagonalWhite diagonalTwo"></span>
+          <span class="diagonalRed diagonalOne"></span>
+          <span class="diagonalRed diagonalTwo"></span>
+          <span class="horizontalWhite"></span>
+          <span class="verticalWhite"></span>
+          <span class="horizontalRed"></span>
+          <span class="verticalRed"></span>
+        </div>
+        <div class="flagLayer germanFlag" aria-hidden="true">
+          <span class="germanBlack"></span>
+          <span class="germanRed"></span>
+          <span class="germanGold"></span>
+        </div>
+        <div class="stageOverlay" aria-hidden="true"></div>
+        <div class="neuronLayer" id="neuronLayer" aria-hidden="true"></div>
 
-      <section class="answers" id="answers" aria-label="Answer options"></section>
-    </main>
+        <section class="promptCard" id="promptCard" aria-live="polite">
+          <p class="promptLabel" id="promptLabel">German word</p>
+          <h2 class="promptWord" id="promptWord">Loading...</h2>
+          <p class="promptHint" id="promptHint">Choose the correct English translation.</p>
+        </section>
+
+        <section class="answers" id="answers" aria-label="Answer options"></section>
+
+        <form class="cardAnswerForm" id="cardAnswerForm" hidden>
+          <label for="cardAnswerInput">Type your answer</label>
+          <div class="cardAnswerRow">
+            <input id="cardAnswerInput" autocomplete="off" placeholder="Enter translation" />
+            <button class="controlButton" type="submit">Check</button>
+          </div>
+        </form>
+      </main>
+    </div>
 
     <footer class="controlPanel">
       <p class="feedback" id="feedback" aria-live="polite">Pick the answer that matches the center card.</p>

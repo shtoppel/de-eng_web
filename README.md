@@ -6,6 +6,9 @@ A small German-English vocabulary trainer with a SQLite database, category-based
 
 - Flag-backed practice arena with separate English, German, and article modes.
 - Words are not repeated within a mode/category deck until the score is reset.
+- Left-side training style submenu for multichoice mode and cards mode.
+- Multichoice answers automatically advance to the next word after two seconds.
+- Cards mode accepts typed translations, flashes the prompt card green or red, and advances automatically without revealing wrong answers.
 - English mode shows a German prompt in the center and English answer choices around it.
 - German mode shows an English prompt in the center and German answer choices around it.
 - Article mode uses a German flag background and `der`, `die`, `das` answer choices.

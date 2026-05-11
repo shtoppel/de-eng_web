@@ -78,6 +78,8 @@ class ServerTests(unittest.TestCase):
         self.assertIn("Vocabulary arena", body)
         self.assertIn("English mode", body)
         self.assertIn("Article mode", body)
+        self.assertIn("Multichoice mode", body)
+        self.assertIn("Cards mode", body)
 
     def test_custom_word_can_be_added(self) -> None:
         status, payload = self.post_json(

@@ -37,11 +37,35 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   font-weight: 900;
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
-.modeButton:hover, .controlButton:hover { transform: translateY(-2px); background: rgba(255,255,255,.24); }
-.modeButton.active { border-color: var(--cyan); background: rgba(165, 243, 252, .22); box-shadow: 0 0 28px rgba(165, 243, 252, .24); }
+.modeButton:hover, .styleButton:hover, .controlButton:hover { transform: translateY(-2px); background: rgba(255,255,255,.24); }
+.modeButton.active, .styleButton.active { border-color: var(--cyan); background: rgba(165, 243, 252, .22); box-shadow: 0 0 28px rgba(165, 243, 252, .24); }
 .articleButton.active { border-color: #facc15; background: rgba(250, 204, 21, .22); }
 #categoryFilter { padding: 0 14px; color: #e2e8f0; }
 #categoryFilter option { color: #0f172a; }
+.trainerLayout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 16px; }
+.styleMenu {
+  position: relative;
+  z-index: 20;
+  align-self: start;
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  background: var(--glass);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.36);
+  padding: 14px;
+  backdrop-filter: blur(14px);
+}
+.styleMenuTitle { margin: 0 0 12px; color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
+.styleButton {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 16px;
+  background: rgba(255,255,255,.14);
+  color: white;
+  font-weight: 900;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
 .heroStage {
   position: relative;
   min-height: 64vh;
@@ -84,7 +108,10 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   box-shadow: 0 22px 60px rgba(0,0,0,.42);
   backdrop-filter: blur(12px);
   animation: cardIn .55s cubic-bezier(.2,.7,.2,1);
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
+.promptCard.correct { background: rgba(16,185,129,.78); border-color: #86efac; box-shadow: 0 0 55px rgba(16,185,129,.45); }
+.promptCard.wrong { background: rgba(239,68,68,.78); border-color: #fca5a5; box-shadow: 0 0 55px rgba(239,68,68,.45); }
 .promptLabel { margin: 0 0 12px; color: var(--cyan); font-size: 12px; font-weight: 900; letter-spacing: .28em; text-transform: uppercase; }
 .promptWord { margin: 0; font-size: clamp(42px, 8vw, 82px); line-height: .95; }
 .promptHint { margin: 14px 0 0; color: rgba(255,255,255,.74); }
@@ -116,6 +143,11 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
 .answerButton.right:hover { transform: translateY(-50%) scale(1.05); }
 .answerButton.bottom:hover { transform: translateX(-50%) scale(1.05); }
 .answerButton.left:hover { transform: translateY(-50%) scale(1.05); }
+.cardAnswerForm { position: absolute; z-index: 15; left: 50%; bottom: 8%; width: min(560px, calc(100% - 40px)); transform: translateX(-50%); padding: 16px; border: 1px solid rgba(255,255,255,.28); border-radius: 22px; background: rgba(0,0,0,.54); box-shadow: 0 18px 42px rgba(0,0,0,.34); backdrop-filter: blur(10px); }
+.cardAnswerForm label { display: block; margin-bottom: 10px; color: rgba(255,255,255,.78); font-weight: 900; }
+.cardAnswerRow { display: flex; gap: 10px; }
+.cardAnswerRow input { flex: 1; min-width: 0; border: 1px solid rgba(255,255,255,.28); border-radius: 16px; background: rgba(255,255,255,.14); color: white; padding: 0 14px; font-weight: 800; }
+.cardAnswerRow input::placeholder { color: rgba(255,255,255,.58); }
 .neuronLayer { z-index: 7; pointer-events: none; }
 .neuronDot { position: absolute; left: 50%; top: 50%; width: 16px; height: 16px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 28px rgba(165,243,252,.95); animation: neuronFly 1.65s ease-in-out both; }
 .centerPulse { position: absolute; left: 50%; top: 50%; width: 110px; height: 110px; margin: -55px 0 0 -55px; border: 1px solid var(--cyan); border-radius: 50%; box-shadow: 0 0 55px rgba(165,243,252,.95); animation: pulse 1.65s .85s ease-in-out both; }
@@ -151,6 +183,10 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   .topBar, .controlPanel { align-items: flex-start; flex-direction: column; }
   .modeMenu { grid-template-columns: 1fr 1fr; }
   #categoryFilter { grid-column: 1 / -1; }
+  .trainerLayout { grid-template-columns: 1fr; }
+  .styleMenu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .styleMenuTitle { grid-column: 1 / -1; margin-bottom: 0; }
+  .styleButton { margin-top: 0; }
   .heroStage { min-height: 72vh; }
   .promptCard { top: 48%; }
   .answerButton { min-width: 124px; max-width: 42vw; padding: 11px 12px; }
@@ -158,4 +194,7 @@ h1 { margin: 0; font-size: clamp(28px, 5vw, 54px); line-height: .95; }
   .answerButton.right { right: 4%; }
   .answerButton.bottom { bottom: 4%; }
   .answerButton.left { left: 4%; }
+  .cardAnswerForm { bottom: 3%; }
+  .cardAnswerRow { flex-direction: column; }
+  .cardAnswerRow input, .cardAnswerRow button { min-height: 48px; }
 }
