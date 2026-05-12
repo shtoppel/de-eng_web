@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>De-Eng Vocabulary Trainer</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="appShell">
+    <header class="topBar">
+      <div>
+        <h1>De-Eng Vocabulary Trainer</h1>
+      </div>
+      <div class="scoreBoard" aria-live="polite">
+        <span>Correct <strong id="score">0</strong>/<strong id="answered">0</strong></span>
+        <span>Accuracy <strong id="accuracy">0%</strong></span>
+        <span>Round <strong id="round">1</strong></span>
+      </div>
+    </header>
+
+    <nav class="modeMenu" aria-label="Practice mode">
+      <button class="modeButton active" data-mode="english">English mode</button>
+      <button class="modeButton" data-mode="german">German mode</button>
+      <button class="modeButton articleButton" data-mode="articles">Article mode</button>
+      <select id="categoryFilter" aria-label="Category filter">
+        <option value="" data-label="All categories">All categories</option>
+        <option value="noun" data-label="Nouns">Nouns</option>
+        <option value="verb" data-label="Verbs">Verbs</option>
+        <option value="adjective" data-label="Adjectives">Adjectives</option>
+        <option value="adverb" data-label="Adverbs">Adverbs</option>
+      </select>
+    </nav>
+
+    <div class="trainerLayout">
+      <aside class="styleMenu" aria-label="Answer style">
+        <p class="styleMenuTitle">Training style</p>
+        <button class="styleButton active" data-style="multi">Multichoice mode</button>
+        <button class="styleButton" data-style="cards">Cards mode</button>
+        <button class="styleButton favoriteModeButton" id="favoriteModeButton" type="button">Favorite words (0)</button>
+        <label class="deckSizeLabel" for="deckSizeSelect">Deck size</label>
+        <select id="deckSizeSelect" class="deckSizeSelect" aria-label="Deck size">
+          <option value="10">10 words</option>
+          <option value="30">30 words</option>
+          <option value="100">100 words</option>
+          <option value="infinite">Infinite mode</option>
+        </select>
+      </aside>
+
+      <main class="heroStage british" id="stage">
+        <div class="flagLayer britishFlag" aria-hidden="true">
+          <span class="diagonalWhite diagonalOne"></span>
+          <span class="diagonalWhite diagonalTwo"></span>
+          <span class="diagonalRed diagonalOne"></span>
+          <span class="diagonalRed diagonalTwo"></span>
+          <span class="horizontalWhite"></span>
+          <span class="verticalWhite"></span>
+          <span class="horizontalRed"></span>
+          <span class="verticalRed"></span>
+        </div>
+        <div class="flagLayer germanFlag" aria-hidden="true">
+          <span class="germanBlack"></span>
+          <span class="germanRed"></span>
+          <span class="germanGold"></span>
+        </div>
+        <div class="stageOverlay" aria-hidden="true"></div>
+        <div class="neuronLayer" id="neuronLayer" aria-hidden="true"></div>
+
+        <section class="promptCard" id="promptCard" aria-live="polite">
+          <p class="promptLabel" id="promptLabel">German word</p>
+          <h2 class="promptWord" id="promptWord">Loading...</h2>
+          <p class="promptHint" id="promptHint">Choose the correct English translation.</p>
+          <p class="promptExample" id="promptExample" hidden></p>
+        </section>
+
+        <section class="answers" id="answers" aria-label="Answer options"></section>
+
+        <form class="cardAnswerForm" id="cardAnswerForm" hidden>
+          <label for="cardAnswerInput">Type your answer</label>
+          <div class="cardAnswerRow">
+            <input id="cardAnswerInput" autocomplete="off" placeholder="Enter translation" />
+            <button class="controlButton" type="submit">Check</button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <footer class="controlPanel">
+      <p class="feedback" id="feedback" aria-live="polite">Pick the answer that matches the center card.</p>
+      <div class="controls">
+        <button class="controlButton" id="nextButton" disabled>Next word</button>
+        <button class="controlButton secondary" id="showAnswerButton" disabled>Show answer</button>
+        <button class="controlButton secondary favoriteButton" id="favoriteButton" disabled>☆ Add to favorites</button>
+        <button class="controlButton secondary" id="resetButton">Reset score</button>
+      </div>
+    </footer>
+
+    <details class="addWordPanel">
+      <summary>Add a custom word</summary>
+      <form id="wordForm" class="wordForm">
+        <label>
+          Category
+          <select id="categoryInput" name="category" required>
+            <option value="noun">Noun</option>
+            <option value="verb">Verb</option>
+            <option value="adjective">Adjective</option>
+            <option value="adverb">Adverb</option>
+          </select>
+        </label>
+        <label>
+          Article for nouns
+          <select id="articleInput" name="article" required>
+            <option value="der">der</option>
+            <option value="die">die</option>
+            <option value="das">das</option>
+          </select>
+        </label>
+        <label>
+          German
+          <input name="german" autocomplete="off" required />
+        </label>
+        <label>
+          English
+          <input name="english" autocomplete="off" required />
+        </label>
+        <label class="fullWidth">
+          Example sentence
+          <input name="example" autocomplete="off" required />
+        </label>
+        <button class="controlButton" type="submit">Add word</button>
+      </form>
+      <p class="formResult" id="formResult" aria-live="polite"></p>
+    </details>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

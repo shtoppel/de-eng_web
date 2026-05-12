@@ -31,6 +31,8 @@ class VocabularyHandler(BaseHTTPRequestHandler):
                 self.send_json(random_word(one(query, "category")))
             elif parsed.path == "/api/articles/random":
                 self.send_json(article_question())
+            elif is_safe_static_path(static_path(parsed.path.lstrip("/"))) and static_path(parsed.path.lstrip("/")).is_file():
+                self.send_static_file(static_path(parsed.path.lstrip("/")))
             else:
                 self.send_error_json(HTTPStatus.NOT_FOUND, "Not found")
         except ValueError as error:

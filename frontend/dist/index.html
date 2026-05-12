@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>De-Eng Vocabulary Trainer</title>
-  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="appShell">
@@ -70,6 +70,7 @@
           <p class="promptLabel" id="promptLabel">German word</p>
           <h2 class="promptWord" id="promptWord">Loading...</h2>
           <p class="promptHint" id="promptHint">Choose the correct English translation.</p>
+          <p class="promptExample" id="promptExample" hidden></p>
         </section>
 
         <section class="answers" id="answers" aria-label="Answer options"></section>
@@ -131,6 +132,6 @@
       <p class="formResult" id="formResult" aria-live="polite"></p>
     </details>
   </div>
-  <script src="/static/app.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
