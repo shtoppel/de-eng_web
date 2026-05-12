@@ -49,6 +49,9 @@ class StaticAppTests(unittest.TestCase):
             self.assertIn(text, index)
 
         self.assertIn("/api/words", api)
+        self.assertIn("example?: string | null", api)
+        self.assertIn("promptExample", index)
+        self.assertIn("renderExampleSentence", game)
         self.assertIn("der', 'die', 'das", game)
         self.assertIn("createWord", game)
         self.assertIn("score", game)

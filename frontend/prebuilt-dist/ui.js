@@ -20,6 +20,7 @@ export const elements = {
     promptLabel: qs('#promptLabel'),
     promptWord: qs('#promptWord'),
     promptHint: qs('#promptHint'),
+    promptExample: qs('#promptExample'),
     answers: qs('#answers'),
     cardAnswerForm: qs('#cardAnswerForm'),
     cardAnswerInput: qs('#cardAnswerInput'),

@@ -10,7 +10,7 @@ export interface Word {
   german: string;
   english: string;
   article: Article | null;
-  example?: string;
+  example?: string | null;
 }
 
 export interface CategoriesPayload {

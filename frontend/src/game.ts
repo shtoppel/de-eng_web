@@ -91,15 +91,23 @@ function showDeckComplete(): void {
     elements.promptLabel.textContent = 'No favorites yet';
     elements.promptWord.textContent = 'Add words';
     elements.promptHint.textContent = 'Use the star button to add words to your favorites list.';
+    renderExampleSentence();
     setFeedback('Favorite words mode is empty.');
   } else {
     elements.promptLabel.textContent = 'Deck complete';
     elements.promptWord.textContent = 'Great job!';
     elements.promptHint.textContent = 'You have seen every word in this deck. Reset the score or choose infinite mode to continue.';
+    renderExampleSentence();
     setFeedback('No repeats before reset: this deck is complete.', 'feedback ok');
   }
   updateChrome();
   renderNeurons();
+}
+
+function renderExampleSentence(): void {
+  const example = state.current?.example?.trim();
+  elements.promptExample.hidden = !example;
+  elements.promptExample.textContent = example ? `Example: ${example}` : '';
 }
 
 function promptForCurrentMode(): void {
@@ -126,6 +134,7 @@ function promptForCurrentMode(): void {
       : 'Choose the matching German word.';
     elements.feedback.textContent = 'German mode: English prompt in the center, German answers around it.';
   }
+  renderExampleSentence();
 }
 
 function buildRound(): void {

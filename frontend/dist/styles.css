@@ -154,6 +154,8 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 72px); line-height: .95; }
 .promptLabel { margin: 0 0 12px; color: var(--cyan); font-size: clamp(11px, .9vw, 14px); font-weight: 900; letter-spacing: .28em; text-transform: uppercase; }
 .promptWord { margin: 0; font-size: clamp(24px, 3.5vw, 52px); line-height: 1.08; overflow-wrap: anywhere; hyphens: auto; }
 .promptHint { margin: 14px 0 0; color: rgba(255,255,255,.74); font-size: clamp(14px, 1.2vw, 18px); }
+.promptExample { margin: 16px 0 0; color: rgba(255,255,255,.66); font-size: clamp(13px, 1vw, 16px); font-style: italic; line-height: 1.45; text-align: left; }
+.promptExample[hidden] { display: none; }
 .answerButton {
   position: absolute;
   z-index: 14;
@@ -197,9 +199,12 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 72px); line-height: .95; }
 .feedback.bad { color: #fca5a5; }
 .controls { display: flex; flex-wrap: wrap; gap: 10px; }
 .controlButton { padding: 0 20px; background: white; color: #111827; }
+.controlButton:hover:not(:disabled) { background: #f8fafc; color: #0f172a; box-shadow: 0 0 0 3px rgba(255,255,255,.24), 0 12px 28px rgba(255,255,255,.18); }
 .controlButton.secondary { background: rgba(255,255,255,.14); color: white; }
+.controlButton.secondary:hover:not(:disabled) { background: rgba(255,255,255,.26); color: white; box-shadow: 0 0 0 3px rgba(255,255,255,.16), 0 12px 28px rgba(255,255,255,.12); }
 .favoriteButton[aria-pressed="true"] { border-color: #facc15; background: rgba(250, 204, 21, .24); color: #fef3c7; }
-.controlButton:disabled { cursor: not-allowed; opacity: .5; transform: none; }
+.controlButton:disabled, .controlButton:disabled:hover { cursor: not-allowed; opacity: .5; transform: none; box-shadow: none; background: white; color: #111827; }
+.controlButton.secondary:disabled, .controlButton.secondary:disabled:hover { background: rgba(255,255,255,.14); color: white; }
 .addWordPanel { margin-top: 0; padding: 16px 18px; }
 .addWordPanel summary { cursor: pointer; font-weight: 950; }
 .wordForm { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 16px; }

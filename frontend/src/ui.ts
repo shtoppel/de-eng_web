@@ -22,6 +22,7 @@ export const elements = {
   promptLabel: qs<HTMLElement>('#promptLabel'),
   promptWord: qs<HTMLElement>('#promptWord'),
   promptHint: qs<HTMLElement>('#promptHint'),
+  promptExample: qs<HTMLElement>('#promptExample'),
   answers: qs<HTMLElement>('#answers'),
   cardAnswerForm: qs<HTMLFormElement>('#cardAnswerForm'),
   cardAnswerInput: qs<HTMLInputElement>('#cardAnswerInput'),
